@@ -39,6 +39,24 @@
                             <h2 class="align-middle" style="font-size: 32px;">Daftar</h2>
                         </div>
                     </div>
+                    <br>
+                    <div class="d-flex px-4 ">
+                        <div class="flex-fill "><hr></div>
+                        <div class="flex-fill"><p style="text-align: center;">atau lanjutkan dengan</p></div>
+                        <div class="flex-fill "><hr></div>
+                    </div>
+                    <!-- <div class="row" style="padding: 40px;">
+                        <div class="d-flex col-4 p-2" style="">
+                            <hr>
+                            
+                        </div>
+                        <div class="col-4 align-middle">
+                            <p class="align-middle ">atau lanjutkan dengan</p>
+                        </div>
+                        <div class="col-4 p-2" style="">
+                            <hr>
+                        </div>
+                    </div> -->
                 </div>
             </div>
         </div>
