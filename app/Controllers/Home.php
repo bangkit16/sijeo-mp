@@ -33,4 +33,8 @@ class Home extends BaseController
     {
         return view('login.php');
     }
+    public function register()
+    {
+        return view('login.php');
+    }
 }
