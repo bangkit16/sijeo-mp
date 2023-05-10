@@ -29,4 +29,8 @@ class Home extends BaseController
         ];
         return view('tesView.php', $data);
     }
+    public function login()
+    {
+        return view('login.php');
+    }
 }
