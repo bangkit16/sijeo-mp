@@ -12,6 +12,7 @@
     <?php
     var_dump($admin);
     ?>
+    <img src="<?= base_url(); ?>/img/Logo_Politeknik_Negeri_Malang.png" alt="">
     <h1>muah</h1>
 </body>
 
