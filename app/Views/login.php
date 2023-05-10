@@ -13,15 +13,22 @@
         * {
             font-family: 'Poppins', sans-serif;
         }
+
+        .gmbr {
+            background-image: url("<?= base_url(); ?>/img/login image.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
     </style>
 </head>
 
 <body>
     <div class="">
         <div class="login" style="overflow: hidden;">
-            <div class="row">
-                <div class="col-7">
-                    <img src="<?= base_url(); ?>/img/login image.png" class="img-fluid" alt="" style="height: 20cm; width: 100%; ";>
+            <div class="row" style="height: 100%">
+                <div class="col-7 gmbr ">
+                    <!-- <img src="<?= base_url(); ?>/img/login image.png" class="img-fluid" alt="" style="height: 20cm; width: 100%; ";> -->
                 </div>
                 <div class="col-5 mt-5">
                     <div class="row">
@@ -29,7 +36,7 @@
                             <h2 style="font-size: 40px;">Masuk</h2>
                         </div>
                         <div class="col" style="text-align: right; margin-right: 60px; color: #FFA931;">
-                            <h2 style="font-size: 32px;">Daftar</h2>
+                            <h2 class="align-middle" style="font-size: 32px;">Daftar</h2>
                         </div>
                     </div>
                 </div>
