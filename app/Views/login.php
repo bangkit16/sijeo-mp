@@ -40,10 +40,10 @@
                         </div>
                     </div>
                     <br>
-                    <div class="d-flex px-4 ">
-                        <div class="flex-fill "><hr></div>
-                        <div class="flex-fill"><p style="text-align: center;">atau lanjutkan dengan</p></div>
-                        <div class="flex-fill "><hr></div>
+                    <div class="d-flex px-4" style="margin-left: 20px; margin-right: 40px;">
+                        <div class="flex-fill"><hr style="color: #959698; border: 1px solid;"></div>
+                        <div class="flex-fill"><p style="text-align: center; color: #959698;">atau lanjutkan dengan</p></div>
+                        <div class="flex-fill"><hr style="color: #959698; border: 1px solid;"></div>
                     </div>
                     <!-- <div class="row" style="padding: 40px;">
                         <div class="d-flex col-4 p-2" style="">
@@ -57,6 +57,13 @@
                             <hr>
                         </div>
                     </div> -->
+                    <br><br>
+                    <form style="margin-left: 40px; margin-right: 60px;">
+                        <div class="mb-3">
+                            <label for="alamat_email" class="form-label"></label>
+                            <input type="email" class="form-control" placeholder="Alamat Email" style="border: 0px; border-bottom: solid 1px; border-color: #959698; border-radius: 0px;">
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
