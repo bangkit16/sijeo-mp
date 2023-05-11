@@ -72,9 +72,10 @@
                         </div>
                         <br>
                         <h5 style="font-size: 15px; text-align: center; color: red; font-weight: 500;">Lupa Kata Sandi?</h5>
-                        <br><br>
+                        <br>
                         <h5 style="font-size: 15px; text-align: center; font-weight: 500;">Belum Punya Akun? Daftar</h5>
                     </form>
+                    <br>
                 </div>
             </div>
         </div>
