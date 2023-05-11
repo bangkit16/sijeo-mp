@@ -60,8 +60,11 @@
                     <br><br>
                     <form style="margin-left: 40px; margin-right: 60px;">
                         <div class="mb-3">
-                            <label for="alamat_email" class="form-label"></label>
                             <input type="email" class="form-control" placeholder="Alamat Email" style="border: 0px; border-bottom: solid 1px; border-color: #959698; border-radius: 0px;">
+                        </div>
+                        <br>
+                        <div class="mb-3">
+                            <input type="password" class="form-control" name="kata_sandi" placeholder="Kata Sandi" style="border: 0px; border-bottom: solid 1px; border-color: #959698; border-radius: 0px;">
                         </div>
                     </form>
                 </div>
