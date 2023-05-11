@@ -33,12 +33,15 @@
                 <div class="col-5 mt-5">
                     <div class="row">
                         <div class="col" style="text-align: left; margin-left: 40px;">
-                            <h2 style="font-size: 40px;">Masuk</h2>
+                            <h2 style="font-size: 40px; font-weight: 600;">Masuk</h2>
                         </div>
                         <div class="col" style="text-align: right; margin-right: 60px; color: #FFA931;">
-                            <h2 class="align-middle" style="font-size: 32px;">Daftar</h2>
+                            <h2 class="align-middle" style="font-size: 32px; font-weight: 600;">Daftar</h2>
                         </div>
                     </div>
+                    <br>
+                    <br>
+                    <br>
                     <br>
                     <div class="d-flex px-4" style="margin-left: 20px; margin-right: 40px;">
                         <div class="flex-fill"><hr style="color: #959698; border: 1px solid;"></div>
@@ -64,7 +67,12 @@
                         </div>
                         <br>
                         <div class="mb-3">
-                            <input type="password" class="form-control" name="kata_sandi" placeholder="Kata Sandi" style="border: 0px; border-bottom: solid 1px; border-color: #959698; border-radius: 0px;">
+                            <input type="password" class="form-control" name="kata_sandi" placeholder="Kata Sandi" id="pass" style="border: 0px; border-bottom: solid 1px; border-color: #959698; border-radius: 0px;">
+                        </div>
+                        <br>
+                        <br>
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary" type="button" style="background-color: #959698; border: none; height: 50px;">Lanjutkan</button>
                         </div>
                     </form>
                 </div>
