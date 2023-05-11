@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <style>
         * {
+            margin: 0;
+            padding: 0;
             font-family: 'Poppins', sans-serif;
         }
 

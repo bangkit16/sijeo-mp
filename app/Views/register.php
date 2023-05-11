@@ -26,11 +26,14 @@
             height: 100vh;
             display: flex;
             align-items: center;
+            padding: 0;
         }
 
         .login-form {
-            /* width: 400px; */
-            margin: auto;
+            width: 100%;
+            /* width: 682px; */
+            height: 100%;
+            margin: 54px;
             padding: 50px;
             background-color: #fff;
             border-radius: 10px;
@@ -48,21 +51,41 @@
 
 <body>
     <div class="container-fluid">
-        <div class="row form-container">
-            <div class="col-lg-6"></div>
-            <div class="col-lg-6 login-form">
-                <h2>Login</h2>
-                <form>
-                    <div class="mb-3">
-                        <label for="username" class="form-label">Username</label>
-                        <input type="text" class="form-control" id="username" name="username" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password" name="password" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Login</button>
-                </form>
+        <div class="row form-container border border-primary">
+            <div class="col-6 border border-warning"></div>
+            <div class="col-6 d-flex justify-content-center border border-secondary">
+                <div class="login-form">
+                    <form>
+                        <div class="row border border-danger">
+                            <div class="col" style="text-align: left; ">
+                                <h2 style="font-size: 40px; font-weight: 600;">Masuk</h2>
+                            </div>
+                            <div class="col d-flex align-items-center justify-content-end" style="text-align: right; color: #FFA931;">
+                                <h2 style="font-size: 32px; font-weight: 600;">Daftar</h2>
+                            </div>
+                        </div>
+                        <div class="row border border-danger">
+                            <div class="d-flex flex-row justify-content-center align-items-center px-4">
+
+                                <div class=" align-items-start border border-primary" style="width: 100%;">
+                                    <hr style="color: #959698; border: 1px solid;">
+                                </div>
+                                <div class=" align-items-center border border-primary" style="width: 100%;">
+                                    <p class="" style="text-align: center; color: #959698;">atau lanjutkan dengan</p>
+                                </div>
+                                <div class="" style="width: 100%;">
+                                    <hr style="color: #959698; border: 1px solid;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3 d-flex flex-row">
+                            <input type="email" class="form-control" placeholder="Nama Depan" style="border: 0px; border-bottom: solid 1px; border-color: #959698; border-radius: 0px;">
+                            <input type="password" class="form-control " name="kata_sandi" placeholder="Nama Belakang" id="pass" style="margin-left:30px; border: 0px; border-bottom: solid 1px; border-color: #959698; border-radius: 0px;">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
