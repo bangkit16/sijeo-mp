@@ -26,11 +26,11 @@
 <body>
     <div class="">
         <div class="login" style="overflow: hidden;">
-            <div class="row" style="height: 100%">
+            <div class="row" style="height: 100vh">
                 <div class="col-7 gmbr ">
                     <!-- <img src="<?= base_url(); ?>/img/login image.png" class="img-fluid" alt="" style="height: 20cm; width: 100%; ";> -->
                 </div>
-                <div class="col-5 mt-5">
+                <div style="height: 100%;" class="col-5 mt-5">
                     <div class="row">
                         <div class="col" style="text-align: left; margin-left: 40px;">
                             <h2 style="font-size: 40px; font-weight: 600;">Masuk</h2>
@@ -41,9 +41,15 @@
                     </div>
                     <br><br><br><br><br><br><br>
                     <div class="d-flex px-4" style="margin-left: 20px; margin-right: 40px;">
-                        <div class="flex-fill"><hr style="color: #959698; border: 1px solid;"></div>
-                        <div class="flex-fill"><p style="text-align: center; color: #959698;">atau lanjutkan dengan</p></div>
-                        <div class="flex-fill"><hr style="color: #959698; border: 1px solid;"></div>
+                        <div class="flex-fill">
+                            <hr style="color: #959698; border: 1px solid;">
+                        </div>
+                        <div class="flex-fill">
+                            <p style="text-align: center; color: #959698;">atau lanjutkan dengan</p>
+                        </div>
+                        <div class="flex-fill">
+                            <hr style="color: #959698; border: 1px solid;">
+                        </div>
                     </div>
                     <!-- <div class="row" style="padding: 40px;">
                         <div class="d-flex col-4 p-2" style="">
