@@ -39,10 +39,7 @@
                             <h2 class="align-middle" style="font-size: 32px; font-weight: 600;">Daftar</h2>
                         </div>
                     </div>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
+                    <br><br><br><br><br><br><br>
                     <div class="d-flex px-4" style="margin-left: 20px; margin-right: 40px;">
                         <div class="flex-fill"><hr style="color: #959698; border: 1px solid;"></div>
                         <div class="flex-fill"><p style="text-align: center; color: #959698;">atau lanjutkan dengan</p></div>
@@ -69,11 +66,14 @@
                         <div class="mb-3">
                             <input type="password" class="form-control" name="kata_sandi" placeholder="Kata Sandi" id="pass" style="border: 0px; border-bottom: solid 1px; border-color: #959698; border-radius: 0px;">
                         </div>
-                        <br>
-                        <br>
+                        <br><br><br>
                         <div class="d-grid gap-2">
                             <button class="btn btn-primary" type="button" style="background-color: #959698; border: none; height: 50px;">Lanjutkan</button>
                         </div>
+                        <br>
+                        <h5 style="font-size: 15px; text-align: center; color: red; font-weight: 500;">Lupa Kata Sandi?</h5>
+                        <br><br>
+                        <h5 style="font-size: 15px; text-align: center; font-weight: 500;">Belum Punya Akun? Daftar</h5>
                     </form>
                 </div>
             </div>
