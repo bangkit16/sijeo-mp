@@ -28,6 +28,11 @@
             font-size: 14px;
             padding: 3px 28px;
         }
+        .bg-1{
+            background-image: url("<?= base_url(); ?>/img/landing page 1.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
     </style>
 </head>
 
@@ -35,9 +40,6 @@
     <nav>
         <div class="container-fluid text-center" style="background-color: white;">
             <div class=" d-flex flex-row justify-content-end p-2">
-                <div class="mx-3">
-
-                </div>
                 <div class="mx-3" style="font-size: 14px;">
                     <span>Menjadi Vendor? <a href="http://localhost:8080/register" style="color: #FFA931; text-decoration: none;">Daftar</a></span>
                 </div>
@@ -51,6 +53,9 @@
                     <a class="btn btn-primary-custom" href="http://localhost:8080/register">Daftar</a>
                 </div>
             </div>
+        </div>
+        <div class="container-fluid text-center bg-1">
+            <br><br><br><br>
         </div>
     </nav>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
