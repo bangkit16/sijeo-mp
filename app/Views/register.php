@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -46,41 +46,66 @@
             font-weight: 600;
             color: #333;
         }
+
+        .form-control {
+            border: 0px;
+            border-bottom: solid 2px;
+            border-color: #E9EAEA;
+            border-radius: 0px;
+        }
+
+        .form-control::placeholder {
+            transform: translateX(-5px);
+            font-size: 20px;
+            color: #959698;
+            font-weight: 500;
+        }
     </style>
 </head>
 
 <body>
     <div class="container-fluid">
-        <div class="row form-container border border-primary">
-            <div class="col-6 border border-warning"></div>
-            <div class="col-6 d-flex justify-content-center border border-secondary">
+        <div class="row form-container ">
+            <div class="col-6 ">
+
+            </div>
+            <div class="col-6 d-flex justify-content-center ">
                 <div class="login-form">
                     <form>
-                        <div class="row border border-danger">
+                        <div class="row ">
                             <div class="col" style="text-align: left; ">
-                                <h2 style="font-size: 40px; font-weight: 600;">Masuk</h2>
+                                <h2 style="font-size: 40px; font-weight: 500;">Daftar</h2>
                             </div>
-                            <div class="col d-flex align-items-center justify-content-end" style="text-align: right; color: #FFA931;">
-                                <h2 style="font-size: 32px; font-weight: 600;">Daftar</h2>
+                            <div class="col d-flex align-items-center justify-content-end" style="text-align: right; ">
+                                <h2 style="font-size: 32px; font-weight: 500;color: #FFA931;">Masuk</h2>
                             </div>
                         </div>
-                        <div class="row border border-danger">
-                            <div class="d-flex flex-row justify-content-center align-items-center px-4">
+                        <div class="row ">
+                            <div style="" class="d-flex flex-row justify-content-center align-items-center py-auto">
 
-                                <div class=" align-items-start border border-primary" style="width: 100%;">
+                                <div class="" style="width: 100%;">
                                     <hr style="color: #959698; border: 1px solid;">
                                 </div>
-                                <div class=" align-items-center border border-primary" style="width: 100%;">
-                                    <p class="" style="text-align: center; color: #959698;">atau lanjutkan dengan</p>
+                                <div class="d-flex justify-content-center align-items-center s" style="width: 100%;text-align: center; ">
+                                    <p class="d-flex my-auto" style="color: #959698;">atau lanjutkan dengan</p>
                                 </div>
                                 <div class="" style="width: 100%;">
                                     <hr style="color: #959698; border: 1px solid;">
                                 </div>
                             </div>
                         </div>
-                        <div class="mb-3 d-flex flex-row">
-                            <input type="email" class="form-control" placeholder="Nama Depan" style="border: 0px; border-bottom: solid 1px; border-color: #959698; border-radius: 0px;">
-                            <input type="password" class="form-control " name="kata_sandi" placeholder="Nama Belakang" id="pass" style="margin-left:30px; border: 0px; border-bottom: solid 1px; border-color: #959698; border-radius: 0px;">
+                        <div class="mb-3 mt-3 d-flex flex-row mb-5">
+                            <input type="text" class="form-control" placeholder="Nama Depan">
+                            <input type="text" class="form-control " name="kata_sandi" placeholder="Nama Belakang" id="pass" style="margin-left:25px;">
+                        </div>
+                        <div class="mb-3 mt-3 d-flex flex-row mb-5">
+                            <input type="text" class="form-control" placeholder="Alamat Email">
+                        </div>
+                        <div class="mb-3 mt-3 d-flex flex-row mb-5">
+                            <input type="text" class="form-control" placeholder="Kata Sandi">
+                        </div>
+                        <div class="mb-3 mt-3 d-flex flex-row mb-5">
+                            <input type="text" class="form-control" placeholder="Konfirmasi Kata Sandi">
                         </div>
 
                         <button type="submit" class="btn btn-primary">Login</button>
