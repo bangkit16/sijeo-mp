@@ -19,7 +19,7 @@ class Home extends BaseController
         $data = [
             'admin' => $admin,
         ];
-        return view('welcome_message', $data);
+        return view('landingPage.php', $data);
     }
     public function tes()
     {

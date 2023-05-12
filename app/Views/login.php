@@ -38,7 +38,7 @@
                             <h2 style="font-size: 40px; font-weight: 600;">Masuk</h2>
                         </div>
                         <div class="col" style="text-align: right; margin-right: 60px; color: #FFA931;">
-                            <h2 class="align-middle" style="font-size: 32px; font-weight: 600;">Daftar</h2>
+                            <h2 class="align-middle" style="font-size: 32px; font-weight: 600;"><a href="http://localhost:8080/register" style="color: #FFA931; text-decoration: none;">Daftar</a></h2>
                         </div>
                     </div>
                     <br><br><br><br><br><br><br>
@@ -81,7 +81,7 @@
                         <br>
                         <h5 style="font-size: 15px; text-align: center; color: red; font-weight: 500;">Lupa Kata Sandi?</h5>
                         <br>
-                        <h5 style="font-size: 15px; text-align: center; font-weight: 500;">Belum Punya Akun? Daftar</h5>
+                        <h5 style="font-size: 15px; text-align: center; font-weight: 500;">Belum Punya Akun? <a href="http://localhost:8080/register" style="color: #FFA931; text-decoration: none;">Daftar</a></h5>
                     </form>
                     <br>
                 </div>

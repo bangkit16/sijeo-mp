@@ -81,7 +81,7 @@
                             </div>
                         </div>
                         <div class="row ">
-                            <div style="" class="d-flex flex-row justify-content-center align-items-center py-auto">
+                            <div class="d-flex flex-row justify-content-center align-items-center py-auto">
 
                                 <div class="" style="width: 100%;">
                                     <hr style="color: #959698; border: 1px solid;">
