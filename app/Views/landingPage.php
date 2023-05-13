@@ -28,10 +28,11 @@
             font-size: 14px;
             padding: 3px 28px;
         }
-        .bg-1{
+        .bg-1-lanpaggue{
             background-image: url("<?= base_url(); ?>/img/landing page 1.png");
             background-size: cover;
             background-repeat: no-repeat;
+            height: 700px;
         }
     </style>
 </head>
@@ -54,8 +55,30 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid text-center bg-1">
-            <br><br><br><br>
+        <div class="container-fluid text-center bg-1-lanpaggue">
+            <div class="d-flex flex-row justify-content-end p-2">
+                <div class="mx-3">
+                    <img src="<?= base_url(); ?>/img/logo si jeo.png" class="img-fluid" style="width: 163px; height: 124px; margin-right: 274px;">
+                </div>
+                <div class="mx-5">
+                    <span style="color: white; font-size: 20px; font-weight: bold;">Home</span>
+                </div>
+                <div class="mx-5">
+                    <span style="color: white; font-size: 20px; font-weight: bold;">Tentang</span>
+                </div>
+                <div class="mx-5">
+                    <span style="color: white; font-size: 20px; font-weight: bold;">Vendor</span>
+                </div>
+                <div class="mx-5">
+                    <span style="color: white; font-size: 20px; font-weight: bold;">Store</span>
+                </div>
+                <div class="mx-5">
+                    <span style="color: white; font-size: 20px; font-weight: bold;">Lastest Event</span>
+                </div>
+                <div class="mx-5">
+                    <span style="color: white; font-size: 20px; font-weight: bold;">Event</span>
+                </div>
+            </div>
         </div>
     </nav>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
