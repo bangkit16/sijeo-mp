@@ -42,8 +42,30 @@
             border-radius: 25px;
         }
         .btn:hover{
+            border-color: white;
+            color: white;
+        }
+        .btn:active{
+            border-color: #FFA931 !important;
+            color: #FFA931 !important;
+        }
+        #btn-daftar:hover{
             background-color: white;
             color: #FFA931;
+            border-color: #FFA931;
+        }
+        #btn-masuk:hover{
+            background-color: #FFA931;
+            color: white;
+        }
+        #btn-masuk:active{
+            color: white !important;
+        }
+        #link-daftar:hover{
+            color: black !important;
+        }
+        #link-daftar:active{
+            color: #FFA931 !important;
         }
     </style>
 </head>
@@ -53,23 +75,23 @@
         <div class="container-fluid text-center" style="background-color: white;">
             <div class=" d-flex flex-row align-items-center justify-content-end p-2">
                 <div class="mx-3" style="font-size: 14px;">
-                    <span>Menjadi Vendor? <a href="http://localhost:8080/register" style="color: #FFA931; text-decoration: none;">Daftar</a></span>
+                    <span>Menjadi Vendor? <a href="http://localhost:8080/register" style="color: #FFA931; text-decoration: none;" id="link-daftar">Daftar</a></span>
                 </div>
                 <div class="mx-3" style="font-size: 14px;">
                     <span>Ingin memesan?</span>
                 </div>
                 <div class="mx-3" style="font-size: 14px;">
-                    <a class="btn btn-outline-primary-custom" href="http://localhost:8080/login">Masuk</a>
+                    <a class="btn btn-outline-primary-custom" href="http://localhost:8080/login" id="btn-masuk">Masuk</a>
                 </div>
                 <div class="mx-3" style="font-size: 14px;">
-                    <a class="btn btn-primary-custom" href="http://localhost:8080/register">Daftar</a>
+                    <a class="btn btn-primary-custom" href="http://localhost:8080/register" id="btn-daftar">Daftar</a>
                 </div>
             </div>
         </div>
         <div class="container-fluid text-center bg-1-lanpaggue">
             <div class="d-flex flex-row align-items-center justify-content-end p-2">
                 <div class="me-auto">
-                    <img src="<?= base_url(); ?>/img/logo si jeo.png" class="img-fluid" style="width: 163px; height: 124px;">
+                    <a href="http://localhost:8080/"><img src="<?= base_url(); ?>/img/logo si jeo.png" class="img-fluid" style="width: 163px; height: 124px;"></a>
                 </div>
                 <div class="mx-5">
                     <span style="color: white; font-size: 20px; font-weight: bold;">Home</span>
@@ -108,6 +130,7 @@
             </div>
         </div>
     </nav>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
     </script>
 </body>
