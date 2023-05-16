@@ -56,9 +56,9 @@
             </div>
         </div>
         <div class="container-fluid text-center bg-1-lanpaggue">
-            <div class="d-flex flex-row justify-content-end p-2">
-                <div class="mx-3">
-                    <img src="<?= base_url(); ?>/img/logo si jeo.png" class="img-fluid" style="width: 163px; height: 124px; margin-right: 274px;">
+            <div class="d-flex flex-row align-items-center justify-content-end p-2">
+                <div class="me-auto">
+                    <img src="<?= base_url(); ?>/img/logo si jeo.png" class="img-fluid" style="width: 163px; height: 124px;">
                 </div>
                 <div class="mx-5">
                     <span style="color: white; font-size: 20px; font-weight: bold;">Home</span>
@@ -77,6 +77,17 @@
                 </div>
                 <div class="mx-5">
                     <span style="color: white; font-size: 20px; font-weight: bold;">Event</span>
+                </div>
+            </div>
+            <div class="container-fluid mt-5 px-5">
+                <div class="d-flex flex-row">
+                    <h1 style="color: white; font-size: 50px; font-weight: bold;">Solusi Layanan Event</h1>
+                </div>
+                <div class="d-flex flex-row">
+                    <h1 style="color: white; font-size: 50px; font-weight: bold;">Organizer Terbaik</h1>
+                </div>
+                <div class="d-flex flex-row">
+                    <h1 style="color: white; font-size: 50px; font-weight: bold;">Sejak 2015</h1>
                 </div>
             </div>
         </div>
