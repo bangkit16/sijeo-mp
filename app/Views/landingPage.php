@@ -40,7 +40,7 @@
 <body>
     <nav>
         <div class="container-fluid text-center" style="background-color: white;">
-            <div class=" d-flex flex-row justify-content-end p-2">
+            <div class=" d-flex flex-row align-items-center justify-content-end p-2">
                 <div class="mx-3" style="font-size: 14px;">
                     <span>Menjadi Vendor? <a href="http://localhost:8080/register" style="color: #FFA931; text-decoration: none;">Daftar</a></span>
                 </div>
