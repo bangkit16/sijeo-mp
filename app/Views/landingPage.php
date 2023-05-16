@@ -34,6 +34,17 @@
             background-repeat: no-repeat;
             height: 700px;
         }
+        .btn-siapkan-event{
+            background-color: #FFA931;
+            color: white;
+            font-size: 25px;
+            padding: 4px 30px;
+            border-radius: 25px;
+        }
+        .btn:hover{
+            background-color: white;
+            color: #FFA931;
+        }
     </style>
 </head>
 
@@ -50,7 +61,7 @@
                 <div class="mx-3" style="font-size: 14px;">
                     <a class="btn btn-outline-primary-custom" href="http://localhost:8080/login">Masuk</a>
                 </div>
-                <div class="mx-3" style="font-size: 16px;">
+                <div class="mx-3" style="font-size: 14px;">
                     <a class="btn btn-primary-custom" href="http://localhost:8080/register">Daftar</a>
                 </div>
             </div>
@@ -79,6 +90,7 @@
                     <span style="color: white; font-size: 20px; font-weight: bold;">Event</span>
                 </div>
             </div>
+            <br>
             <div class="container-fluid mt-5 px-5">
                 <div class="d-flex flex-row">
                     <h1 style="color: white; font-size: 50px; font-weight: bold;">Solusi Layanan Event</h1>
@@ -88,6 +100,10 @@
                 </div>
                 <div class="d-flex flex-row">
                     <h1 style="color: white; font-size: 50px; font-weight: bold;">Sejak 2015</h1>
+                </div>
+                <br>
+                <div class="d-flex dlex-row">
+                    <a class="btn btn-siapkan-event" href="">Siapkan Event Bersama Kami</a>
                 </div>
             </div>
         </div>
