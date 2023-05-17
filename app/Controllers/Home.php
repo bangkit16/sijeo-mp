@@ -37,4 +37,8 @@ class Home extends BaseController
     {
         return view('register.php');
     }
+    public function vendor()
+    {
+        return view('vendorPage.php');
+    }
 }

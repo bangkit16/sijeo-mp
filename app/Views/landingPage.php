@@ -72,7 +72,7 @@
 
 <body>
     <nav>
-        <div class="container-fluid text-center" style="background-color: white;">
+        <div class="container-fluid text-center sticky-top" style="background-color: white;">
             <div class=" d-flex flex-row align-items-center justify-content-end p-2">
                 <div class="mx-3" style="font-size: 14px;">
                     <span>Menjadi Vendor? <a href="http://localhost:8080/register" style="color: #FFA931; text-decoration: none;" id="link-daftar">Daftar</a></span>
@@ -130,7 +130,19 @@
             </div>
         </div>
     </nav>
-    
+    <div class="container-fluid text-center overflow px-5 py-5" style="font-size: 18px;">
+        <div class="py-5">
+            <span>SI JEO merupakan jasa Event Organizer terkenal di Malang. Sebagai EO berpengalaman</span>
+            <br>
+            <span>dan profesional, prioritas utama kami adalah kepuasan konsumen.</span>
+            <br><br>
+            <span>SI JEO menawarkan banyak pilihan paket acara, meliputi catering, full dekorasi,</span>
+            <br>
+            <span>wardrobe, MUA, foto dan video. Dengan pilihan paket yang beragam, anda bisa</span>
+            <br>
+            <span>menyesuaikan menurut harga dan selera.</span>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
     </script>
 </body>
