@@ -42,7 +42,7 @@ class Home extends BaseController
     {
         return view('register.php');
     }
-    public function vendor()
+    public function vendorPage()
     {
         return view('vendorPage.php');
     }

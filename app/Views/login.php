@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <title>Login SI JEO</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
@@ -21,6 +22,13 @@
             background-size: cover;
             background-repeat: no-repeat;
 
+        }
+        .btn:hover{
+            color: white !important;
+            background-color: #FFA931 !important;
+        }
+        #link-daftar:hover{
+            color: black !important;
         }
     </style>
 </head>
@@ -79,7 +87,7 @@
                         <br>
                         <h5 style="font-size: 15px; text-align: center; color: red; font-weight: 500;">Lupa Kata Sandi?</h5>
                         <br>
-                        <h5 style="font-size: 15px; text-align: center; font-weight: 500;">Belum Punya Akun? <a href="http://localhost:8080/register" style="color: #FFA931; text-decoration: none;">Daftar</a></h5>
+                        <h5 style="font-size: 15px; text-align: center; font-weight: 500;">Belum Punya Akun? <a href="http://localhost:8080/register" style="color: #FFA931; text-decoration: none;" id="link-daftar">Daftar</a></h5>
                     </form>
                     <br>
                 </div>
