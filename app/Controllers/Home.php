@@ -31,7 +31,12 @@ class Home extends BaseController
     }
     public function login()
     {
-        return view('login.php');
+        $admin = $this->adminModel->findAll();
+        $data = [
+            'admin' => $admin,
+        ];
+        
+        return view('login.php', $data);
     }
     public function register()
     {

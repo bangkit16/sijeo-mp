@@ -15,24 +15,22 @@ class Customer extends BaseController
 
     public function login()
     {
-        $username = $this->request->getVar('username');
-        $password = $this->request->getVar('password');
-        $user = $this->customerModel->where(['username' => $username])->first();
-
-
+        $email = $this->request->getVar('email');
+        $password = md5($this->request->getVar('password'));
+        // $user = $this->customerModel->where(['email_cutomer' => $email])->first();
+        $user = $this->customerModel->where(['password_customer' => $password])->first();
+        // dd($user);
         if ($user) {
 
-            if ($user['password'] == $password) {
-                $_SESSION['username'] = $username;
-                $_SESSION['leveluser'] = $user['level_user'];
-                $_SESSION['id_user'] = $user['id_user'];
-
+            if ($user['password_customer'] == $password) {
                 // dd($_SESSION['leveluser']);
-                return redirect()->to(base_url().'/ ');
+                return redirect()->to(base_url() . '/ ');
             }
         }
-
-        return redirect()->to(base_url().'/Pages/login');
+        return redirect()->to(base_url() . '/login');
     }
-    
+    public function register(){
+        
+    }
+
 }
