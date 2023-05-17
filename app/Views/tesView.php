@@ -10,10 +10,11 @@
 
 <body>
     <?php
-    var_dump($admin);
+    var_dump($password);
+    var_dump($email);
     ?>
-    <img src="<?= base_url(); ?>/img/Logo_Politeknik_Negeri_Malang.png" alt="">
-    <h1>muah</h1>
+    <imvar src="<?= base_url(); ?>/img/Logo_Politeknik_Negeri_Malang.png" alt="">
+        <h1>muah</h1>
 </body>
 
 </html>

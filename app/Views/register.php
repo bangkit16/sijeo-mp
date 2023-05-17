@@ -17,9 +17,12 @@
         }
 
         body {
-            background-image: url(https://via.placeholder.com/1500x1000);
+            background-image: url("<?= base_url(); ?>/svg/bgregister.svg");
             background-size: cover;
+            background-repeat: no-repeat;
+            /* background-attachment: fixed; */
             background-position: center;
+            background-position-y: 70px;
         }
 
         .form-container {
@@ -55,10 +58,24 @@
         }
 
         .form-control::placeholder {
-            transform: translateX(-5px);
+            /* transform: translateX(-5px); */
             font-size: 20px;
             color: #959698;
             font-weight: 500;
+        }
+
+        .form-check-input {
+            height: 35px;
+            width: 35px;
+            border-radius: 100px !important;
+
+        }
+
+        .form-check-input:checked {
+
+            background-color: #3CDB7F;
+            border-style: none;
+            outline-style: none !important;
         }
     </style>
 </head>
@@ -75,9 +92,6 @@
                         <div class="row ">
                             <div class="col" style="text-align: left; ">
                                 <h2 style="font-size: 40px; font-weight: 500;">Daftar</h2>
-                            </div>
-                            <div class="col d-flex align-items-center justify-content-end" style="text-align: right; ">
-                                <h2 style="font-size: 32px; font-weight: 500;color: #FFA931;">Masuk</h2>
                             </div>
                         </div>
                         <div class="row ">
@@ -96,19 +110,26 @@
                         </div>
                         <div class="mb-3 mt-3 d-flex flex-row mb-5">
                             <input type="text" class="form-control" placeholder="Nama Depan">
-                            <input type="text" class="form-control " name="kata_sandi" placeholder="Nama Belakang" id="pass" style="margin-left:25px;">
                         </div>
                         <div class="mb-3 mt-3 d-flex flex-row mb-5">
-                            <input type="text" class="form-control" placeholder="Alamat Email">
+                            <input type="text" class="form-control" placeholder="Email">
                         </div>
                         <div class="mb-3 mt-3 d-flex flex-row mb-5">
                             <input type="text" class="form-control" placeholder="Kata Sandi">
                         </div>
                         <div class="mb-3 mt-3 d-flex flex-row mb-5">
-                            <input type="text" class="form-control" placeholder="Konfirmasi Kata Sandi">
+                            <input type="text" class="form-control" placeholder="Nomor Handphone">
                         </div>
-
-                        <button type="submit" class="btn btn-primary">Login</button>
+                        <div class="mb-3 mt-3 d-flex flex-row mb-5">
+                            <input type="text" class="form-control" placeholder="Alamat">
+                        </div>
+                        <div class="mb-3 mt-3 d-flex flex-row mb-5">
+                            <input class="form-check-input mx-2" type="checkbox" value="">
+                            <p>Saya ingin menerima email promo dan newsletter dari Si Jeo dan rekannya</p>
+                        </div>
+                        <div class="mb-3 mt-3 d-flex flex-row mb-5">
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </div>
                     </form>
                 </div>
             </div>

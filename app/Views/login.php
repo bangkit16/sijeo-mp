@@ -63,17 +63,18 @@
                         </div>
                     </div> -->
                     <br><br>
-                    <form style="margin-left: 40px; margin-right: 60px;">
+                    <form action="<?= base_url(); ?>/Customer/login" method="post" style="margin-left: 40px; margin-right: 60px;">
+
                         <div class="mb-3">
-                            <input type="email" class="form-control" placeholder="Alamat Email" style="border: 0px; border-bottom: solid 1px; border-color: #959698; border-radius: 0px;">
+                            <input name="email" type="email" class="form-control" placeholder="Alamat Email" style="border: 0px; border-bottom: solid 1px; border-color: #959698; border-radius: 0px;">
                         </div>
                         <br>
                         <div class="mb-3">
-                            <input type="password" class="form-control" name="kata_sandi" placeholder="Kata Sandi" id="pass" style="border: 0px; border-bottom: solid 1px; border-color: #959698; border-radius: 0px;">
+                            <input name="password" type="password" class="form-control" placeholder="Kata Sandi" id="pass" style="border: 0px; border-bottom: solid 1px; border-color: #959698; border-radius: 0px;">
                         </div>
                         <br><br><br>
                         <div class="d-grid gap-2">
-                            <button class="btn btn-primary" type="button" style="background-color: #959698; border: none; height: 50px;">Lanjutkan</button>
+                            <button class="btn btn-primary" type="submit" style="background-color: #959698; border: none; height: 50px;">Lanjutkan</button>
                         </div>
                         <br>
                         <h5 style="font-size: 15px; text-align: center; color: red; font-weight: 500;">Lupa Kata Sandi?</h5>
