@@ -37,9 +37,6 @@
                         <div class="col" style="text-align: left; margin-left: 40px;">
                             <h2 style="font-size: 40px; font-weight: 600;">Masuk</h2>
                         </div>
-                        <div class="col" style="text-align: right; margin-right: 60px; color: #FFA931;">
-                            <h2 class="align-middle" style="font-size: 32px; font-weight: 600;"><a href="http://localhost:8080/register" style="color: #FFA931; text-decoration: none;">Daftar</a></h2>
-                        </div>
                     </div>
                     <br><br><br><br><br><br><br>
                     <div class="d-flex px-4" style="margin-left: 20px; margin-right: 40px;">
