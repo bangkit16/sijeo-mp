@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <style>
         * {
             margin: 0;
@@ -136,8 +137,9 @@
                 <div class="login-form d-flex">
                     <form action="<?= base_url(); ?>Customer/register" method="post">
                         <div class="row ">
-                            <div class="col" style="text-align: left; ">
-                                <h2 style="font-size: 40px; font-weight: 500;">Daftar</h2>
+                            <div class="d-flex flex-row justifi-content-center align-items-start" style="text-align: left; ">
+                                <h2 class="me-auto" style="font-size: 40px; font-weight: 500;">Daftar</h2>
+                                <a href="<?= base_url(); ?>" class="btn ms-auto" style="font-size: 30px; font-weight: 500;text-decoration: none; color: #FFA931;">Home</a>
                             </div>
                         </div>
                         <div class="mb-3 mt-3 d-flex flex-row mb-5">
@@ -164,7 +166,8 @@
                             <input name="email" type="text" class="form-control" placeholder="Email">
                         </div>
                         <div class="mb-3 mt-3 d-flex flex-row mb-5">
-                            <input name="password" type="text" class="form-control" placeholder="Kata Sandi">
+                            <input name="password" type="password" class="form-control" placeholder="Kata Sandi" id="id_password">
+                            <i class="bi bi-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer;color: #959698;font-size: 1.5rem;"></i>
                         </div>
                         <div class="mb-3 mt-3 d-flex flex-row mb-5">
                             <input name="nohp" type="text" class="form-control" placeholder="Nomor Handphone">
@@ -191,6 +194,18 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+    </script>
+    <script>
+        const togglePassword = document.querySelector('#togglePassword');
+        const password = document.querySelector('#id_password');
+
+        togglePassword.addEventListener('click', function(e) {
+            // toggle the type attribute
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+            // toggle the eye slash icon
+            this.classList.toggle('bi bi-eye');
+        });
     </script>
 </body>
 
