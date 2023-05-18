@@ -67,6 +67,9 @@
         #link-daftar:active{
             color: #FFA931 !important;
         }
+        #link-nav2:hover{
+            color: #FFA931 !important;
+        }
     </style>
 </head>
 
@@ -94,22 +97,22 @@
                     <a href="http://localhost:8080/"><img src="<?= base_url(); ?>/img/logo si jeo.png" class="img-fluid" style="width: 163px; height: 124px;"></a>
                 </div>
                 <div class="mx-5">
-                    <span style="color: white; font-size: 20px; font-weight: bold;">Home</span>
+                    <a href="http://localhost:8080/" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Home</a>
                 </div>
                 <div class="mx-5">
-                    <span style="color: white; font-size: 20px; font-weight: bold;">Tentang</span>
+                    <a href="" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Tentang</a>
                 </div>
                 <div class="mx-5">
-                    <span style="color: white; font-size: 20px; font-weight: bold;">Vendor</span>
+                    <a href="http://localhost:8080/vendor" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Vendor</a>
                 </div>
                 <div class="mx-5">
-                    <span style="color: white; font-size: 20px; font-weight: bold;">Store</span>
+                    <a href="" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Store</a>
                 </div>
                 <div class="mx-5">
-                    <span style="color: white; font-size: 20px; font-weight: bold;">Lastest Event</span>
+                    <a href="" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Lastest Event</a>
                 </div>
                 <div class="mx-5">
-                    <span style="color: white; font-size: 20px; font-weight: bold;">Event</span>
+                    <a href="" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Review</a>
                 </div>
             </div>
             <br>
