@@ -31,32 +31,6 @@
         #link-nav2:hover {
             color: #FFA931 !important;
         }
-
-        .gallery {
-
-            padding: 1rem;
-            display: grid;
-            grid-template-columns: repeat(10, 80vw);
-            grid-template-rows: 1fr;
-            grid-column-gap: 5rem;
-            grid-row-gap: 5rem;
-            overflow: hidden;
-            height: 90vh;
-            scroll-snap-type: both mandatory;
-            scroll-padding: 1rem;
-            transition: 1sec;
-        }
-
-        .active {
-            scroll-snap-type: unset;
-        }
-
-        li {
-            scroll-snap-align: center;
-            display: inline-block;
-            border-radius: 3px;
-            font-size: 0;
-        }
     </style>
 </head>
 
@@ -112,46 +86,6 @@
             </div>
         </div>
     </div>
-    <!-- <div class="d-flex align-items-center justify-content-center p-2"> -->
-    <div class="mx-auto ">
-        <ul class="gallery ">
-            <li class="active" style="background: #f6bd60;"></li>
-            <li style="background: #f7ede2;"></li>
-            <li style="background: #f5cac3;"></li>
-            <li style="background: #84a59d;"></li>
-            <li style="background: #f28482;"></li>
-        </ul>
-    </div>
-    <!-- </div> -->
-    <script>
-        const slider = document.querySelector('.gallery');
-        let isDown = false;
-        let startX;
-        let scrollLeft;
-
-        slider.addEventListener('mousedown', e => {
-            isDown = true;
-            slider.classList.add('active');
-            startX = e.pageX - slider.offsetLeft;
-            scrollLeft = slider.scrollLeft;
-        });
-        slider.addEventListener('mouseleave', _ => {
-            isDown = false;
-            slider.classList.remove('active');
-        });
-        slider.addEventListener('mouseup', _ => {
-            isDown = false;
-            slider.classList.remove('active');
-        });
-        slider.addEventListener('mousemove', e => {
-            if (!isDown) return;
-            e.preventDefault();
-            const x = e.pageX - slider.offsetLeft;
-            const SCROLL_SPEED = 3;
-            const walk = (x - startX) * SCROLL_SPEED;
-            slider.scrollLeft = scrollLeft - walk;
-        });
-    </script>
 </body>
 
 </html>
