@@ -46,7 +46,7 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid text-center bg-1-lanpaggue">
+        <div class="container-fluid text-center bg-1-lanpaggue sticky-top">
             <div class="d-flex flex-row align-items-center justify-content-end p-2">
                 <div class="me-auto">
                     <a href="http://localhost:8080/"><img src="<?= base_url(); ?>/img/logo si jeo.png" class="img-fluid" style="width: auto; height: 60px"></a>
