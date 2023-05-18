@@ -30,6 +30,9 @@
         #link-daftar:hover{
             color: black !important;
         }
+        #link-lupasandi:hover{
+            color: #FFA931 !important;
+        }
     </style>
 </head>
 
@@ -85,7 +88,7 @@
                             <button class="btn btn-primary" type="submit" style="background-color: #959698; border: none; height: 50px;">Lanjutkan</button>
                         </div>
                         <br>
-                        <h5 style="font-size: 15px; text-align: center; color: red; font-weight: 500;">Lupa Kata Sandi?</h5>
+                        <h5 style="font-size: 15px; text-align: center; font-weight: 500;"><a id="link-lupasandi" href="" style="text-decoration: none; color: red;">Lupa Kata Sandi?</a></h5>
                         <br>
                         <h5 style="font-size: 15px; text-align: center; font-weight: 500;">Belum Punya Akun? <a href="http://localhost:8080/register" style="color: #FFA931; text-decoration: none;" id="link-daftar">Daftar</a></h5>
                     </form>
