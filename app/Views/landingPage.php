@@ -21,7 +21,6 @@
             color: white;
             font-size: 14px;
             padding: 3px 28px;
-            align-content: en;
         }
 
         .btn-outline-primary-custom {
@@ -111,7 +110,7 @@
         <div class="container-fluid text-center bg-1-lanpaggue">
             <div class="d-flex flex-row align-items-center justify-content-end p-2">
                 <div class="me-auto">
-                    <a href="http://localhost:8080/"><img src="<?= base_url(); ?>/img/logo si jeo.png" class="img-fluid" style="width: 163px; height: 124px;"></a>
+                    <a href="http://localhost:8080/"><img src="<?= base_url(); ?>/img/logo si jeo.png" class="img-fluid" style="width: auto; height: 120px"></a>
                 </div>
                 <div class="mx-5">
                     <a href="http://localhost:8080/" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Home</a>
