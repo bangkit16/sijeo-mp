@@ -23,15 +23,34 @@
             background-repeat: no-repeat;
 
         }
-        .btn:hover{
+
+        .btn:hover {
             color: white !important;
             background-color: #FFA931 !important;
         }
-        #link-daftar:hover{
+
+        #link-daftar:hover {
             color: black !important;
         }
-        #link-lupasandi:hover{
+
+        #link-lupasandi:hover {
             color: #FFA931 !important;
+        }
+
+        .btngoogle {
+            background-color: #FAFAFA;
+            border-color: #333;
+            width: 100%;
+            font-weight: 500;
+            font-size: 24px;
+            height: 70px;
+            padding: 10px;
+        }
+
+        .imggoogle {
+            width: auto;
+            height: 80%;
+            margin-right: 10px;
         }
     </style>
 </head>
@@ -44,12 +63,14 @@
                     <!-- <img src="<?= base_url(); ?>/img/login image.png" class="img-fluid" alt="" style="height: 20cm; width: 100%; ";> -->
                 </div>
                 <div style="height: 100%;" class="col-5 mt-5">
-                    <div class="row">
+                    <div class="row mb-5">
                         <div class="col" style="text-align: left; margin-left: 40px;">
                             <h2 style="font-size: 40px; font-weight: 600;">Masuk</h2>
                         </div>
                     </div>
-                    <br><br><br><br><br><br><br>
+                    <div class="mb-3 mt-3 d-flex flex-row mb-5" style="margin-left: 50px; margin-right: 50px;">
+                        <button class="btn btngoogle"><img class="imggoogle" style="margin-left: ;" src="<?= base_url(); ?>img/logo google.png" alt=""> Google</button>
+                    </div>
                     <div class="d-flex px-4" style="margin-left: 20px; margin-right: 40px;">
                         <div class="flex-fill">
                             <hr style="color: #959698; border: 1px solid;">
@@ -93,6 +114,7 @@
                         <h5 style="font-size: 15px; text-align: center; font-weight: 500;">Belum Punya Akun? <a href="http://localhost:8080/register" style="color: #FFA931; text-decoration: none;" id="link-daftar">Daftar</a></h5>
                     </form>
                     <br>
+
                 </div>
             </div>
         </div>

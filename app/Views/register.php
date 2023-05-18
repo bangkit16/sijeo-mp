@@ -22,7 +22,7 @@
             background-repeat: no-repeat;
             /* background-attachment: fixed; */
             background-position: center;
-            background-position-y: 70px;
+            background-position-y: 90px;
         }
 
         .form-container {
@@ -38,7 +38,7 @@
             height: 100%;
             margin: 54px;
             padding: 50px;
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 1);
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
@@ -86,22 +86,62 @@
             font-size: 24px;
             font-weight: 400;
         }
+
+        .btngoogle {
+            background-color: #FAFAFA;
+            border-color: #333;
+            width: 100%;
+            font-weight: 500;
+            font-size: 24px;
+            height: 70px;
+            padding: 10px;
+        }
+
+        .imggoogle {
+            width: auto;
+            height: 80%;
+            margin-right: 10px;
+        }
+
+        .kiri {
+            width: 100%;
+            /* width: 682px; */
+            height: 100%;
+            margin: 54px;
+            padding: 50px;
+
+        }
     </style>
 </head>
 
 <body>
     <div class="container-fluid">
         <div class="row form-container ">
-            <div class="col-6 ">
-
+            <div class="col-6 d-flex align-self-start">
+                <div class="kiri d-flex flex-column">
+                    <span style="font-weight: 500; font-size: 32px;">Persiapkan Acara dengan Beragam Kemudahan & Penawaran Eksklusif</span>
+                    <span style="font-weight: 400; font-size: 23px;">Daftar sekarang & dapatkan harga terbaik untuk lengkapi kebutuhan acara Anda</span>
+                    <img class="mt-5" style="width: 100px;" src="<?= base_url(); ?>img/standard.png" alt="">
+                    <span style="font-weight: 500; font-size: 24px;">Vendor & Produk Terlengkap</span>
+                    <span style="font-weight: 400; font-size: 23px;">Lengkapi kebutuhan pernikahan Anda dengan 5.000+ pilihan produk dari 20.000 vendor acara profesional</span>
+                    <img class="mt-5" style="width: 100px;" src="<?= base_url(); ?>img/shopping-cart (1).png" alt="">
+                    <span style="font-weight: 500; font-size: 24px;">Sesuaikan Pesanan dengan Impian Anda</span>
+                    <span style="font-weight: 400; font-size: 23px;">Ingin menyesuaikan pesanan dengan kebutuhan? Konsultasikan bersama vendor & pesan produk sesuai keinginan Anda</span>
+                    <img class="mt-5" style="width: 100px;" src="<?= base_url(); ?>img/social-marketing.png" alt="">
+                    <span style="font-weight: 500; font-size: 24px;">Promo Eksklusif & Hadiah Menarik</span>
+                    <span style="font-weight: 400; font-size: 23px;">Jangan lewatkan kesempatan untuk memesan vendor dengan promo eksklusif di Si Jeo & beragam hadiah menarik selama online event!</span>
+                </div>
             </div>
             <div class="col-6 d-flex justify-content-center ">
-                <div class="login-form">
+                <div class="login-form d-flex">
                     <form action="<?= base_url(); ?>Customer/register" method="post">
                         <div class="row ">
                             <div class="col" style="text-align: left; ">
                                 <h2 style="font-size: 40px; font-weight: 500;">Daftar</h2>
                             </div>
+                        </div>
+                        <div class="mb-3 mt-3 d-flex flex-row mb-5">
+                            <button class="btn btngoogle"><img class="imggoogle" src="<?= base_url(); ?>img/logo google.png" alt=""> Google</button>
                         </div>
                         <div class="row ">
                             <div class="d-flex flex-row justify-content-center align-items-center py-auto">
@@ -138,6 +178,12 @@
                         </div>
                         <div class="mb-3 mt-3 d-flex flex-row mb-5">
                             <button type="submit" class="btn btnreg b">Lanjutkan</button>
+                        </div>
+                        <div class="mt-3 d-flex flex-row mb-5 justify-content-center">
+                            <span style="font-weight: 400;font-size: 16px; " class="align-self-center">Dengan mendaftar, saya menyetujui <a href="" style="color: #FFA931;text-decoration: none;">Syarat dan Ketentuan</a> Si Jeo</span>
+                        </div>
+                        <div class="mb-2 mt-1 d-flex flex-row justify-content-center">
+                            <span style="font-weight: 500;font-size: 20px;  margin-top: 50px;">Sudah Punya Akun? <a href="<?= base_url(); ?>login" style="color: #FFA931;text-decoration: none;">Masuk</a></span>
                         </div>
                     </form>
                 </div>
