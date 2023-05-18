@@ -23,11 +23,20 @@ class Customer extends BaseController
         if ($user) {
 
             if ($user['password_customer'] == $password) {
-                // dd($_SESSION['leveluser']);
+                $_SESSION['username'] = $user['nama_customer'];
                 return redirect()->to(base_url() . ' ');
             }
         }
         return redirect()->to(base_url() . 'login');
+    }
+    public function logout()
+    {
+        // unset($_SESSION['username']);
+        // unset($_SESSION['leveluser']);
+
+        session()->remove('username');
+
+        return redirect()->to(base_url());
     }
     public function register()
     {

@@ -15,28 +15,12 @@ class Home extends BaseController
 
     public function index()
     {
-        $admin = $this->adminModel->findAll();
-        $data = [
-            'admin' => $admin,
-        ];
-        return view('landingPage.php', $data);
+        return view('landingPage.php');
     }
-    public function tes()
-    {
-        $admin = $this->adminModel->findAll();
-        $data = [
-            'admin' => $admin,
-        ];
-        return view('tesView.php', $data);
-    }
+    
     public function login()
     {
-        $admin = $this->adminModel->findAll();
-        $data = [
-            'admin' => $admin,
-        ];
-        
-        return view('login.php', $data);
+        return view('login.php');
     }
     public function register()
     {
