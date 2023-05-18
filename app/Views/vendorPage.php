@@ -25,6 +25,9 @@
             background-size: cover;
             background-repeat: no-repeat;
         }
+        #link-nav2:hover{
+            color: #FFA931 !important;
+        }
     </style>
 </head>
 <body>
