@@ -7,7 +7,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     <title>Vendor SI JEO</title>
     <style>
         * {
@@ -43,6 +45,26 @@
             border-color: #FFA931;
             color: #FFA931;
             font-size: 14px;
+            padding: 3px 28px;
+        }
+
+        .btnpesan {
+            background-color: #FFA931;
+            color: white;
+            font-size: 14px;
+            padding: 3px 28px;
+            height: 50px;
+            width: 210px;
+            font-weight: 600;
+        }
+
+        .btnchat {
+            height: 50px;
+            width: 175px;
+            font-size: 18px;
+            font-weight: 600;
+            border-color: #FFA931;
+            color: #FFA931;
             padding: 3px 28px;
         }
 
@@ -88,6 +110,21 @@
 
         #link-nav2:hover {
             color: #FFA931 !important;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .flex-item {
+            flex: 1 1 33%;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        .img-fluid {
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -185,6 +222,89 @@
             </div>
         </div>
     </div>
+    <div class="container-fluid px-5 mt-5">
+        <div class="row">
+            <div class="col-5">
+                <div class="d-flex flex-column">
+                    <div class="p-1 mx-auto">
+                        <div class="flex-item">
+                            <img src="<?= base_url(); ?>img/vendor-img-4.jpg" class="img-fluid" alt="Big Product Image">
+                        </div>
+                    </div>
+                    <div class="p-1 d-flex flex-row ">
+                        <div class="flex-item">
+                            <img src="<?= base_url(); ?>img/vendor-img-2.jpg" class="img-fluid" alt="Small Product Image">
+                        </div>
+                        <div class="flex-item">
+                            <img src="<?= base_url(); ?>img/vendor-img-3.jpg" class="img-fluid" alt="Small Product Image">
+                        </div>
+                        <div class="flex-item">
+                            <img src="<?= base_url(); ?>img/vendor-img-1.jpg" class="img-fluid" alt="Small Product Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-7 pt-1">
+
+                <span style="font-weight: 600;font-size: 30px;">Paket Platinum Acara Dies Natalis ALEA (Decoration) 2023 untuk Mahasiswa</span><br>
+                <span style="color: #FFA931; font-weight: 500;font-size: 30px;">IDR 20.000.000</span>
+                <div style="margin-top: 5rem;" class="d-flex flex-row align-items-center">
+                    <div class="d-flex align-items-center">
+                        <a style="font-size: 18px;" class="d-flex btn align-items-center justify-content-center btnchat" href="http://localhost:8080/login" id="btn-masuk">Chat</a>
+                    </div>
+                    <div class="mx-2 d-flex align-items-center">
+                        <a style="font-size: 18px;" class="d-flex btn btnpesan align-items-center justify-content-center my-auto" href="http://localhost:8080/register" id="btn-daftar">Pesan Sekarang</a>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 1</h5>
+                        <p class="card-text">Product description</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 2</h5>
+                        <p class="card-text">Product description</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 3</h5>
+                        <p class="card-text">Product description</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 4</h5>
+                        <p class="card-text">Product description</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>

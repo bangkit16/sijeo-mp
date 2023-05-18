@@ -17,7 +17,7 @@ class Home extends BaseController
     {
         return view('landingPage.php');
     }
-    
+
     public function login()
     {
         return view('login.php');
@@ -29,5 +29,9 @@ class Home extends BaseController
     public function vendorPage()
     {
         return view('vendorPage.php');
+    }
+    public function detail()
+    {
+        return view('detail.php');
     }
 }
