@@ -77,6 +77,15 @@
             border-style: none;
             outline-style: none !important;
         }
+
+        .btnreg {
+            background-color: #959698;
+            width: 100%;
+            height: 70px;
+            color: white;
+            font-size: 24px;
+            font-weight: 400;
+        }
     </style>
 </head>
 
@@ -88,7 +97,7 @@
             </div>
             <div class="col-6 d-flex justify-content-center ">
                 <div class="login-form">
-                    <form>
+                    <form action="<?= base_url(); ?>Customer/register" method="post">
                         <div class="row ">
                             <div class="col" style="text-align: left; ">
                                 <h2 style="font-size: 40px; font-weight: 500;">Daftar</h2>
@@ -109,26 +118,26 @@
                             </div>
                         </div>
                         <div class="mb-3 mt-3 d-flex flex-row mb-5">
-                            <input type="text" class="form-control" placeholder="Nama Depan">
+                            <input name="nama" type="text" class="form-control" placeholder="Nama Lengkap">
                         </div>
                         <div class="mb-3 mt-3 d-flex flex-row mb-5">
-                            <input type="text" class="form-control" placeholder="Email">
+                            <input name="email" type="text" class="form-control" placeholder="Email">
                         </div>
                         <div class="mb-3 mt-3 d-flex flex-row mb-5">
-                            <input type="text" class="form-control" placeholder="Kata Sandi">
+                            <input name="password" type="text" class="form-control" placeholder="Kata Sandi">
                         </div>
                         <div class="mb-3 mt-3 d-flex flex-row mb-5">
-                            <input type="text" class="form-control" placeholder="Nomor Handphone">
+                            <input name="nohp" type="text" class="form-control" placeholder="Nomor Handphone">
                         </div>
                         <div class="mb-3 mt-3 d-flex flex-row mb-5">
-                            <input type="text" class="form-control" placeholder="Alamat">
+                            <input name="alamat" type="text" class="form-control" placeholder="Alamat">
                         </div>
                         <div class="mb-3 mt-3 d-flex flex-row mb-5">
-                            <input class="form-check-input mx-2" type="checkbox" value="">
+                            <input name="sendemail" class="form-check-input mx-2" type="checkbox" value="">
                             <p>Saya ingin menerima email promo dan newsletter dari Si Jeo dan rekannya</p>
                         </div>
                         <div class="mb-3 mt-3 d-flex flex-row mb-5">
-                            <button type="submit" class="btn btn-primary">Login</button>
+                            <button type="submit" class="btn btnreg b">Lanjutkan</button>
                         </div>
                     </form>
                 </div>

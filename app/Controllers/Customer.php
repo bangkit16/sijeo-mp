@@ -24,13 +24,21 @@ class Customer extends BaseController
 
             if ($user['password_customer'] == $password) {
                 // dd($_SESSION['leveluser']);
-                return redirect()->to(base_url() . '/ ');
+                return redirect()->to(base_url() . ' ');
             }
         }
-        return redirect()->to(base_url() . '/login');
+        return redirect()->to(base_url() . 'login');
     }
-    public function register(){
-        
+    public function register()
+    {
+        $this->customerModel->save([
+            'nama_customer' => $this->request->getVar('nama'),
+            'password_customer' => md5($this->request->getVar('password')),
+            'email_customer' => $this->request->getVar('email'),
+            'no_hp_customer' => $this->request->getVar('nohp'),
+            'alamat_customer' => $this->request->getVar('alamat'),
+            // 'no_hp' => $this->request->getVar('')
+        ]);
+        return redirect()->to(base_url());
     }
-
 }
