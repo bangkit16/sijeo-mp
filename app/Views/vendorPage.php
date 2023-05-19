@@ -91,14 +91,14 @@
         }
 
         .gallery {
-            padding: 1rem;
+            padding-left: 5rem;
             display: grid;
             grid-template-columns: repeat(10, 80vw);
             grid-template-rows: 1fr;
             grid-column-gap: 1rem;
             grid-row-gap: 1rem;
-            overflow: scroll;
-            height: 90vh;
+            overflow: hidden;
+            /* height: 90vh; */
             scroll-snap-type: both mandatory;
             scroll-padding: 1rem;
         }
@@ -112,6 +112,13 @@
             display: inline-block;
             border-radius: 3px;
             font-size: 0;
+            overflow: hidden;
+            padding: 5rem;
+            height: 100%;
+        }
+
+        li img {
+            border-radius: 25px;
         }
     </style>
 </head>
@@ -119,7 +126,7 @@
 <body>
     <nav>
         <div class="container-fluid text-center sticky-top" style="background-color: white;">
-            <div class=" d-flex flex-row align-items-center justify-content-end p-2">
+            <!-- <div class=" d-flex flex-row align-items-center justify-content-end p-2">
                 <div class="mx-3" style="font-size: 14px;">
                     <img src="<?= base_url(); ?>/img/vector rasyid.png" class="img-fluid" style="width: 30px; height: 30px; border-radius: 100%;">
                     <span>&nbsp;&nbsp;&nbsp;Rasyid Razeka</span>
@@ -209,10 +216,10 @@
         </div>
     </div>
     <div class="container-fluid text-center" style="background-color: white;">
-        <ul class="gallery">
-            <li><img src="<?= base_url(); ?>/img/vendor car 1.png" class="img-fluid"></li>
-            <li style="background: #f7ede2;"></li>
-            <li style="background: #f5cac3;"></li>
+        <ul class="gallery align-items-center">
+            <li><img style="width: 100%;" src="<?= base_url(); ?>/img/vendor car 1.png" class="img-fluid"></li>
+            <li><img style="width: 100%;" src="<?= base_url(); ?>/img/vendor car 2.png" class="img-fluid"></li>
+            <li><img style="width: 100%;" src="<?= base_url(); ?>/img/vendor car 3.png" class="img-fluid"></li>
         </ul>
     </div>
     <script>
