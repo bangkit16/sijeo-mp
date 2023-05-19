@@ -34,6 +34,7 @@ $routes->get('/', 'Home::index');
 $routes->get('/login', 'Home::login');
 $routes->get('/register', 'Home::register');
 $routes->get('/vendor', 'Home::vendorPage');
+$routes->get('/detail', 'Home::detail');
 
 
 
