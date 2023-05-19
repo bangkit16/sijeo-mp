@@ -227,6 +227,7 @@
 
                 <span style="font-weight: 600;font-size: 30px;">Paket Platinum Acara Dies Natalis ALEA (Decoration) 2023 untuk Mahasiswa</span><br>
                 <span style="color: #FFA931; font-weight: 500;font-size: 30px;">IDR 20.000.000</span>
+                <br><br><br><br><br>
                 <div style="margin-top: 5rem;" class="d-flex flex-row align-items-center">
                     <div class="d-flex align-items-center">
                         <a style="font-size: 18px;" class="d-flex btn align-items-center justify-content-center btnchat" href="http://localhost:8080/login" id="btn-masuk">Chat</a>
@@ -238,7 +239,7 @@
                 <hr>
                 <span style="font-weight: 600;font-size: 30px;">DETAIL PAKET</span>
                 <hr>
-
+                <div class="row-7"></div>
             </div>
         </div>
     </div>
