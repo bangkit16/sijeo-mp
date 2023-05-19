@@ -126,7 +126,7 @@
 <body>
     <nav>
         <div class="container-fluid text-center sticky-top" style="background-color: white;">
-            <!-- <div class=" d-flex flex-row align-items-center justify-content-end p-2">
+            <div class=" d-flex flex-row align-items-center justify-content-end p-2">
                 <div class="mx-3" style="font-size: 14px;">
                     <img src="<?= base_url(); ?>/img/vector rasyid.png" class="img-fluid" style="width: 30px; height: 30px; border-radius: 100%;">
                     <span>&nbsp;&nbsp;&nbsp;Rasyid Razeka</span>
