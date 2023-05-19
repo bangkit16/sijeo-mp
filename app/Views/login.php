@@ -23,14 +23,17 @@
             background-repeat: no-repeat;
 
         }
-        .btn:hover{
+
+        .btn:hover {
             color: white !important;
             background-color: #FFA931 !important;
         }
-        #link-daftar:hover{
+
+        #link-daftar:hover {
             color: black !important;
         }
-        #link-lupasandi:hover{
+
+        #link-lupasandi:hover {
             color: #FFA931 !important;
         }
     </style>

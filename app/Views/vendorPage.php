@@ -31,12 +31,36 @@
         #link-nav2:hover {
             color: #FFA931 !important;
         }
+
+        .gallery {
+            padding: 1rem;
+            display: grid;
+            grid-template-columns: repeat(10, 80vw);
+            grid-template-rows: 1fr;
+            grid-column-gap: 1rem;
+            grid-row-gap: 1rem;
+            overflow: scroll;
+            height: 90vh;
+            scroll-snap-type: both mandatory;
+            scroll-padding: 1rem;
+        }
+
+        .active {
+            scroll-snap-type: unset;
+        }
+
+        li {
+            scroll-snap-align: center;
+            display: inline-block;
+            border-radius: 3px;
+            font-size: 0;
+        }
     </style>
 </head>
 
 <body>
     <nav>
-        <div class="container-fluid text-center sticky-top" style="background-color: white;">
+        <div class="container-fluid text-center" style="background-color: white;">
             <div class=" d-flex flex-row align-items-center justify-content-end p-2">
                 <div class="mx-3" style="font-size: 14px;">
                     <img src="<?= base_url(); ?>/img/vector rasyid.png" class="img-fluid" style="width: 30px; height: 30px; border-radius: 100%;">
@@ -62,7 +86,6 @@
     </nav>
     <div class="container-fluid text-center bg-1-lanpaggue sticky-top">
         <div class="d-flex flex-row align-items-center justify-content-end p-2">
-
             <div class="me-auto">
                 <a href="http://localhost:8080/"><img src="<?= base_url(); ?>/img/logo si jeo.png" class="img-fluid" style="width: auto; height: 60px"></a>
             </div>
@@ -86,6 +109,42 @@
             </div>
         </div>
     </div>
+    <div class="container-fluid text-center" style="background-color: white;">
+        <ul class="gallery">
+            <li><img src="<?= base_url(); ?>/img/vendor car 1.png" class="img-fluid"></li>
+            <li style="background: #f7ede2;"></li>
+            <li style="background: #f5cac3;"></li>
+        </ul>
+    </div>
+    <script>
+        const slider = document.querySelector('.gallery');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        slider.addEventListener('mousedown', e => {
+            isDown = true;
+            slider.classList.add('active');
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+        slider.addEventListener('mouseleave', _ => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+        slider.addEventListener('mouseup', _ => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+        slider.addEventListener('mousemove', e => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const SCROLL_SPEED = 3;
+            const walk = (x - startX) * SCROLL_SPEED;
+            slider.scrollLeft = scrollLeft - walk;
+        });
+    </script>
 </body>
 
 </html>
