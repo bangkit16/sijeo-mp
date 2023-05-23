@@ -239,19 +239,68 @@
                 <hr>
                 <span style="font-weight: 600;font-size: 30px;">DETAIL PAKET</span>
                 <hr>
-                <div class="d-flex flex-row align-items-center">
-                    <div class="mx-1" style="color: #8A8888;">
-                        <span>AREA PELAYANAN&nbsp;&nbsp;</span>
-                    </div>
-                    <div class="mx-1">
-                        <span>Wilayah Malang dan sekitarnya</span>
+                <div class="container-fluid" style="text-align: justify;">
+                    <div class="row row-cols-auto">
+                        <div class="col-3">
+                            <ul class="px-0" style="list-style: none; color: #8A8888;">
+                                <li>AREA PELAYANAN</li>
+                                <li>KAPASITAS ORANG</li>
+                                <li>PERIODE ACARA</li>
+                                <li>DETAIL FASILITAS</li>
+                            </ul>
+                        </div>
+                        <div class="col-9">
+                            <ul class="px-1" style="list-style: none;">
+                                <li><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="black" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                    </svg> Wilayah Malang dan sekitarnya</li>
+                                <li>Max. 5000 orang</li>
+                                <li>Max. 3 hari</li>
+                                <li>1. Dekorasi:
+                                    <ul style="list-style: disc;">
+                                        <li>Dekorasi panggung utama dengan backdrop yang mencakup logo universitas atau tema Dies Natalis.</li>
+                                        <li>Pengaturan bunga segar atau bunga artifisial yang menarik perhatian di sekitar panggung dan area acara.</li>
+                                        <li>Penggunaan balon kustom dengan warna dan desain yang sesuai dengan tema acara.</li>
+                                    </ul>
+                                    2. Pencahayaan:
+                                    <ul style="list-style: disc;">
+                                        <li>Pencahayaan profesional yang menghasilkan efek dramatis dan atmosfer yang tepat.</li>
+                                        <li>Penggunaan lampu sorot untuk memberikan penekanan pada panggung, backdrop, atau elemen dekorasi khusus lainnya.</li>
+                                    </ul>
+                                    3. Hiasan Meja dan Kursi:
+                                    <ul style="list-style: disc;">
+                                        <li>Pengaturan meja dan kursi dengan taplak meja yang elegan dan hiasan meja yang sesuai dengan tema.</li>
+                                        <li>Penambahan aksesori seperti pita, kain, atau dekorasi tambahan yang menambahkan sentuhan mewah.</li>
+                                    </ul>
+                                    4. Pemasangan Backdrop dan Display:
+                                    <ul style="list-style: disc;">
+                                        <li>Pembuatan backdrop yang menampilkan tema Dies Natalis atau logo universitas dengan desain khusus.</li>
+                                        <li>Penggunaan display atau papan pengumuman yang menampilkan informasi acara dan prestasi universitas.</li>
+                                    </ul>
+                                    5. Aksesori dan Hiasan Tambahan:
+                                    <ul style="list-style: disc;">
+                                        <li>Penggunaan bendera, poster, atau banner yang menggambarkan semangat Dies Natalis dan pencapaian universitas.</li>
+                                        <li>Hiasan tambahan seperti gantungan kertas, bunga kertas, atau elemen dekoratif lainnya yang mendukung tema acara.</li>
+                                    </ul>
+                                    6. Peralatan dan Perlengkapan:
+                                    <ul style="list-style: disc;">
+                                        <li>Penyediaan peralatan suara dan pencahayaan yang berkualitas untuk memastikan kelancaran acara.</li>
+                                        <li>Pengaturan panggung dan area acara dengan perlengkapan seperti podium, mikrofon, layar proyektor, atau peralatan teknis lainnya.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <hr>
+        <div class="container-fluid text-center">
+            <h2>PAKET EVENT TERKAIT LAINNYA</h2>
+            
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 
 </html>
