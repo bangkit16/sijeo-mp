@@ -239,7 +239,14 @@
                 <hr>
                 <span style="font-weight: 600;font-size: 30px;">DETAIL PAKET</span>
                 <hr>
-                <div class="row-7"></div>
+                <div class="d-flex flex-row align-items-center">
+                    <div class="mx-1" style="color: #8A8888;">
+                        <span>AREA PELAYANAN&nbsp;&nbsp;</span>
+                    </div>
+                    <div class="mx-1">
+                        <span>Wilayah Malang dan sekitarnya</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
