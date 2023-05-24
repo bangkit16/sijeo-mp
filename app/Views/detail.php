@@ -298,53 +298,56 @@
         <div class="container-fluid text-center">
             <h2>PAKET EVENT TERKAIT LAINNYA</h2>
             <br>
-            <div class="row row-cols-1 row-cols-md-5 g-4">
+            <div class="row row-cols-1 row-cols-md-5 g-4" style="text-align: start;">
                 <div class="col">
                     <div class="card">
-                        <img src="<?= base_url(); ?>/img/vector rasyid.png" class="img-fluid">
+                        <img src="<?= base_url(); ?>/img/card detail 1.png" class="card-img-top img-fluid" style="height: 276,04px;">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <h5 class="card-title">Paket Platinum Acara Dies Natalis ALEA (Decoration) 2023 untuk Mahasiswa</h5>
+                            <p class="card-text" style="color: #FFA931;">Rp 20.000.000</p>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="<?= base_url(); ?>/img/card detail 2.png" class="card-img-top img-fluid" style="height: 276,04px;">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <h5 class="card-title">Eksklusif Webinar untuk Acara Perusahaan (Bundle Package)</h5>
+                            <p class="card-text" style="color: #FFA931;">Rp 12.000.000</p>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="<?= base_url(); ?>/img/card detail 3.png" class="card-img-top img-fluid" style="height: 276,04px;">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                            <h5 class="card-title">Paket Bundle Bazar All In Event</h5>
+                            <br><br>
+                            <p class="card-text" style="color: #FFA931;">Rp 10.000.000-Rp 25.000.000</p>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="<?= base_url(); ?>/img/card detail 4.png" class="card-img-top img-fluid" style="height: 276,04px;">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <h5 class="card-title">Dies Natalis Eksklusif untuk Perusahaan (All Event Decoration)</h5>
+                            <br>
+                            <p class="card-text" style="color: #FFA931;">Rp 22.275.000</p>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="<?= base_url(); ?>/img/card detail 5.png" class="card-img-top img-fluid" style="height: 276,04px;">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <h5 class="card-title">EVENTLY PROJECT Seminar & Webinar Bundle Package untuk Semua Acara</h5>
+                            <p class="card-text" style="color: #FFA931;">Rp 12.00.000-Rp 25.000.000</p>
                         </div>
                     </div>
                 </div>
             </div>
+            <br>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     </div>
