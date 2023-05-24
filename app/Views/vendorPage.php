@@ -90,35 +90,31 @@
             color: #FFA931 !important;
         }
 
-        .gallery {
-            padding-left: 5rem;
-            display: grid;
-            grid-template-columns: repeat(10, 80vw);
-            grid-template-rows: 1fr;
-            grid-column-gap: 1rem;
-            grid-row-gap: 1rem;
-            overflow: hidden;
-            /* height: 90vh; */
-            scroll-snap-type: both mandatory;
-            scroll-padding: 1rem;
+        /* .carousel-inner .carousel-item-next.carousel-item-start,
+        .carousel-inner .carousel-item-prev.carousel-item-end {
+            transform: translateX(50%);
         }
 
-        .active {
-            scroll-snap-type: unset;
+        .carousel-inner .carousel-item-start.active,
+        .carousel-inner .carousel-item-end.active {
+            transform: translateX(0);
+        } */
+
+        .carousel-inner .carousel-item-start,
+        .carousel-inner .carousel-item-end {
+            transition: transform 0.5s ease-in-out;
         }
 
-        li {
-            scroll-snap-align: center;
-            display: inline-block;
-            border-radius: 3px;
-            font-size: 0;
-            overflow: hidden;
-            padding: 5rem;
-            height: 100%;
-        }
-
-        li img {
+        .carousel-item {
             border-radius: 25px;
+            min-height: 200px;
+            overflow: hidden;
+        }
+
+        .carousel-item img {
+            border-radius: 25px;
+            height: 100%;
+            width: auto;
         }
     </style>
 </head>
@@ -126,27 +122,6 @@
 <body>
     <nav>
         <div class="container-fluid text-center sticky-top" style="background-color: white;">
-            <div class=" d-flex flex-row align-items-center justify-content-end p-2">
-                <div class="mx-3" style="font-size: 14px;">
-                    <img src="<?= base_url(); ?>/img/vector rasyid.png" class="img-fluid" style="width: 30px; height: 30px; border-radius: 100%;">
-                    <span>&nbsp;&nbsp;&nbsp;Rasyid Razeka</span>
-                </div>
-                <div class="mx-3 garis_vertikal" style="font-size: 14px;">
-
-                </div>
-                <div class="mx-3" style="font-size: 14px;">
-                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 25px; height: 25px; fill: black;">
-                            <title>bell-ring-outline</title>
-                            <path d="M10,21H14A2,2 0 0,1 12,23A2,2 0 0,1 10,21M21,19V20H3V19L5,17V11C5,7.9 7.03,5.17 10,4.29C10,4.19 10,4.1 10,4A2,2 0 0,1 12,2A2,2 0 0,1 14,4C14,4.1 14,4.19 14,4.29C16.97,5.17 19,7.9 19,11V17L21,19M17,11A5,5 0 0,0 12,6A5,5 0 0,0 7,11V18H17V11M19.75,3.19L18.33,4.61C20.04,6.3 21,8.6 21,11H23C23,8.07 21.84,5.25 19.75,3.19M1,11H3C3,8.6 3.96,6.3 5.67,4.61L4.25,3.19C2.16,5.25 1,8.07 1,11Z" />
-                        </svg></a>
-                </div>
-                <div class="mx-3" style="font-size: 14px;">
-                    <a href="http://"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 25px; height: 25px; fill: black;">
-                            <title>message-processing-outline</title>
-                            <path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2M20 16H5.2L4 17.2V4H20V16M17 11H15V9H17M13 11H11V9H13M9 11H7V9H9" />
-                        </svg></a>
-                </div>
-            </div> -->
             <div class=" d-flex flex-row align-items-center justify-content-end p-2">
                 <?php if (isset($_SESSION['username'])) : ?>
                     <div class="mx-3" style="font-size: 14px;">
@@ -190,7 +165,7 @@
 
         </div>
     </nav>
-    <div class="container-fluid text-center bg-1-lanpaggue sticky-top">
+    <div class="container-fluid text-center bg-1-lanpaggue sticky-top shadow-sm ">
         <div class="d-flex flex-row align-items-center justify-content-end p-2">
             <div class="me-auto">
                 <a href="http://localhost:8080/"><img src="<?= base_url(); ?>/img/logo si jeo.png" class="img-fluid" style="width: auto; height: 60px"></a>
@@ -215,42 +190,35 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid text-center" style="background-color: white;">
-        <ul class="gallery align-items-center">
-            <li><img style="width: 100%;" src="<?= base_url(); ?>/img/vendor car 1.png" class="img-fluid"></li>
-            <li><img style="width: 100%;" src="<?= base_url(); ?>/img/vendor car 2.png" class="img-fluid"></li>
-            <li><img style="width: 100%;" src="<?= base_url(); ?>/img/vendor car 3.png" class="img-fluid"></li>
-        </ul>
-    </div>
-    <script>
-        const slider = document.querySelector('.gallery');
-        let isDown = false;
-        let startX;
-        let scrollLeft;
+    <div class="container">
 
-        slider.addEventListener('mousedown', e => {
-            isDown = true;
-            slider.classList.add('active');
-            startX = e.pageX - slider.offsetLeft;
-            scrollLeft = slider.scrollLeft;
-        });
-        slider.addEventListener('mouseleave', _ => {
-            isDown = false;
-            slider.classList.remove('active');
-        });
-        slider.addEventListener('mouseup', _ => {
-            isDown = false;
-            slider.classList.remove('active');
-        });
-        slider.addEventListener('mousemove', e => {
-            if (!isDown) return;
-            e.preventDefault();
-            const x = e.pageX - slider.offsetLeft;
-            const SCROLL_SPEED = 3;
-            const walk = (x - startX) * SCROLL_SPEED;
-            slider.scrollLeft = scrollLeft - walk;
-        });
-    </script>
+        <div id="carouselExampleAutoplaying" class="carousel slide mt-3" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="<?= base_url(); ?>img/vendor car 1.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="<?= base_url(); ?>img/vendor car 2.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="<?= base_url(); ?>img/vendor car 3.png" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
