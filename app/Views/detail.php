@@ -239,12 +239,115 @@
                 <hr>
                 <span style="font-weight: 600;font-size: 30px;">DETAIL PAKET</span>
                 <hr>
-                <div class="row-7"></div>
+                <div class="container-fluid" style="text-align: justify;">
+                    <div class="row row-cols-auto">
+                        <div class="col-3">
+                            <ul class="px-0" style="list-style: none; color: #8A8888;">
+                                <li>AREA PELAYANAN</li>
+                                <li>KAPASITAS ORANG</li>
+                                <li>PERIODE ACARA</li>
+                                <li>DETAIL FASILITAS</li>
+                            </ul>
+                        </div>
+                        <div class="col-9">
+                            <ul class="px-1" style="list-style: none;">
+                                <li><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="black" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                    </svg> Wilayah Malang dan sekitarnya</li>
+                                <li>Max. 5000 orang</li>
+                                <li>Max. 3 hari</li>
+                                <li>1. Dekorasi:
+                                    <ul style="list-style: disc;">
+                                        <li>Dekorasi panggung utama dengan backdrop yang mencakup logo universitas atau tema Dies Natalis.</li>
+                                        <li>Pengaturan bunga segar atau bunga artifisial yang menarik perhatian di sekitar panggung dan area acara.</li>
+                                        <li>Penggunaan balon kustom dengan warna dan desain yang sesuai dengan tema acara.</li>
+                                    </ul>
+                                    2. Pencahayaan:
+                                    <ul style="list-style: disc;">
+                                        <li>Pencahayaan profesional yang menghasilkan efek dramatis dan atmosfer yang tepat.</li>
+                                        <li>Penggunaan lampu sorot untuk memberikan penekanan pada panggung, backdrop, atau elemen dekorasi khusus lainnya.</li>
+                                    </ul>
+                                    3. Hiasan Meja dan Kursi:
+                                    <ul style="list-style: disc;">
+                                        <li>Pengaturan meja dan kursi dengan taplak meja yang elegan dan hiasan meja yang sesuai dengan tema.</li>
+                                        <li>Penambahan aksesori seperti pita, kain, atau dekorasi tambahan yang menambahkan sentuhan mewah.</li>
+                                    </ul>
+                                    4. Pemasangan Backdrop dan Display:
+                                    <ul style="list-style: disc;">
+                                        <li>Pembuatan backdrop yang menampilkan tema Dies Natalis atau logo universitas dengan desain khusus.</li>
+                                        <li>Penggunaan display atau papan pengumuman yang menampilkan informasi acara dan prestasi universitas.</li>
+                                    </ul>
+                                    5. Aksesori dan Hiasan Tambahan:
+                                    <ul style="list-style: disc;">
+                                        <li>Penggunaan bendera, poster, atau banner yang menggambarkan semangat Dies Natalis dan pencapaian universitas.</li>
+                                        <li>Hiasan tambahan seperti gantungan kertas, bunga kertas, atau elemen dekoratif lainnya yang mendukung tema acara.</li>
+                                    </ul>
+                                    6. Peralatan dan Perlengkapan:
+                                    <ul style="list-style: disc;">
+                                        <li>Penyediaan peralatan suara dan pencahayaan yang berkualitas untuk memastikan kelancaran acara.</li>
+                                        <li>Pengaturan panggung dan area acara dengan perlengkapan seperti podium, mikrofon, layar proyektor, atau peralatan teknis lainnya.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <hr>
+        <div class="container-fluid text-center">
+            <h2>PAKET EVENT TERKAIT LAINNYA</h2>
+            <br>
+            <div class="row row-cols-1 row-cols-md-5 g-4">
+                <div class="col">
+                    <div class="card">
+                        <img src="<?= base_url(); ?>/img/vector rasyid.png" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 
 </html>
