@@ -264,7 +264,7 @@
                         <a style="font-size: 18px;" class="d-flex btn align-items-center justify-content-center btnchat" href="http://localhost:8080/login" id="btn-masuk">Chat</a>
                     </div>
                     <div class="mx-2 d-flex align-items-center">
-                        <button style="font-size: 18px;" class="d-flex btn btnpesan align-items-center justify-content-center my-auto" id="btn-daftar myInput">Pesan Sekarang</button>
+                        <button style="font-size: 18px;" class="d-flex btn btnpesan align-items-center justify-content-center my-auto" id="btn-daftar" data-bs-toggle="modal" data-bs-target="#exampleModal">Pesan Sekarang</button>
                     </div>
                 </div>
                 <hr>
@@ -384,49 +384,49 @@
             </div>
             <br><br>
         </div>
-        <!-- Vertically centered modal -->
-        <div class="modal-dialog modal-dialog-centered">
-            ...
-        </div>
 
-        <!-- Vertically centered scrollable modal -->
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-            ...
-        </div><!-- Vertically centered modal -->
-        <div class="modal-dialog modal-dialog-centered">
-            ...
-        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-body text-center">
+                        <h3>Pesan Sekarang</h3>
+                        <div class="row row-cols-auto" style="height: 123px; width: 589px; align-items: center; border-color: black;">
+                            <div class="col-3">
+                                <img src="<?= base_url(); ?>/img/vector rasyid.png" class="img-fluid">
+                            </div>
+                            <div class="col-9 d-flex flex-column justify-content-center">
+                                <span>Paket Platinum Acara Dies Natalis ALEA (Decoration) - Ready...</span>
+                                <span style="color: #FFA931;">IDR 20.000.000</span>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+            <script>
+                function selengkapnya() {
+                    var dots = document.getElementById("dots");
+                    var moreText = document.getElementById("more");
+                    var btnText = document.getElementById("selengkapnya");
 
-        <!-- Vertically centered scrollable modal -->
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-            ...
-        </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script>
-            const myModal = document.getElementById('myModal')
-            const myInput = document.getElementById('myInput')
-
-            myModal.addEventListener('shown.bs.modal', () => {
-                myInput.focus()
-            })
-
-            function selengkapnya() {
-                var dots = document.getElementById("dots");
-                var moreText = document.getElementById("more");
-                var btnText = document.getElementById("selengkapnya");
-
-                if (dots.style.display === "none") {
-                    dots.style.display = "inline";
-                    btnText.innerHTML = "Lihat Lebih Banyak";
-                    moreText.style.display = "none";
-                } else {
-                    dots.style.display = "none";
-                    btnText.innerHTML = "Lihat Lebih Sedikit";
-                    moreText.style.display = "inline";
+                    if (dots.style.display === "none") {
+                        dots.style.display = "inline";
+                        btnText.innerHTML = "Lihat Lebih Banyak";
+                        moreText.style.display = "none";
+                    } else {
+                        dots.style.display = "none";
+                        btnText.innerHTML = "Lihat Lebih Sedikit";
+                        moreText.style.display = "inline";
+                    }
                 }
-            }
-        </script>
-    </div>
+            </script>
+        </div>
 </body>
 
 </html>
