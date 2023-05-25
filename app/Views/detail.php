@@ -135,6 +135,11 @@
         #more {
             display: none;
         }
+
+        .custom-form {
+            border-bottom: 1px solid black !important;
+            border-radius: 0%;
+        }
     </style>
 </head>
 
@@ -273,54 +278,69 @@
                 <div class="container-fluid" style="text-align: justify;">
                     <div class="row row-cols-auto">
                         <div class="col-3">
-                            <ul class="px-0" style="list-style: none; color: #8A8888;">
-                                <li>AREA PELAYANAN</li>
-                                <li>KAPASITAS ORANG</li>
-                                <li>PERIODE ACARA</li>
-                                <li>DETAIL FASILITAS</li>
-                            </ul>
+                            <span>AREA PELAYANAN</span>
                         </div>
                         <div class="col-9">
-                            <ul class="px-1" style="list-style: none;">
-                                <li><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="black" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-                                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                                    </svg> Wilayah Malang dan sekitarnya</li>
-                                <li>Max. 5000 orang</li>
-                                <li>Max. 3 hari</li>
-                                <li>1. Dekorasi:
+                            <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="black" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                </svg> Wilayah Malang dan sekitarnya</span>
+                        </div>
+                    </div>
+                    <div class="row row-cols-auto">
+                        <div class="col-3">
+                            <span>KAPASITAS ORANG</span>
+                        </div>
+                        <div class="col-9">
+                            <span>Max. 5000 orang</span>
+                        </div>
+                    </div>
+                    <div class="row row-cols-auto">
+                        <div class="col-3">
+                            <span>PERIODE ACARA</span>
+                        </div>
+                        <div class="col-9">
+                            <span>Max. 3 hari</span>
+                        </div>
+                    </div>
+                    <div class="row row-cols-auto">
+                        <div class="col-3">
+                            <span>DETAIL FASILITAS</span>
+                        </div>
+                        <div class="col-9">
+                            <ul style="list-style: none;">
+                                <span>1. Dekorasi:</span>
+                                <ul style="list-style: disc;">
+                                    <li>Dekorasi panggung utama dengan backdrop yang mencakup logo universitas atau tema Dies Natalis.</li>
+                                    <li>Pengaturan bunga segar atau bunga artifisial yang menarik perhatian di sekitar panggung dan area acara.</li>
+                                    <li>Penggunaan balon kustom dengan warna dan desain yang sesuai dengan tema acara.</li>
+                                </ul>
+                                <span id="dots"></span><span id="more">
+                                    <span>2. Pencahayaan:</span>
                                     <ul style="list-style: disc;">
-                                        <li>Dekorasi panggung utama dengan backdrop yang mencakup logo universitas atau tema Dies Natalis.</li>
-                                        <li>Pengaturan bunga segar atau bunga artifisial yang menarik perhatian di sekitar panggung dan area acara.</li>
-                                        <li>Penggunaan balon kustom dengan warna dan desain yang sesuai dengan tema acara.</li>
+                                        <li>Pencahayaan profesional yang menghasilkan efek dramatis dan atmosfer yang tepat.</li>
+                                        <li>Penggunaan lampu sorot untuk memberikan penekanan pada panggung, backdrop, atau elemen dekorasi khusus lainnya.</li>
                                     </ul>
-                                    <span id="dots"></span><span id="more">
-                                        2. Pencahayaan:
-                                        <ul style="list-style: disc;">
-                                            <li>Pencahayaan profesional yang menghasilkan efek dramatis dan atmosfer yang tepat.</li>
-                                            <li>Penggunaan lampu sorot untuk memberikan penekanan pada panggung, backdrop, atau elemen dekorasi khusus lainnya.</li>
-                                        </ul>
-                                        3. Hiasan Meja dan Kursi:
-                                        <ul style="list-style: disc;">
-                                            <li>Pengaturan meja dan kursi dengan taplak meja yang elegan dan hiasan meja yang sesuai dengan tema.</li>
-                                            <li>Penambahan aksesori seperti pita, kain, atau dekorasi tambahan yang menambahkan sentuhan mewah.</li>
-                                        </ul>
-                                        4. Pemasangan Backdrop dan Display:
-                                        <ul style="list-style: disc;">
-                                            <li>Pembuatan backdrop yang menampilkan tema Dies Natalis atau logo universitas dengan desain khusus.</li>
-                                            <li>Penggunaan display atau papan pengumuman yang menampilkan informasi acara dan prestasi universitas.</li>
-                                        </ul>
-                                        5. Aksesori dan Hiasan Tambahan:
-                                        <ul style="list-style: disc;">
-                                            <li>Penggunaan bendera, poster, atau banner yang menggambarkan semangat Dies Natalis dan pencapaian universitas.</li>
-                                            <li>Hiasan tambahan seperti gantungan kertas, bunga kertas, atau elemen dekoratif lainnya yang mendukung tema acara.</li>
-                                        </ul>
-                                        6. Peralatan dan Perlengkapan:
-                                        <ul style="list-style: disc;">
-                                            <li>Penyediaan peralatan suara dan pencahayaan yang berkualitas untuk memastikan kelancaran acara.</li>
-                                            <li>Pengaturan panggung dan area acara dengan perlengkapan seperti podium, mikrofon, layar proyektor, atau peralatan teknis lainnya.</li>
-                                        </ul>
-                                    </span>
-                                </li>
+                                    <span>3. Hiasan Meja dan Kursi:</span>
+                                    <ul style="list-style: disc;">
+                                        <li>Pengaturan meja dan kursi dengan taplak meja yang elegan dan hiasan meja yang sesuai dengan tema.</li>
+                                        <li>Penambahan aksesori seperti pita, kain, atau dekorasi tambahan yang menambahkan sentuhan mewah.</li>
+                                    </ul>
+                                    <span>4. Pemasangan Backdrop dan Display:</span>
+                                    <ul style="list-style: disc;">
+                                        <li>Pembuatan backdrop yang menampilkan tema Dies Natalis atau logo universitas dengan desain khusus.</li>
+                                        <li>Penggunaan display atau papan pengumuman yang menampilkan informasi acara dan prestasi universitas.</li>
+                                    </ul>
+                                    <span>5. Aksesori dan Hiasan Tambahan:</span>
+                                    <ul style="list-style: disc;">
+                                        <li>Penggunaan bendera, poster, atau banner yang menggambarkan semangat Dies Natalis dan pencapaian universitas.</li>
+                                        <li>Hiasan tambahan seperti gantungan kertas, bunga kertas, atau elemen dekoratif lainnya yang mendukung tema acara.</li>
+                                    </ul>
+                                    <span>6. Peralatan dan Perlengkapan:</span>
+                                    <ul style="list-style: disc;">
+                                        <li>Penyediaan peralatan suara dan pencahayaan yang berkualitas untuk memastikan kelancaran acara.</li>
+                                        <li>Pengaturan panggung dan area acara dengan perlengkapan seperti podium, mikrofon, layar proyektor, atau peralatan teknis lainnya.</li>
+                                    </ul>
+                                </span>
                             </ul>
                             <button onclick="selengkapnya()" class="px-4" id="selengkapnya" style="border-color: #FFA931; background-color: white; border-radius: 10px;">Lihat Lebih Banyak</button>
                         </div>
@@ -390,7 +410,7 @@
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-body d-flex flex-column align-items-center justify-content-center">
-                        <h3 class="pt-5 pb-5" style="font-weight: 600;">Pesan Sekarang</h3>
+                        <h3 class="py-5" style="font-weight: 600;">Pesan Sekarang</h3>
                         <div class="row row-cols-auto mx-5" style="height: 140px; width: 589px; align-items: center; border-color: black; border-style: solid; border-radius: 20px; border-width: 1px;">
                             <div class="col-3">
                                 <img src="<?= base_url(); ?>/img/vector rasyid.png" class="img-fluid" style="height: 120px; width: auto;">
@@ -402,10 +422,22 @@
                         </div>
                         <div class="row row-cols-auto mx-auto pt-5" style="height: auto; width: 589px;">
                             <span>Sebelum melanjutkan ke proses pembayaran, mohon lengkapi tanggal layanan dan metodee pembayaran terlebih dahulu</span>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
+                            <form class="pt-4" style="width: 100%;">
+                                <label for="tgl" class="form-label" style="font-weight: 600;">Tanggal Layanan</label>
+                                <input type="date" class="form-control custom-form" style="border-style: none;">
+                                <label for="metodebyr" class="form-label pt-4" style="font-weight: 600;">Metode Pembayaran</label>
+                                <select class="form-select custom-form" aria-label="Default select example" style="border: none;">
+                                    <option selected></option>
+                                    <option value="1">Transfer</option>
+                                    <option value="2">Dana</option>
+                                    <option value="3">LinkAja</option>
+                                </select>
+                                <div class="d-flex flex-column text-center align-items-center py-5">
+                                    <button type="button" class="btn" style="background-color: #FFA931; width: 285px; height: 60px;">Bayar DP - Rp 6.000.000</button>
+                                    <br>
+                                    <button type="button" class="btn" style="background-color: #FFA931; width: 285px; height: 60px;">Lunas - Rp 20.000.000</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
