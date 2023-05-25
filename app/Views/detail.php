@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     <title>Vendor SI JEO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         * {
             margin: 0;
@@ -126,6 +127,19 @@
         .img-fluid {
             border-radius: 10px;
         }
+
+        .checked {
+            color: orange;
+        }
+
+        #more {
+            display: none;
+        }
+
+        .custom-form {
+            border-bottom: 1px solid black !important;
+            border-radius: 0%;
+        }
     </style>
 </head>
 
@@ -222,6 +236,28 @@
                         </div>
                     </div>
                 </div>
+                <br>
+                <div class="row row-cols-auto">
+                    <div class="col-3">
+                        <img src="<?= base_url(); ?>img/vector rasyid.png" class="img-fluid" aria-rowspan="3" style="width: 109px; height: 109px; border-radius: 100%;">
+                    </div>
+                    <div class="col-9 d-flex flex-column justify-content-center">
+                        <span>Alea Decoration, MALANG</span>
+                        <div class="pt-1">
+                            <span class="pt-5">Acara Dies Natalis | <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="black" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                </svg> Malang</span>
+                        </div>
+                        <div class="pt-1">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span> 9 (reviews)</span>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-7 pt-1">
 
@@ -233,7 +269,7 @@
                         <a style="font-size: 18px;" class="d-flex btn align-items-center justify-content-center btnchat" href="http://localhost:8080/login" id="btn-masuk">Chat</a>
                     </div>
                     <div class="mx-2 d-flex align-items-center">
-                        <a style="font-size: 18px;" class="d-flex btn btnpesan align-items-center justify-content-center my-auto" href="http://localhost:8080/register" id="btn-daftar">Pesan Sekarang</a>
+                        <button style="font-size: 18px;" class="d-flex btn btnpesan align-items-center justify-content-center my-auto" id="btn-daftar" data-bs-toggle="modal" data-bs-target="#exampleModal">Pesan Sekarang</button>
                     </div>
                 </div>
                 <hr>
@@ -242,58 +278,77 @@
                 <div class="container-fluid" style="text-align: justify;">
                     <div class="row row-cols-auto">
                         <div class="col-3">
-                            <ul class="px-0" style="list-style: none; color: #8A8888;">
-                                <li>AREA PELAYANAN</li>
-                                <li>KAPASITAS ORANG</li>
-                                <li>PERIODE ACARA</li>
-                                <li>DETAIL FASILITAS</li>
-                            </ul>
+                            <span>AREA PELAYANAN</span>
                         </div>
                         <div class="col-9">
-                            <ul class="px-1" style="list-style: none;">
-                                <li><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="black" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-                                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                                    </svg> Wilayah Malang dan sekitarnya</li>
-                                <li>Max. 5000 orang</li>
-                                <li>Max. 3 hari</li>
-                                <li>1. Dekorasi:
-                                    <ul style="list-style: disc;">
-                                        <li>Dekorasi panggung utama dengan backdrop yang mencakup logo universitas atau tema Dies Natalis.</li>
-                                        <li>Pengaturan bunga segar atau bunga artifisial yang menarik perhatian di sekitar panggung dan area acara.</li>
-                                        <li>Penggunaan balon kustom dengan warna dan desain yang sesuai dengan tema acara.</li>
-                                    </ul>
-                                    2. Pencahayaan:
+                            <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="black" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                </svg> Wilayah Malang dan sekitarnya</span>
+                        </div>
+                    </div>
+                    <div class="row row-cols-auto">
+                        <div class="col-3">
+                            <span>KAPASITAS ORANG</span>
+                        </div>
+                        <div class="col-9">
+                            <span>Max. 5000 orang</span>
+                        </div>
+                    </div>
+                    <div class="row row-cols-auto">
+                        <div class="col-3">
+                            <span>PERIODE ACARA</span>
+                        </div>
+                        <div class="col-9">
+                            <span>Max. 3 hari</span>
+                        </div>
+                    </div>
+                    <div class="row row-cols-auto">
+                        <div class="col-3">
+                            <span>DETAIL FASILITAS</span>
+                        </div>
+                        <div class="col-9">
+                            <ul style="list-style: none;">
+                                <span>1. Dekorasi:</span>
+                                <ul style="list-style: disc;">
+                                    <li>Dekorasi panggung utama dengan backdrop yang mencakup logo universitas atau tema Dies Natalis.</li>
+                                    <li>Pengaturan bunga segar atau bunga artifisial yang menarik perhatian di sekitar panggung dan area acara.</li>
+                                    <li>Penggunaan balon kustom dengan warna dan desain yang sesuai dengan tema acara.</li>
+                                </ul>
+                                <span id="dots"></span><span id="more">
+                                    <span>2. Pencahayaan:</span>
                                     <ul style="list-style: disc;">
                                         <li>Pencahayaan profesional yang menghasilkan efek dramatis dan atmosfer yang tepat.</li>
                                         <li>Penggunaan lampu sorot untuk memberikan penekanan pada panggung, backdrop, atau elemen dekorasi khusus lainnya.</li>
                                     </ul>
-                                    3. Hiasan Meja dan Kursi:
+                                    <span>3. Hiasan Meja dan Kursi:</span>
                                     <ul style="list-style: disc;">
                                         <li>Pengaturan meja dan kursi dengan taplak meja yang elegan dan hiasan meja yang sesuai dengan tema.</li>
                                         <li>Penambahan aksesori seperti pita, kain, atau dekorasi tambahan yang menambahkan sentuhan mewah.</li>
                                     </ul>
-                                    4. Pemasangan Backdrop dan Display:
+                                    <span>4. Pemasangan Backdrop dan Display:</span>
                                     <ul style="list-style: disc;">
                                         <li>Pembuatan backdrop yang menampilkan tema Dies Natalis atau logo universitas dengan desain khusus.</li>
                                         <li>Penggunaan display atau papan pengumuman yang menampilkan informasi acara dan prestasi universitas.</li>
                                     </ul>
-                                    5. Aksesori dan Hiasan Tambahan:
+                                    <span>5. Aksesori dan Hiasan Tambahan:</span>
                                     <ul style="list-style: disc;">
                                         <li>Penggunaan bendera, poster, atau banner yang menggambarkan semangat Dies Natalis dan pencapaian universitas.</li>
                                         <li>Hiasan tambahan seperti gantungan kertas, bunga kertas, atau elemen dekoratif lainnya yang mendukung tema acara.</li>
                                     </ul>
-                                    6. Peralatan dan Perlengkapan:
+                                    <span>6. Peralatan dan Perlengkapan:</span>
                                     <ul style="list-style: disc;">
                                         <li>Penyediaan peralatan suara dan pencahayaan yang berkualitas untuk memastikan kelancaran acara.</li>
                                         <li>Pengaturan panggung dan area acara dengan perlengkapan seperti podium, mikrofon, layar proyektor, atau peralatan teknis lainnya.</li>
                                     </ul>
-                                </li>
+                                </span>
                             </ul>
+                            <button onclick="selengkapnya()" class="px-4" id="selengkapnya" style="border-color: #FFA931; background-color: white; border-radius: 10px;">Lihat Lebih Banyak</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <br>
         <hr>
         <div class="container-fluid text-center">
             <h2>PAKET EVENT TERKAIT LAINNYA</h2>
@@ -347,10 +402,66 @@
                     </div>
                 </div>
             </div>
-            <br>
+            <br><br>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-body d-flex flex-column align-items-center justify-content-center">
+                        <h3 class="py-5" style="font-weight: 600;">Pesan Sekarang</h3>
+                        <div class="row row-cols-auto mx-5" style="height: 140px; width: 589px; align-items: center; border-color: black; border-style: solid; border-radius: 20px; border-width: 1px;">
+                            <div class="col-3">
+                                <img src="<?= base_url(); ?>/img/vector rasyid.png" class="img-fluid" style="height: 120px; width: auto;">
+                            </div>
+                            <div class="col-9 d-flex flex-column justify-content-center">
+                                <span>Paket Platinum Acara Dies Natalis ALEA (Decoration) - Ready...</span>
+                                <span style="color: #FFA931;">IDR 20.000.000</span>
+                            </div>
+                        </div>
+                        <div class="row row-cols-auto mx-auto pt-5" style="height: auto; width: 589px;">
+                            <span>Sebelum melanjutkan ke proses pembayaran, mohon lengkapi tanggal layanan dan metodee pembayaran terlebih dahulu</span>
+                            <form class="pt-4" style="width: 100%;">
+                                <label for="tgl" class="form-label" style="font-weight: 600;">Tanggal Layanan</label>
+                                <input type="date" class="form-control custom-form" style="border-style: none;">
+                                <label for="metodebyr" class="form-label pt-4" style="font-weight: 600;">Metode Pembayaran</label>
+                                <select class="form-select custom-form" aria-label="Default select example" style="border: none;">
+                                    <option selected></option>
+                                    <option value="1">Transfer</option>
+                                    <option value="2">Dana</option>
+                                    <option value="3">LinkAja</option>
+                                </select>
+                                <div class="d-flex flex-column text-center align-items-center py-5">
+                                    <button type="button" class="btn" style="background-color: #FFA931; width: 285px; height: 60px;">Bayar DP - Rp 6.000.000</button>
+                                    <br>
+                                    <button type="button" class="btn" style="background-color: #FFA931; width: 285px; height: 60px;">Lunas - Rp 20.000.000</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+            <script>
+                function selengkapnya() {
+                    var dots = document.getElementById("dots");
+                    var moreText = document.getElementById("more");
+                    var btnText = document.getElementById("selengkapnya");
+
+                    if (dots.style.display === "none") {
+                        dots.style.display = "inline";
+                        btnText.innerHTML = "Lihat Lebih Banyak";
+                        moreText.style.display = "none";
+                    } else {
+                        dots.style.display = "none";
+                        btnText.innerHTML = "Lihat Lebih Sedikit";
+                        moreText.style.display = "inline";
+                    }
+                }
+            </script>
+        </div>
 </body>
 
 </html>
