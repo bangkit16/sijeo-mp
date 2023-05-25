@@ -389,16 +389,19 @@
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
-                    <div class="modal-body text-center">
-                        <h3>Pesan Sekarang</h3>
-                        <div class="row row-cols-auto" style="height: 123px; width: 589px; align-items: center; border-color: black;">
+                    <div class="modal-body d-flex flex-column align-items-center justify-content-center">
+                        <h3 class="pt-5 pb-5" style="font-weight: 600;">Pesan Sekarang</h3>
+                        <div class="row row-cols-auto mx-5" style="height: 140px; width: 589px; align-items: center; border-color: black; border-style: solid; border-radius: 20px; border-width: 1px;">
                             <div class="col-3">
-                                <img src="<?= base_url(); ?>/img/vector rasyid.png" class="img-fluid">
+                                <img src="<?= base_url(); ?>/img/vector rasyid.png" class="img-fluid" style="height: 120px; width: auto;">
                             </div>
                             <div class="col-9 d-flex flex-column justify-content-center">
                                 <span>Paket Platinum Acara Dies Natalis ALEA (Decoration) - Ready...</span>
                                 <span style="color: #FFA931;">IDR 20.000.000</span>
                             </div>
+                        </div>
+                        <div class="row row-cols-auto mx-auto pt-5" style="height: auto; width: 589px;">
+                            <span>Sebelum melanjutkan ke proses pembayaran, mohon lengkapi tanggal layanan dan metodee pembayaran terlebih dahulu</span>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
