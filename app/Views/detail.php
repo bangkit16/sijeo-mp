@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     <title>Vendor SI JEO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         * {
             margin: 0;
@@ -126,6 +127,14 @@
         .img-fluid {
             border-radius: 10px;
         }
+
+        .checked {
+            color: orange;
+        }
+
+        #more {
+            display: none;
+        }
     </style>
 </head>
 
@@ -222,6 +231,28 @@
                         </div>
                     </div>
                 </div>
+                <br>
+                <div class="row row-cols-auto">
+                    <div class="col-3">
+                        <img src="<?= base_url(); ?>img/vector rasyid.png" class="img-fluid" aria-rowspan="3" style="width: 109px; height: 109px; border-radius: 100%;">
+                    </div>
+                    <div class="col-9 d-flex flex-column justify-content-center">
+                        <span>Alea Decoration, MALANG</span>
+                        <div class="pt-1">
+                            <span class="pt-5">Acara Dies Natalis | <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="black" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                </svg> Malang</span>
+                        </div>
+                        <div class="pt-1">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span> 9 (reviews)</span>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-7 pt-1">
 
@@ -233,7 +264,7 @@
                         <a style="font-size: 18px;" class="d-flex btn align-items-center justify-content-center btnchat" href="http://localhost:8080/login" id="btn-masuk">Chat</a>
                     </div>
                     <div class="mx-2 d-flex align-items-center">
-                        <a style="font-size: 18px;" class="d-flex btn btnpesan align-items-center justify-content-center my-auto" href="http://localhost:8080/register" id="btn-daftar">Pesan Sekarang</a>
+                        <button style="font-size: 18px;" class="d-flex btn btnpesan align-items-center justify-content-center my-auto" id="btn-daftar myInput">Pesan Sekarang</button>
                     </div>
                 </div>
                 <hr>
@@ -262,38 +293,42 @@
                                         <li>Pengaturan bunga segar atau bunga artifisial yang menarik perhatian di sekitar panggung dan area acara.</li>
                                         <li>Penggunaan balon kustom dengan warna dan desain yang sesuai dengan tema acara.</li>
                                     </ul>
-                                    2. Pencahayaan:
-                                    <ul style="list-style: disc;">
-                                        <li>Pencahayaan profesional yang menghasilkan efek dramatis dan atmosfer yang tepat.</li>
-                                        <li>Penggunaan lampu sorot untuk memberikan penekanan pada panggung, backdrop, atau elemen dekorasi khusus lainnya.</li>
-                                    </ul>
-                                    3. Hiasan Meja dan Kursi:
-                                    <ul style="list-style: disc;">
-                                        <li>Pengaturan meja dan kursi dengan taplak meja yang elegan dan hiasan meja yang sesuai dengan tema.</li>
-                                        <li>Penambahan aksesori seperti pita, kain, atau dekorasi tambahan yang menambahkan sentuhan mewah.</li>
-                                    </ul>
-                                    4. Pemasangan Backdrop dan Display:
-                                    <ul style="list-style: disc;">
-                                        <li>Pembuatan backdrop yang menampilkan tema Dies Natalis atau logo universitas dengan desain khusus.</li>
-                                        <li>Penggunaan display atau papan pengumuman yang menampilkan informasi acara dan prestasi universitas.</li>
-                                    </ul>
-                                    5. Aksesori dan Hiasan Tambahan:
-                                    <ul style="list-style: disc;">
-                                        <li>Penggunaan bendera, poster, atau banner yang menggambarkan semangat Dies Natalis dan pencapaian universitas.</li>
-                                        <li>Hiasan tambahan seperti gantungan kertas, bunga kertas, atau elemen dekoratif lainnya yang mendukung tema acara.</li>
-                                    </ul>
-                                    6. Peralatan dan Perlengkapan:
-                                    <ul style="list-style: disc;">
-                                        <li>Penyediaan peralatan suara dan pencahayaan yang berkualitas untuk memastikan kelancaran acara.</li>
-                                        <li>Pengaturan panggung dan area acara dengan perlengkapan seperti podium, mikrofon, layar proyektor, atau peralatan teknis lainnya.</li>
-                                    </ul>
+                                    <span id="dots"></span><span id="more">
+                                        2. Pencahayaan:
+                                        <ul style="list-style: disc;">
+                                            <li>Pencahayaan profesional yang menghasilkan efek dramatis dan atmosfer yang tepat.</li>
+                                            <li>Penggunaan lampu sorot untuk memberikan penekanan pada panggung, backdrop, atau elemen dekorasi khusus lainnya.</li>
+                                        </ul>
+                                        3. Hiasan Meja dan Kursi:
+                                        <ul style="list-style: disc;">
+                                            <li>Pengaturan meja dan kursi dengan taplak meja yang elegan dan hiasan meja yang sesuai dengan tema.</li>
+                                            <li>Penambahan aksesori seperti pita, kain, atau dekorasi tambahan yang menambahkan sentuhan mewah.</li>
+                                        </ul>
+                                        4. Pemasangan Backdrop dan Display:
+                                        <ul style="list-style: disc;">
+                                            <li>Pembuatan backdrop yang menampilkan tema Dies Natalis atau logo universitas dengan desain khusus.</li>
+                                            <li>Penggunaan display atau papan pengumuman yang menampilkan informasi acara dan prestasi universitas.</li>
+                                        </ul>
+                                        5. Aksesori dan Hiasan Tambahan:
+                                        <ul style="list-style: disc;">
+                                            <li>Penggunaan bendera, poster, atau banner yang menggambarkan semangat Dies Natalis dan pencapaian universitas.</li>
+                                            <li>Hiasan tambahan seperti gantungan kertas, bunga kertas, atau elemen dekoratif lainnya yang mendukung tema acara.</li>
+                                        </ul>
+                                        6. Peralatan dan Perlengkapan:
+                                        <ul style="list-style: disc;">
+                                            <li>Penyediaan peralatan suara dan pencahayaan yang berkualitas untuk memastikan kelancaran acara.</li>
+                                            <li>Pengaturan panggung dan area acara dengan perlengkapan seperti podium, mikrofon, layar proyektor, atau peralatan teknis lainnya.</li>
+                                        </ul>
+                                    </span>
                                 </li>
                             </ul>
+                            <button onclick="selengkapnya()" class="px-4" id="selengkapnya" style="border-color: #FFA931; background-color: white; border-radius: 10px;">Lihat Lebih Banyak</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <br>
         <hr>
         <div class="container-fluid text-center">
             <h2>PAKET EVENT TERKAIT LAINNYA</h2>
@@ -349,7 +384,48 @@
             </div>
             <br><br>
         </div>
+        <!-- Vertically centered modal -->
+        <div class="modal-dialog modal-dialog-centered">
+            ...
+        </div>
+
+        <!-- Vertically centered scrollable modal -->
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            ...
+        </div><!-- Vertically centered modal -->
+        <div class="modal-dialog modal-dialog-centered">
+            ...
+        </div>
+
+        <!-- Vertically centered scrollable modal -->
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            ...
+        </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            const myModal = document.getElementById('myModal')
+            const myInput = document.getElementById('myInput')
+
+            myModal.addEventListener('shown.bs.modal', () => {
+                myInput.focus()
+            })
+
+            function selengkapnya() {
+                var dots = document.getElementById("dots");
+                var moreText = document.getElementById("more");
+                var btnText = document.getElementById("selengkapnya");
+
+                if (dots.style.display === "none") {
+                    dots.style.display = "inline";
+                    btnText.innerHTML = "Lihat Lebih Banyak";
+                    moreText.style.display = "none";
+                } else {
+                    dots.style.display = "none";
+                    btnText.innerHTML = "Lihat Lebih Sedikit";
+                    moreText.style.display = "inline";
+                }
+            }
+        </script>
     </div>
 </body>
 
