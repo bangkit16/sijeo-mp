@@ -348,6 +348,7 @@
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-body d-flex flex-column align-items-center justify-content-center">
+                        <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
                         <h3 class="py-5" style="font-weight: 600;">Pesan Sekarang</h3>
                         <div class="row row-cols-auto mx-5" style="height: 140px; width: 589px; align-items: center; border-color: black; border-style: solid; border-radius: 20px; border-width: 1px;">
                             <div class="col-3">
