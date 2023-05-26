@@ -3,14 +3,20 @@
 namespace App\Controllers;
 
 use App\Models\AdminModel;
+use App\Models\VendorModel;
+use App\Models\PaketVendorModel;
 
 class Home extends BaseController
 {
     protected $adminModel;
+    protected $vendorModel;
+    protected $paketVendorModel;
 
     public function __construct()
     {
         $this->adminModel = new AdminModel();
+        $this->vendorModel = new VendorModel();
+        $this->paketVendorModel = new PaketVendorModel();
     }
 
     public function index()
@@ -28,10 +34,17 @@ class Home extends BaseController
     }
     public function vendorPage()
     {
-        return view('vendorPage.php');
+        $data = [
+            'paket' => $this->paketVendorModel->findAll(),
+            'vendor' => $this->vendorModel->findAll(),
+        ];
+        return view('vendorPage.php', $data);
     }
-    public function detail()
+    public function detail($id)
     {
-        return view('detail.php');
+        $data = [
+            'paket' => $this->paketVendorModel->where(['id' => $id])->first(),
+        ];
+        return view('detail.php', $data);
     }
 }
