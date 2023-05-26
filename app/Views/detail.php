@@ -261,8 +261,8 @@
             </div>
             <div class="col-7 pt-1">
 
-                <span style="font-weight: 600;font-size: 30px;">Paket Platinum Acara Dies Natalis ALEA (Decoration) 2023 untuk Mahasiswa</span><br>
-                <span style="color: #FFA931; font-weight: 500;font-size: 30px;">IDR 20.000.000</span>
+                <span style="font-weight: 600;font-size: 30px;"><?= $paketDetail['nama_paket']; ?></span><br>
+                <span style="color: #FFA931; font-weight: 500;font-size: 30px;">IDR <?= $paketDetail['idr']; ?></span>
                 <br><br><br><br><br>
                 <div style="margin-top: 5rem;" class="d-flex flex-row align-items-center">
                     <div class="d-flex align-items-center">
@@ -283,7 +283,7 @@
                         <div class="col-9">
                             <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="black" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
                                     <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                                </svg> Wilayah Malang dan sekitarnya</span>
+                                </svg> Wilayah <?= $paketDetail['area_pelayanan']; ?> dan sekitarnya</span>
                         </div>
                     </div>
                     <div class="row row-cols-auto">
@@ -291,7 +291,7 @@
                             <span>KAPASITAS ORANG</span>
                         </div>
                         <div class="col-9">
-                            <span>Max. 5000 orang</span>
+                            <span>Max. <?= $paketDetail['kapasitas_orang']; ?></span>
                         </div>
                     </div>
                     <div class="row row-cols-auto">
@@ -299,7 +299,7 @@
                             <span>PERIODE ACARA</span>
                         </div>
                         <div class="col-9">
-                            <span>Max. 3 hari</span>
+                            <span>Max. <?= $paketDetail['periode_acara']; ?></span>
                         </div>
                     </div>
                     <div class="row row-cols-auto">
@@ -307,42 +307,9 @@
                             <span>DETAIL FASILITAS</span>
                         </div>
                         <div class="col-9">
-                            <ul style="list-style: none;">
-                                <span>1. Dekorasi:</span>
-                                <ul style="list-style: disc;">
-                                    <li>Dekorasi panggung utama dengan backdrop yang mencakup logo universitas atau tema Dies Natalis.</li>
-                                    <li>Pengaturan bunga segar atau bunga artifisial yang menarik perhatian di sekitar panggung dan area acara.</li>
-                                    <li>Penggunaan balon kustom dengan warna dan desain yang sesuai dengan tema acara.</li>
-                                </ul>
-                                <span id="dots"></span><span id="more">
-                                    <span>2. Pencahayaan:</span>
-                                    <ul style="list-style: disc;">
-                                        <li>Pencahayaan profesional yang menghasilkan efek dramatis dan atmosfer yang tepat.</li>
-                                        <li>Penggunaan lampu sorot untuk memberikan penekanan pada panggung, backdrop, atau elemen dekorasi khusus lainnya.</li>
-                                    </ul>
-                                    <span>3. Hiasan Meja dan Kursi:</span>
-                                    <ul style="list-style: disc;">
-                                        <li>Pengaturan meja dan kursi dengan taplak meja yang elegan dan hiasan meja yang sesuai dengan tema.</li>
-                                        <li>Penambahan aksesori seperti pita, kain, atau dekorasi tambahan yang menambahkan sentuhan mewah.</li>
-                                    </ul>
-                                    <span>4. Pemasangan Backdrop dan Display:</span>
-                                    <ul style="list-style: disc;">
-                                        <li>Pembuatan backdrop yang menampilkan tema Dies Natalis atau logo universitas dengan desain khusus.</li>
-                                        <li>Penggunaan display atau papan pengumuman yang menampilkan informasi acara dan prestasi universitas.</li>
-                                    </ul>
-                                    <span>5. Aksesori dan Hiasan Tambahan:</span>
-                                    <ul style="list-style: disc;">
-                                        <li>Penggunaan bendera, poster, atau banner yang menggambarkan semangat Dies Natalis dan pencapaian universitas.</li>
-                                        <li>Hiasan tambahan seperti gantungan kertas, bunga kertas, atau elemen dekoratif lainnya yang mendukung tema acara.</li>
-                                    </ul>
-                                    <span>6. Peralatan dan Perlengkapan:</span>
-                                    <ul style="list-style: disc;">
-                                        <li>Penyediaan peralatan suara dan pencahayaan yang berkualitas untuk memastikan kelancaran acara.</li>
-                                        <li>Pengaturan panggung dan area acara dengan perlengkapan seperti podium, mikrofon, layar proyektor, atau peralatan teknis lainnya.</li>
-                                    </ul>
-                                </span>
-                            </ul>
-                            <button onclick="selengkapnya()" class="px-4" id="selengkapnya" style="border-color: #FFA931; background-color: white; border-radius: 10px;">Lihat Lebih Banyak</button>
+                            <span><?= $paketDetail['desc_vendor']; ?></span>
+
+                            <!-- <button onclick="selengkapnya()" class="px-4" id="selengkapnya" style="border-color: #FFA931; background-color: white; border-radius: 10px;">Lihat Lebih Banyak</button> -->
                         </div>
                     </div>
                 </div>
@@ -353,54 +320,25 @@
         <div class="container-fluid text-center">
             <h2>PAKET EVENT TERKAIT LAINNYA</h2>
             <br>
-            <div class="row row-cols-1 row-cols-md-5 g-4" style="text-align: start;">
-                <div class="col">
-                    <div class="card">
-                        <img src="<?= base_url(); ?>/img/card detail 1.png" class="card-img-top img-fluid" style="height: 276,04px;">
-                        <div class="card-body">
-                            <h5 class="card-title">Paket Platinum Acara Dies Natalis ALEA (Decoration) 2023 untuk Mahasiswa</h5>
-                            <p class="card-text" style="color: #FFA931;">Rp 20.000.000</p>
-                        </div>
+            <div class="row mt-3 row-cols-md-5 g-4 roww" style="text-align: start;">
+                <?php foreach ($paket as $paket) :  ?>
+                    <div class="col coll mb-auto">
+                        <a style="text-decoration: none;" href="<?= base_url(); ?>detail/<?= $paket['id']; ?>">
+                            <div class="card my-auto ">
+                                <img src="<?= base_url(); ?>/img/<?= $paket['gambar']; ?>" class="card-img-top img-fluid" style="">
+                                <div class="card-body">
+                                    <div style="height: 8rem">
+                                        <span style="font-size: 16px; font-weight: 600;width:100% " class="card-title"><?= $paket['nama_paket']; ?></span>
+
+                                    </div>
+
+                                    <p class="card-text  mb-1" style="color: #FFA931;font-size: 15px; font-weight: 500;">Rp <?= $paket['idr']; ?></p>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="<?= base_url(); ?>/img/card detail 2.png" class="card-img-top img-fluid" style="height: 276,04px;">
-                        <div class="card-body">
-                            <h5 class="card-title">Eksklusif Webinar untuk Acara Perusahaan (Bundle Package)</h5>
-                            <p class="card-text" style="color: #FFA931;">Rp 12.000.000</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="<?= base_url(); ?>/img/card detail 3.png" class="card-img-top img-fluid" style="height: 276,04px;">
-                        <div class="card-body">
-                            <h5 class="card-title">Paket Bundle Bazar All In Event</h5>
-                            <br><br>
-                            <p class="card-text" style="color: #FFA931;">Rp 10.000.000-Rp 25.000.000</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="<?= base_url(); ?>/img/card detail 4.png" class="card-img-top img-fluid" style="height: 276,04px;">
-                        <div class="card-body">
-                            <h5 class="card-title">Dies Natalis Eksklusif untuk Perusahaan (All Event Decoration)</h5>
-                            <br>
-                            <p class="card-text" style="color: #FFA931;">Rp 22.275.000</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="<?= base_url(); ?>/img/card detail 5.png" class="card-img-top img-fluid" style="height: 276,04px;">
-                        <div class="card-body">
-                            <h5 class="card-title">EVENTLY PROJECT Seminar & Webinar Bundle Package untuk Semua Acara</h5>
-                            <p class="card-text" style="color: #FFA931;">Rp 12.00.000-Rp 25.000.000</p>
-                        </div>
-                    </div>
-                </div>
+                <?php endforeach; ?>
+
             </div>
             <br><br>
         </div>
@@ -413,11 +351,11 @@
                         <h3 class="py-5" style="font-weight: 600;">Pesan Sekarang</h3>
                         <div class="row row-cols-auto mx-5" style="height: 140px; width: 589px; align-items: center; border-color: black; border-style: solid; border-radius: 20px; border-width: 1px;">
                             <div class="col-3">
-                                <img src="<?= base_url(); ?>/img/vector rasyid.png" class="img-fluid" style="height: 120px; width: auto;">
+                                <img src="<?= base_url(); ?>/img/<?= $paketDetail['gambar']; ?>" class="img-fluid" style="height: 120px; width: auto;">
                             </div>
                             <div class="col-9 d-flex flex-column justify-content-center">
-                                <span>Paket Platinum Acara Dies Natalis ALEA (Decoration) - Ready...</span>
-                                <span style="color: #FFA931;">IDR 20.000.000</span>
+                                <span><?= $paketDetail['nama_paket']; ?></span>
+                                <span style="color: #FFA931;"><?= $paketDetail['idr']; ?></span>
                             </div>
                         </div>
                         <div class="row row-cols-auto mx-auto pt-5" style="height: auto; width: 589px;">

@@ -43,7 +43,8 @@ class Home extends BaseController
     public function detail($id)
     {
         $data = [
-            'paket' => $this->paketVendorModel->where(['id' => $id])->first(),
+            'paketDetail' => $this->paketVendorModel->where(['id' => $id])->first(),
+            'paket' => $this->paketVendorModel->findAll(),
         ];
         return view('detail.php', $data);
     }
