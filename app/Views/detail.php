@@ -216,6 +216,25 @@
         </div>
     </div>
     <div class="container-fluid px-5 mt-5">
+        <div class="d-flex flex-row gap-5 mx-5" style="background-color: pink; width: auto; height: 40px;">
+            <select class="form-select" style="border-color: black;">
+                <option value="" disabled selected>Semua Kategori</option>
+                <option>Vendor 1</option>
+                <option>Vendor 2</option>
+            </select>
+            <select class="form-select" style="border-color: black;">
+                <option value="" disabled selected>Semua Kota</option>
+                <option>Vendor 1</option>
+                <option>Vendor 2</option>
+            </select>
+            <select class="form-select" style="border-color: black;">
+                <option value="" disabled selected>Semua Harga</option>
+                <option>Vendor 1</option>
+                <option>Vendor 2</option>
+            </select>
+            <button type="button" class="btn" style="background-color: #959698; color: white;">Cari Vendor</button>
+        </div>
+        <hr style="color: black;">
         <div class="row">
             <div class="col-5">
                 <div class="d-flex flex-column">
