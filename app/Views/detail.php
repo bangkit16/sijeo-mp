@@ -232,7 +232,7 @@
                 <option>Vendor 1</option>
                 <option>Vendor 2</option>
             </select>
-            <button type="button" class="btn" style="background-color: #959698; color: white;">Cari Vendor</button>
+            <button type="button" class="btn" style="background-color: #959698; color: white;">Cari_Vendor</button>
         </div>
         <hr style="color: black;">
         <div class="row">
