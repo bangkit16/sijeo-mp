@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -86,6 +86,39 @@
 
         .foto {
             background-image: url("<?= base_url(); ?>img/lp1.jpg");
+            background-size: cover;
+            position: relative;
+
+        }
+
+        .foto::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .mengapa {
+            margin-top: 100px;
+            padding: 20px 30px;
+            padding-right: 50px;
+            background-color: #FFA931;
+            width: fit-content;
+            border-radius: 0px 100px 100px 0px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .mengapaa {
+            margin-top: 30px;
+            padding: 20px 30px;
+            width: fit-content;
+        }
+
+        .rig {
+            text-align: right !important;
         }
     </style>
 </head>
@@ -192,8 +225,76 @@
             <span>menyesuaikan menurut harga dan selera.</span>
         </div>
     </div>
-    <div class="container-fluid foto mx-auto">
-        pap
+    <div class="foto" style="">
+        <div class="container-fluid mx-auto d-flex flex-column" style="padding: 90px 225px;position: relative;z-index: 2;">
+            <span class="mx-auto" style="font-weight: 700;font-size: 55px;color: white; text-align: center;">Sejarah</span><br>
+            <span class="mx-auto" style="font-weight: 400;font-size: 24px;color: white; text-align: center;padding: 150px 0px">SI JEO merupakan jasa Event Organizer terkenal di Malang. Sebagai EO berpengalaman dan profesional, prioritas utama kami adalah kepuasan konsumen. <br><br>
+
+                SI JEO menawarkan banyak pilihan paket acara, meliputi catering, full dekorasi, wardrobe, MUA, foto dan video. Dengan pilihan paket yang beragam, anda bisa menyesuaikan menurut harga dan selera.</span><br>
+
+        </div>
+    </div>
+    <div class="">
+        <div class="mengapa ">
+            <span style="font-weight: 500;font-size: 32px;">Mengapa SI JEO ? </span><br>
+            <span style="font-weight: 400;font-size: 20px;">sebagai penyelenggara event anda</span>
+        </div>
+        <div class="container-fluid d-flex flex-row" style="padding: 30px 50px;">
+            <img class="m-3 align-self-start" src="<?= base_url(); ?>svg/brainstorming.svg" style="width: 100px;" alt="">
+            <div class="p-3" style="width: 700px;">
+                <span style="font-weight: 500;font-size: 32px;">Solid Teamwork </span><br>
+                <span style="font-weight: 400;font-size: 24px;">Kami percaya akan kekuatan sinergi dari seluruh anggota team yang sudah bekerjasama selama bertahun-tahun, yang selalu siap sedia membantu melancarkan kegiatan bazaar, outbound, gathering, launching, virtual event, webinar, seminar, serta kegiatan anda yang lain</span>
+            </div>
+        </div>
+        <div class="container-fluid d-flex flex-row-reverse" style="padding: 30px 50px; background-color: #FFA931;">
+            <img class="m-3 align-self-start" src="<?= base_url(); ?>svg/timesaving.svg" style="width: 100px;" alt="">
+            <div class="p-3" style="width: 700px;text-align: end;">
+                <span class="rig" style="font-weight: 500;font-size: 32px;">Time Saving</span><br>
+                <span style="font-weight: 400;font-size: 24px;">Sebagai EO terbaik yang terus berkembang dan belajar, kami terus melakukan riset atas berbagai elemen event. Kami bisa membantu anda mencari ide terbaik dan mengimplementasikannya, termasuk vendor-vendor profesional yang dibutuhkan. Anda bisa menghemat sumber daya (waktu dan tenaga) anda dan bersinergi bersama dengan kami</span>
+            </div>
+        </div>
+        <div class="container-fluid d-flex flex-row" style="padding: 30px 50px;">
+            <img class="m-3 align-self-start" src="<?= base_url(); ?>svg/creativethinking.svg" style="width: 100px;" alt="">
+            <div class="p-3" style="width: 700px;">
+                <span style="font-weight: 500;font-size: 32px;">Creative Thinking</span><br>
+                <span style="font-weight: 400;font-size: 24px;">Seiring dengan berjalannya waktu, kami mendapatkan wawasan serta pengalaman bernilai mengenai cara-cara mensukseskan suatu kegiatan. Kita terus mengikuti trend dan tempat terkini serta inovasi terbaru / canggih. Kami mengajak anda untuk berdiskusi berbagai ide yang menarik, manajemen perhitungan biaya, serta detail yang lain untuk membantu anda membuat kegiatan yang spesial.</span>
+            </div>
+        </div>
+        <div class="container-fluid d-flex flex-row-reverse" style="padding: 30px 50px; background-color: #FFA931;">
+            <img class="m-3 align-self-start" src="<?= base_url(); ?>svg/inovativethinking.svg" style="width: 100px;" alt="">
+            <div class="p-3" style="width: 700px;text-align: end;">
+                <span class="rig" style="font-weight: 500;font-size: 32px;">Inovative Ideas </span><br>
+                <span style="font-weight: 400;font-size: 24px;">Kami percaya akan kekuatan sinergi dari seluruh anggota team yang sudah bekerjasama selama bertahun-tahun, yang selalu siap sedia membantu melancarkan kegiatan bazaar, outbound, gathering, launching, virtual event, webinar, seminar, serta kegiatan anda yang lain</span>
+            </div>
+        </div>
+        <br>
+    </div>
+    <div class="mengapaa ">
+        <span style="font-weight: 500;font-size: 32px;">Vendor</span><br>
+        <span style="font-weight: 400;font-size: 20px;">Lihat Rekomendasi Sesuai Budget</span>
+    </div>
+    <div class="" style="padding: 0px 120px;">
+
+        <div class=" row mt-3 row-cols-md-5 g-4 roww" style="text-align: start;">
+            <?php foreach ($paket as $paket) :  ?>
+                <div class="col coll mb-auto">
+                    <a style="text-decoration: none;" href="<?= base_url(); ?>detail/<?= $paket['id']; ?>">
+                        <div style="box-shadow: 0px 25px 106px rgba(0,0,0,0.1); border: none;" class="card my-auto ">
+                            <img src="<?= base_url(); ?>/img/<?= $paket['gambar']; ?>" class="card-img-top img-fluid" style="">
+                            <div class="card-body">
+                                <div style="height: 8rem">
+                                    <span style="font-size: 16px; font-weight: 600;width:100% " class="card-title"><?= $paket['nama_paket']; ?></span>
+
+                                </div>
+
+                                <p class="card-text  mb-1" style="color: #FFA931;font-size: 15px; font-weight: 500;">Rp <?= $paket['idr']; ?></p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            <?php endforeach; ?>
+
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
     </script>
