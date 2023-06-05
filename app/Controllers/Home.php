@@ -21,7 +21,10 @@ class Home extends BaseController
 
     public function index()
     {
-        return view('landingPage.php');
+        $data = [
+            'paket' => $this->paketVendorModel->findAll(5),
+        ];
+        return view('landingPage.php', $data);
     }
 
     public function login()
