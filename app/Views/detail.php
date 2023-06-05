@@ -61,14 +61,18 @@
 
         .btnchat {
             height: 50px;
-            width: 175px;
             font-size: 18px;
             font-weight: 600;
-            border-color: #FFA931;
-            color: #FFA931;
+            background-color: #FFA931;
+            color: white;
             padding: 3px 28px;
         }
 
+        .btnchat:hover {
+            border-color: #FFA931 !important;
+            background-color: white !important;
+            color: #FFA931 !important;
+        }
 
         .btn-siapkan-event {
             background-color: #FFA931;
@@ -216,25 +220,6 @@
         </div>
     </div>
     <div class="container-fluid px-5 mt-5">
-        <div class="d-flex flex-row gap-5 mx-5" style="background-color: pink; width: auto; height: 40px;">
-            <select class="form-select" style="border-color: black;">
-                <option value="" disabled selected>Semua Kategori</option>
-                <option>Vendor 1</option>
-                <option>Vendor 2</option>
-            </select>
-            <select class="form-select" style="border-color: black;">
-                <option value="" disabled selected>Semua Kota</option>
-                <option>Vendor 1</option>
-                <option>Vendor 2</option>
-            </select>
-            <select class="form-select" style="border-color: black;">
-                <option value="" disabled selected>Semua Harga</option>
-                <option>Vendor 1</option>
-                <option>Vendor 2</option>
-            </select>
-            <button type="button" class="btn" style="background-color: #959698; color: white;">Cari_Vendor</button>
-        </div>
-        <hr style="color: black;">
         <div class="row">
             <div class="col-5">
                 <div class="d-flex flex-column">
@@ -283,14 +268,7 @@
                 <span style="font-weight: 600;font-size: 30px;"><?= $paketDetail['nama_paket']; ?></span><br>
                 <span style="color: #FFA931; font-weight: 500;font-size: 30px;">IDR <?= $paketDetail['idr']; ?></span>
                 <br><br><br><br><br>
-                <div style="margin-top: 5rem;" class="d-flex flex-row align-items-center">
-                    <div class="d-flex align-items-center">
-                        <a style="font-size: 18px;" class="d-flex btn align-items-center justify-content-center btnchat" href="http://localhost:8080/login" id="btn-masuk">Chat</a>
-                    </div>
-                    <div class="mx-2 d-flex align-items-center">
-                        <button style="font-size: 18px;" class="d-flex btn btnpesan align-items-center justify-content-center my-auto" id="btn-daftar" data-bs-toggle="modal" data-bs-target="#exampleModal">Pesan Sekarang</button>
-                    </div>
-                </div>
+                <a style="font-size: 18px; margin-top: 5rem; width: auto;" class="d-flex flex-row align-items-center justify-content-center btn btnchat" href="http://localhost:8080/login">Chat</a>
                 <hr>
                 <span style="font-weight: 600;font-size: 30px;">DETAIL PAKET</span>
                 <hr>
