@@ -314,19 +314,47 @@
         </div>
         <br>
         <hr>
+        <div class="d-flex justify-content-center align-items-center pt-3" style="font-size: 20px; font-weight: bold;">
+            <span>Apakah kamu sedang melengkapi kebutuhan acaramu?</span>
+        </div>
+        <div class="d-flex justify-content-center align-items-center" style="font-size: 20px; font-weight: bold;">
+            <span>Lihat apa yang kami tawarkan di “Store”!</span>
+        </div>
+        <div class="d-flex flex-row align-items-center pt-5">
+            <span style="font-size: 30px; font-weight: 600;">Store&nbsp;</span>
+            <span style="font-size: 15px; padding-top: 7px;">(Pilih store untuk melihat detail)</span>
+        </div>
+        <div class="row mt-3 row-cols-md-4 g-4 row">
+            <div class="col mb-auto">
+                <a style="text-decoration: none;" href="http://">
+                    <div class="card my-auto">
+                        <img src="" class="card-img-top img-fluid">
+                        <div class="card-body">
+                            <div style="height: 8rem">
+                                <span style="font-size: 16px; font-weight: 600;width:100% " class="card-title">BARU NIH</span>
+                            </div>
+                            <p class="card-text  mb-1" style="color: #FFA931;font-size: 15px; font-weight: 500;">Rp 10.000</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="d-flex flex-row align-items-center justify-content-center">
+            <a style="font-size: 18px; margin-top: 3rem; margin-bottom: 3rem; width: 800px; height: 45px;" class="d-flex align-items-center justify-content-center btn btnchat" href="http://localhost:8080/login">Pesan Sekarang</a>
+        </div>
+        <hr>
         <div class="container-fluid text-center">
             <h2>PAKET EVENT TERKAIT LAINNYA</h2>
             <br>
-            <div class="row mt-3 row-cols-md-5 g-4 roww" style="text-align: start;">
+            <div class="row mt-3 row-cols-md-5 g-4 row" style="text-align: start;">
                 <?php foreach ($paket as $paket) :  ?>
-                    <div class="col coll mb-auto">
+                    <div class="col mb-auto">
                         <a style="text-decoration: none;" href="<?= base_url(); ?>detail/<?= $paket['id']; ?>">
                             <div class="card my-auto ">
                                 <img src="<?= base_url(); ?>/img/<?= $paket['gambar']; ?>" class="card-img-top img-fluid" style="">
                                 <div class="card-body">
                                     <div style="height: 8rem">
                                         <span style="font-size: 16px; font-weight: 600;width:100% " class="card-title"><?= $paket['nama_paket']; ?></span>
-
                                     </div>
 
                                     <p class="card-text  mb-1" style="color: #FFA931;font-size: 15px; font-weight: 500;">Rp <?= $paket['idr']; ?></p>
