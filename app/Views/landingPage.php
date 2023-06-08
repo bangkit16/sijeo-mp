@@ -8,7 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playball&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -88,6 +89,7 @@
             background-image: url("<?= base_url(); ?>img/lp1.jpg");
             background-size: cover;
             position: relative;
+            background-attachment: fixed;
 
         }
 
@@ -119,6 +121,68 @@
 
         .rig {
             text-align: right !important;
+        }
+
+
+
+        .galery {
+            line-height: 1.5;
+            /* overflow: hidden; */
+            display: flex;
+            align-items: center;
+            margin-bottom: 120px;
+        }
+
+        .wrapper {
+            position: relative;
+            flex-grow: 1;
+            margin: auto;
+            padding-right: 120px;
+            padding-left: 120px;
+            /* max-width: 1200px;
+            max-height: 1200px; */
+
+
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            grid-gap: 2vmin;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .wrapper IMG {
+            z-index: 1;
+            grid-column: span 2;
+            max-width: 100%;
+            margin-bottom: -52%;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            transform: scale(1);
+            transition: all .25s;
+
+            &:nth-child(11n + 1) {
+                grid-column: 2 / span 2;
+            }
+
+            &:hover {
+                z-index: 2;
+                transform: scale(2);
+            }
+        }
+
+        .latest {
+            margin: 40px 0px;
+            padding: 20px 0px;
+            margin-top: 100px;
+            border-top: solid 5px #FFA931;
+            border-bottom: solid 5px #FFA931;
+
+            width: max-content;
+        }
+
+        .review {
+            background-color: #EBEBEB;
+            padding: 60px 120px;
         }
     </style>
 </head>
@@ -225,7 +289,7 @@
             <span>menyesuaikan menurut harga dan selera.</span>
         </div>
     </div>
-    <div class="foto" style="">
+    <div class="foto">
         <div class="container-fluid mx-auto d-flex flex-column" style="padding: 90px 225px;position: relative;z-index: 2;">
             <span class="mx-auto" style="font-weight: 700;font-size: 55px;color: white; text-align: center;">Sejarah</span><br>
             <span class="mx-auto" style="font-weight: 400;font-size: 24px;color: white; text-align: center;padding: 150px 0px">SI JEO merupakan jasa Event Organizer terkenal di Malang. Sebagai EO berpengalaman dan profesional, prioritas utama kami adalah kepuasan konsumen. <br><br>
@@ -296,8 +360,102 @@
 
         </div>
     </div>
+    <br>
+    <div class="container-fluid galery d-flex flex-column">
+        <div class="latest">
+            <h1 style="font-weight: 600;">LATEST EVENT</h1>
+        </div>
+        <br>
+        <div class="wrapper">
+            <img src="https://muralsyourway.vtexassets.com/arquivos/ids/240880-825-auto?width=825&height=auto&aspect=true" alt="">
+            <img src="https://source.unsplash.com/random/600x600?concert" alt="">
+            <img src="https://source.unsplash.com/random/700x700?party" alt="">
+            <img src="https://source.unsplash.com/random/800x800?birthday" alt="">
+            <img src="https://source.unsplash.com/random/800x800?concert" alt="">
+            <img src="https://source.unsplash.com/random/900x900?concert" alt="">
+            <img src="https://source.unsplash.com/random/1000x1000?concert" alt="">
+            <img src="https://source.unsplash.com/random/1100x1100?concert" alt="">
+            <img src="https://source.unsplash.com/random/500x500?concert" alt="">
+            <img src="https://source.unsplash.com/random/400x400?concert" alt="">
+            <img src="https://source.unsplash.com/random/300x300?concert" alt="">
+            <img src="https://source.unsplash.com/random/1200x1200?concert" alt="">
+            <img src="https://source.unsplash.com/random/1300x1300?concert" alt="">
+            <img src="https://source.unsplash.com/random/1400x1400?concert" alt="">
+            <img src="https://source.unsplash.com/random/1500x1500?concert" alt="">
+            <img src="https://source.unsplash.com/random/1600x1600?concert" alt="">
+        </div>
+    </div>
+    <div class="review container-fluid">
+        <span style="font-weight: 500;font-size: 32px;">Review</span><br>
+        <div class="row">
+            <div class="col-4">
+
+                <div class="card mb-3 justify-content-center mt-5" style="max-width: 100%">
+                    <div style="width: 50%;height: 5rem% ;border-radius: 25px; overflow: hidden" class="m-auto mt-5">
+                        <img src="<?= base_url(); ?>/img/vector rasyid.png" class="img-fluid mx-auto" alt="..." style=";"><br>
+                    </div>
+                    <div class="card-body justify-content-center m-auto">
+                        <span style="color: #FFA931;" class="fa fa-star checked"></span>
+                        <span style="color: #FFA931;"class="fa fa-star checked"></span>
+                        <span style="color: #FFA931;"class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="card-body justify-content-center text-center">
+                        <h5 class="card-title m-auto">Dark card title</h5>
+                        <p class="card-text m-auto">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card mb-3 justify-content-center mt-5" style="max-width: 100%">
+                    <div style="width: 50%;height: 5rem% ;border-radius: 25px; overflow: hidden" class="m-auto mt-5">
+                        <img src="<?= base_url(); ?>/img/vector rasyid.png" class="img-fluid mx-auto" alt="..." style=";"><br>
+                    </div>
+                    <div class="card-body justify-content-center m-auto">
+                        <span style="color: #FFA931;" class="fa fa-star checked"></span>
+                        <span style="color: #FFA931;"class="fa fa-star checked"></span>
+                        <span style="color: #FFA931;"class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="card-body justify-content-center text-center">
+                        <h5 class="card-title m-auto">Dark card title</h5>
+                        <p class="card-text m-auto">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-4">
+                <div class="card mb-3 justify-content-center mt-5" style="max-width: 100%">
+                    <div style="width: 50%;height: 5rem% ;border-radius: 25px; overflow: hidden" class="m-auto mt-5">
+                        <img src="<?= base_url(); ?>/img/vector rasyid.png" class="img-fluid mx-auto" alt="..." style=";"><br>
+                    </div>
+                    <div class="card-body justify-content-center m-auto">
+                        <span style="color: #FFA931;" class="fa fa-star checked"></span>
+                        <span style="color: #FFA931;"class="fa fa-star checked"></span>
+                        <span style="color: #FFA931;"class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="card-body justify-content-center text-center">
+                        <h5 class="card-title m-auto">Dark card title</h5>
+                        <p class="card-text m-auto">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+        // 'https://images.pexels.com/photos/3941286/pexels-photo-3941286.jpeg',
+        // 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29uY2VydHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60',
+        // 'https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
     </script>
+
+
 </body>
 
 </html>
