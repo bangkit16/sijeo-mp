@@ -190,12 +190,10 @@
                     </div>
                 <?php endif; ?>
             </div>
-
         </div>
     </nav>
     <div class="container-fluid text-center bg-1-lanpaggue sticky-top">
         <div class="d-flex flex-row align-items-center justify-content-end p-2">
-
             <div class="me-auto">
                 <a href="http://localhost:8080/"><img src="<?= base_url(); ?>/img/logo si jeo.png" class="img-fluid" style="width: auto; height: 60px"></a>
             </div>
@@ -264,7 +262,6 @@
                 </div>
             </div>
             <div class="col-7 pt-1">
-
                 <span style="font-weight: 600;font-size: 30px;"><?= $paketDetail['nama_paket']; ?></span><br>
                 <span style="color: #FFA931; font-weight: 500;font-size: 30px;">IDR <?= $paketDetail['idr']; ?></span>
                 <br><br><br><br><br>
@@ -305,8 +302,6 @@
                         </div>
                         <div class="col-9">
                             <span><?= $paketDetail['desc_vendor']; ?></span>
-
-                            <!-- <button onclick="selengkapnya()" class="px-4" id="selengkapnya" style="border-color: #FFA931; background-color: white; border-radius: 10px;">Lihat Lebih Banyak</button> -->
                         </div>
                     </div>
                 </div>
@@ -363,7 +358,6 @@
                         </a>
                     </div>
                 <?php endforeach; ?>
-
             </div>
             <br><br>
         </div>
