@@ -72,6 +72,22 @@
             border-color: #FFA931 !important;
             background-color: white !important;
             color: #FFA931 !important;
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19) !important;
+        }
+
+        .btnWarna {
+            height: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            background-color: #D9D9D9;
+            color: black;
+            padding: 3px 28px;
+        }
+
+        .btnWarna:hover {
+            border-color: #FFA931 !important;
+            background-color: white !important;
+            color: #FFA931 !important;
         }
 
         .btn-siapkan-event {
@@ -319,7 +335,7 @@
             <span style="font-size: 30px; font-weight: 600;">Store&nbsp;</span>
             <span style="font-size: 15px; padding-top: 7px;">(Pilih store untuk melihat detail)</span>
         </div>
-        <div class="row mt-3 row-cols-md-4 g-4 row">
+        <div class="d-flex row mt-3 row-cols-md-4 g-4 row" id="dropStore">
             <div class="col mb-auto">
                 <a style="text-decoration: none;" href="http://">
                     <div class="card my-auto">
@@ -334,8 +350,49 @@
                 </a>
             </div>
         </div>
+        <div id="dropStoreNow">
+        <div class="d-flex ms-5 my-5">
+            <span style="font-size: 30px; font-weight: 600;">Detail Pemesanan Store</span>
+        </div>
+        <div class="card mb-3 ms-5" style="max-width: 1122px; border: none;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="<?= base_url(); ?>/img/store 1.png" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body pt-0">
+                        <h5 class="card-title">Dresscode Kaos + Sablon</h5>
+                        <span>Warna</span>
+                        <div class="row">
+                            <div class="col">
+                                <a style="font-size: 18px; margin-top: 1rem; margin-bottom: 1rem; width: 209px; height: 42px;" class="d-flex align-items-center justify-content-center btn btnWarna" href="http://localhost:8080/login">Pesan Sekarang</a>
+                            </div>
+                            <div class="col">
+                                <a style="font-size: 18px; margin-top: 1rem; margin-bottom: 1rem; width: 209px; height: 42px;" class="d-flex align-items-center justify-content-center btn btnWarna" href="http://localhost:8080/login">Pesan Sekarang</a>
+                            </div>
+                            <div class="col">
+                                <a style="font-size: 18px; margin-top: 1rem; margin-bottom: 1rem; width: 209px; height: 42px;" class="d-flex align-items-center justify-content-center btn btnWarna" href="http://localhost:8080/login">Pesan Sekarang</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <a style="font-size: 18px; margin-bottom: 1rem; width: 209px; height: 42px;" class="d-flex align-items-center justify-content-center btn btnWarna" href="http://localhost:8080/login">Pesan Sekarang</a>
+                            </div>
+                            <div class="col">
+                                <a style="font-size: 18px; margin-bottom: 1rem; width: 209px; height: 42px;" class="d-flex align-items-center justify-content-center btn btnWarna" href="http://localhost:8080/login">Pesan Sekarang</a>
+                            </div>
+                            <div class="col">
+                                <a style="font-size: 18px; margin-bottom: 1rem; width: 209px; height: 42px;" class="d-flex align-items-center justify-content-center btn btnWarna" href="http://localhost:8080/login">Pesan Sekarang</a>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
         <div class="d-flex flex-row align-items-center justify-content-center">
-            <a style="font-size: 18px; margin-top: 3rem; margin-bottom: 3rem; width: 800px; height: 45px;" class="d-flex align-items-center justify-content-center btn btnchat" href="http://localhost:8080/login">Pesan Sekarang</a>
+            <a style="font-size: 18px; margin-top: 5rem; margin-bottom: 3rem; width: 800px; height: 45px;" class="d-flex align-items-center justify-content-center btn btnchat" href="http://localhost:8080/login">Pesan Sekarang</a>
         </div>
         <hr>
         <div class="container-fluid text-center">
