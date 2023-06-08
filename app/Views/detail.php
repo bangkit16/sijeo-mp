@@ -351,7 +351,6 @@
                                     <div style="height: 8rem">
                                         <span style="font-size: 16px; font-weight: 600;width:100% " class="card-title"><?= $paket['nama_paket']; ?></span>
                                     </div>
-
                                     <p class="card-text  mb-1" style="color: #FFA931;font-size: 15px; font-weight: 500;">Rp <?= $paket['idr']; ?></p>
                                 </div>
                             </div>
