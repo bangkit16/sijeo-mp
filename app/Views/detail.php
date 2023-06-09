@@ -72,7 +72,7 @@
             border-color: #FFA931 !important;
             background-color: white !important;
             color: #FFA931 !important;
-            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19) !important;
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19) !important;
         }
 
         .btnWarna {
@@ -339,10 +339,49 @@
             <div class="col mb-auto">
                 <a style="text-decoration: none;" href="http://">
                     <div class="card my-auto">
-                        <img src="" class="card-img-top img-fluid">
+                        <img style="height: 18rem;" src="<?= base_url(); ?>/img/store 1.jpg" class="card-img-top ">
                         <div class="card-body">
                             <div style="height: 8rem">
-                                <span style="font-size: 16px; font-weight: 600;width:100% " class="card-title">BARU NIH</span>
+                                <span style="font-size: 16px; font-weight: 600;width:100% " class="card-title">Dress Code</span>
+                            </div>
+                            <p class="card-text  mb-1" style="color: #FFA931;font-size: 15px; font-weight: 500;">Rp 10.000</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col mb-auto">
+                <a style="text-decoration: none;" href="http://">
+                    <div class="card my-auto">
+                        <img style="height: 18rem;" src="<?= base_url(); ?>/img/store 2.jpg" class="card-img-top ">
+                        <div class="card-body">
+                            <div style="height: 8rem">
+                                <span style="font-size: 16px; font-weight: 600;width:100% " class="card-title">Souvenir</span>
+                            </div>
+                            <p class="card-text  mb-1" style="color: #FFA931;font-size: 15px; font-weight: 500;">Rp 10.000</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col mb-auto">
+                <a style="text-decoration: none;" href="http://">
+                    <div class="card my-auto">
+                        <img style="height: 18rem;" src="<?= base_url(); ?>/img/store 3.jpg" class="card-img-top ">
+                        <div class="card-body">
+                            <div style="height: 8rem">
+                                <span style="font-size: 16px; font-weight: 600;width:100% " class="card-title">Bracelet Ticket/span>
+                            </div>
+                            <p class="card-text  mb-1" style="color: #FFA931;font-size: 15px; font-weight: 500;">Rp 10.000</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col mb-auto">
+                <a style="text-decoration: none;" href="http://">
+                    <div class="card my-auto">
+                        <img style="height: 18rem;" src="<?= base_url(); ?>/img/store 4.jpg" class="card-img-top ">
+                        <div class="card-body">
+                            <div style="height: 8rem">
+                                <span style="font-size: 16px; font-weight: 600;width:100% " class="card-title">Balon</span>
                             </div>
                             <p class="card-text  mb-1" style="color: #FFA931;font-size: 15px; font-weight: 500;">Rp 10.000</p>
                         </div>
@@ -351,48 +390,48 @@
             </div>
         </div>
         <div id="dropStoreNow">
-        <div class="d-flex ms-5 my-5">
-            <span style="font-size: 30px; font-weight: 600;">Detail Pemesanan Store</span>
-        </div>
-        <div class="card mb-3 ms-5" style="max-width: 1122px; border: none;">
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img src="<?= base_url(); ?>/img/store 1.png" class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body pt-0">
-                        <h5 class="card-title">Dresscode Kaos + Sablon</h5>
-                        <span>Warna</span>
-                        <div class="row">
-                            <div class="col">
-                                <a style="font-size: 18px; margin-top: 1rem; margin-bottom: 1rem; width: 209px; height: 42px;" class="d-flex align-items-center justify-content-center btn btnWarna" href="http://localhost:8080/login">Pesan Sekarang</a>
+            <div class="d-flex ms-5 my-5">
+                <span style="font-size: 30px; font-weight: 600;">Detail Pemesanan Store</span>
+            </div>
+            <div class="card mb-3 ms-5" style="max-width: 1122px; border: none;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="<?= base_url(); ?>/img/store 1.png" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body pt-0">
+                            <h5 class="card-title">Dresscode Kaos + Sablon</h5>
+                            <span>Warna</span>
+                            <div class="row">
+                                <div class="col">
+                                    <a style="font-size: 18px; margin-top: 1rem; margin-bottom: 1rem; width: 209px; height: 42px;" class="d-flex align-items-center justify-content-center btn btnWarna" href="http://localhost:8080/login">Pesan Sekarang</a>
+                                </div>
+                                <div class="col">
+                                    <a style="font-size: 18px; margin-top: 1rem; margin-bottom: 1rem; width: 209px; height: 42px;" class="d-flex align-items-center justify-content-center btn btnWarna" href="http://localhost:8080/login">Pesan Sekarang</a>
+                                </div>
+                                <div class="col">
+                                    <a style="font-size: 18px; margin-top: 1rem; margin-bottom: 1rem; width: 209px; height: 42px;" class="d-flex align-items-center justify-content-center btn btnWarna" href="http://localhost:8080/login">Pesan Sekarang</a>
+                                </div>
                             </div>
-                            <div class="col">
-                                <a style="font-size: 18px; margin-top: 1rem; margin-bottom: 1rem; width: 209px; height: 42px;" class="d-flex align-items-center justify-content-center btn btnWarna" href="http://localhost:8080/login">Pesan Sekarang</a>
+                            <div class="row">
+                                <div class="col">
+                                    <a style="font-size: 18px; margin-bottom: 1rem; width: 209px; height: 42px;" class="d-flex align-items-center justify-content-center btn btnWarna" href="http://localhost:8080/login">Pesan Sekarang</a>
+                                </div>
+                                <div class="col">
+                                    <a style="font-size: 18px; margin-bottom: 1rem; width: 209px; height: 42px;" class="d-flex align-items-center justify-content-center btn btnWarna" href="http://localhost:8080/login">Pesan Sekarang</a>
+                                </div>
+                                <div class="col">
+                                    <a style="font-size: 18px; margin-bottom: 1rem; width: 209px; height: 42px;" class="d-flex align-items-center justify-content-center btn btnWarna" href="http://localhost:8080/login">Pesan Sekarang</a>
+                                </div>
                             </div>
-                            <div class="col">
-                                <a style="font-size: 18px; margin-top: 1rem; margin-bottom: 1rem; width: 209px; height: 42px;" class="d-flex align-items-center justify-content-center btn btnWarna" href="http://localhost:8080/login">Pesan Sekarang</a>
-                            </div>
+                            <hr>
                         </div>
-                        <div class="row">
-                            <div class="col">
-                                <a style="font-size: 18px; margin-bottom: 1rem; width: 209px; height: 42px;" class="d-flex align-items-center justify-content-center btn btnWarna" href="http://localhost:8080/login">Pesan Sekarang</a>
-                            </div>
-                            <div class="col">
-                                <a style="font-size: 18px; margin-bottom: 1rem; width: 209px; height: 42px;" class="d-flex align-items-center justify-content-center btn btnWarna" href="http://localhost:8080/login">Pesan Sekarang</a>
-                            </div>
-                            <div class="col">
-                                <a style="font-size: 18px; margin-bottom: 1rem; width: 209px; height: 42px;" class="d-flex align-items-center justify-content-center btn btnWarna" href="http://localhost:8080/login">Pesan Sekarang</a>
-                            </div>
-                        </div>
-                        <hr>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
         <div class="d-flex flex-row align-items-center justify-content-center">
-            <a style="font-size: 18px; margin-top: 5rem; margin-bottom: 3rem; width: 800px; height: 45px;" class="d-flex align-items-center justify-content-center btn btnchat" href="http://localhost:8080/login">Pesan Sekarang</a>
+            <button style="font-size: 18px; margin-top: 5rem; margin-bottom: 3rem; width: 800px; height: 45px;" class="d-flex align-items-center justify-content-center btn btnchat" data-bs-toggle="modal" data-bs-target="#exampleModal">Pesan Sekarang</button>
         </div>
         <hr>
         <div class="container-fluid text-center">
@@ -447,35 +486,48 @@
                                     <option value="3">LinkAja</option>
                                 </select>
                                 <div class="d-flex flex-column text-center align-items-center py-5">
-                                    <button type="button" class="btn" style="background-color: #FFA931; width: 285px; height: 60px;">Bayar DP - Rp 6.000.000</button>
+                                    <button class="btn btn-primary">Open second modal</button>
+                                    <a type="button" class="btn" style="background-color: #FFA931; width: 285px; height: 60px;" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Bayar DP - Rp 6.000.000</a>
                                     <br>
-                                    <button type="button" class="btn" style="background-color: #FFA931; width: 285px; height: 60px;">Lunas - Rp 20.000.000</button>
+                                    <button type="button" class="btn" style="background-color: #FFA931; width: 285px; height: 60px;" data-bs-toggle="modal" data-bs-target="#modalQR">Lunas - Rp 20.000.000</button>
                                 </div>
+
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
-            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
-            <script>
-                function selengkapnya() {
-                    var dots = document.getElementById("dots");
-                    var moreText = document.getElementById("more");
-                    var btnText = document.getElementById("selengkapnya");
-
-                    if (dots.style.display === "none") {
-                        dots.style.display = "inline";
-                        btnText.innerHTML = "Lihat Lebih Banyak";
-                        moreText.style.display = "none";
-                    } else {
-                        dots.style.display = "none";
-                        btnText.innerHTML = "Lihat Lebih Sedikit";
-                        moreText.style.display = "inline";
-                    }
-                }
-            </script>
         </div>
+        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-body d-flex flex-column align-items-center justify-content-center">
+                        <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <img src="https://www.hellotech.com/guide/wp-content/uploads/2020/05/HelloTech-qr-code-1024x1024.jpg" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+    <script>
+        function selengkapnya() {
+            var dots = document.getElementById("dots");
+            var moreText = document.getElementById("more");
+            var btnText = document.getElementById("selengkapnya");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Lihat Lebih Banyak";
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btnText.innerHTML = "Lihat Lebih Sedikit";
+                moreText.style.display = "inline";
+            }
+        }
+    </script>
 </body>
 
 </html>
