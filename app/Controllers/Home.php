@@ -8,13 +8,11 @@ use App\Models\PaketVendorModel;
 
 class Home extends BaseController
 {
-    protected $adminModel;
     protected $vendorModel;
     protected $paketVendorModel;
 
     public function __construct()
     {
-        $this->adminModel = new AdminModel();
         $this->vendorModel = new VendorModel();
         $this->paketVendorModel = new PaketVendorModel();
     }

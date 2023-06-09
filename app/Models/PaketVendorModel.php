@@ -11,7 +11,7 @@ class PaketVendorModel extends Model
 
     protected $returnType     = 'array';
 
-    protected $allowedFields = ['nama_paket', 'idr', 'area_pelayana', 'kapasitas_orang', 'peiode_acara', 'desc_vendor'];
+    protected $allowedFields = ['nama_paket', 'idr', 'area_pelayanan', 'kapasitas_orang', 'peiode_acara', 'desc_vendor' , 'id_vendor'];
 
     protected $useTimestamps = false;
     protected $createdField  = 'created_at';
