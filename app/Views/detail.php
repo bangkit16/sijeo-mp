@@ -76,18 +76,23 @@
         }
 
         .btnWarna {
-            height: 50px;
-            font-size: 18px;
+            width: 209px;
+            height: 42px;
             font-weight: 600;
             background-color: #D9D9D9;
+            cursor: pointer;
+            font-size: 18px;
             color: black;
             padding: 3px 28px;
+            border: none;
+            border-radius: 5px;
         }
 
+        .active,
         .btnWarna:hover {
-            border-color: #FFA931 !important;
-            background-color: white !important;
-            color: #FFA931 !important;
+            border: 1px solid #FFA931;
+            background-color: white;
+            color: #FFA931;
         }
 
         .btn-siapkan-event {
@@ -389,43 +394,27 @@
                 </a>
             </div>
         </div>
-        <div id="dropStoreNow">
-            <div class="d-flex ms-5 my-5">
-                <span style="font-size: 30px; font-weight: 600;">Detail Pemesanan Store</span>
-            </div>
-            <div class="card mb-3 ms-5" style="max-width: 1122px; border: none;">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="<?= base_url(); ?>/img/store 1.png" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body pt-0">
-                            <h5 class="card-title">Dresscode Kaos + Sablon</h5>
-                            <span>Warna</span>
-                            <div class="row">
-                                <div class="col">
-                                    <a style="font-size: 18px; margin-top: 1rem; margin-bottom: 1rem; width: 209px; height: 42px;" class="d-flex align-items-center justify-content-center btn btnWarna" href="http://localhost:8080/login">Pesan Sekarang</a>
-                                </div>
-                                <div class="col">
-                                    <a style="font-size: 18px; margin-top: 1rem; margin-bottom: 1rem; width: 209px; height: 42px;" class="d-flex align-items-center justify-content-center btn btnWarna" href="http://localhost:8080/login">Pesan Sekarang</a>
-                                </div>
-                                <div class="col">
-                                    <a style="font-size: 18px; margin-top: 1rem; margin-bottom: 1rem; width: 209px; height: 42px;" class="d-flex align-items-center justify-content-center btn btnWarna" href="http://localhost:8080/login">Pesan Sekarang</a>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <a style="font-size: 18px; margin-bottom: 1rem; width: 209px; height: 42px;" class="d-flex align-items-center justify-content-center btn btnWarna" href="http://localhost:8080/login">Pesan Sekarang</a>
-                                </div>
-                                <div class="col">
-                                    <a style="font-size: 18px; margin-bottom: 1rem; width: 209px; height: 42px;" class="d-flex align-items-center justify-content-center btn btnWarna" href="http://localhost:8080/login">Pesan Sekarang</a>
-                                </div>
-                                <div class="col">
-                                    <a style="font-size: 18px; margin-bottom: 1rem; width: 209px; height: 42px;" class="d-flex align-items-center justify-content-center btn btnWarna" href="http://localhost:8080/login">Pesan Sekarang</a>
-                                </div>
-                            </div>
-                            <hr>
+        <div class="d-flex ms-5 my-5">
+            <span style="font-size: 30px; font-weight: 600;">Detail Pemesanan Store</span>
+        </div>
+        <div class="card mb-3 ms-5" style="max-width: 1122px; border: none;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="<?= base_url(); ?>/img/store 1.png" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body pt-0">
+                        <h5 class="card-title">Dresscode Kaos + Sablon</h5>
+                        <span>Warna</span>
+                        <div id="selectWarna" class="d-flex gap-4 mt-3">
+                            <button class="btnWarna active">Warna1</button>
+                            <button class="btnWarna">Warna2</button>
+                            <button class="btnWarna">Warna3</button>
+                            <button class="btnWarna">Warna4</button>
+                            <button class="btnWarna">Warna5</button>
+                            <button class="btnWarna">Warna6</button>
                         </div>
+                        <hr>
                     </div>
                 </div>
             </div>
@@ -512,6 +501,17 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
     <script>
+        // Add active class to the current button (highlight it)
+        var header = document.getElementById("selectWarna");
+        var btns = header.getElementsByClassName("btnWarna");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+
         function selengkapnya() {
             var dots = document.getElementById("dots");
             var moreText = document.getElementById("more");
