@@ -391,7 +391,7 @@
             <div class="col-4">
 
                 <div class="card mb-3 justify-content-center mt-5" style="max-width: 100%">
-                    <div style="width: 50%;height: 5rem% ;border-radius: 25px; overflow: hidden" class="m-auto mt-5">
+                    <div style="width: 50%;height: 5rem ;border-radius: 25px; overflow: hidden" class="m-auto mt-5">
                         <img src="<?= base_url(); ?>/img/vector rasyid.png" class="img-fluid mx-auto" alt="..." style=";"><br>
                     </div>
                     <div class="card-body justify-content-center m-auto">
@@ -409,7 +409,7 @@
             </div>
             <div class="col-4">
                 <div class="card mb-3 justify-content-center mt-5" style="max-width: 100%">
-                    <div style="width: 50%;height: 5rem% ;border-radius: 25px; overflow: hidden" class="m-auto mt-5">
+                    <div style="width: 50%;height: 5rem ;border-radius: 25px; overflow: hidden" class="m-auto mt-5">
                         <img src="<?= base_url(); ?>/img/vector rasyid.png" class="img-fluid mx-auto" alt="..." style=";"><br>
                     </div>
                     <div class="card-body justify-content-center m-auto">
@@ -428,7 +428,7 @@
             </div>
             <div class="col-4">
                 <div class="card mb-3 justify-content-center mt-5" style="max-width: 100%">
-                    <div style="width: 50%;height: 5rem% ;border-radius: 25px; overflow: hidden" class="m-auto mt-5">
+                    <div style="width: 50%;height: 5rem ;border-radius: 25px; overflow: hidden" class="m-auto mt-5">
                         <img src="<?= base_url(); ?>/img/vector rasyid.png" class="img-fluid mx-auto" alt="..." style=";"><br>
                     </div>
                     <div class="card-body justify-content-center m-auto">

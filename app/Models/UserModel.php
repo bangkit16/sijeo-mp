@@ -4,14 +4,14 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class ManagerModel extends Model
+class UserModel extends Model
 {
-    protected $table      = 'manager';
-    protected $primaryKey = 'id_manager';
+    protected $table      = 'user';
+    protected $primaryKey = 'id_user';
 
     protected $returnType     = 'array';
 
-    protected $allowedFields = ['nama_manager', 'username_manager', 'alamat_manager', 'no_hp_manager', 'email_manager', 'password_manager'];
+    protected $allowedFields = ['nama_customer', 'jenis_kelamin', 'tempat_lahir', 'tanggal_lahir', 'no_hp', 'email', 'alamat', 'password', 'level_user'];
 
     protected $useTimestamps = false;
     protected $createdField  = 'created_at';
