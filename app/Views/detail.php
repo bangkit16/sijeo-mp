@@ -575,7 +575,7 @@
     <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalLabel2" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
-                <div class="modal-body">
+                <div class="modal-body d-flex flex-column align-items-center justify-content-center">
                     <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="container-fluid">
                         <h3 class="py-5 text-center" style="font-weight: 600;">Rangkuman Pembayaran</h3>
@@ -635,6 +635,91 @@
                         <hr class="mx-5">
                         <div class="d-flex flex-column text-center align-items-center py-5">
                             <button type="button" class="btn" style="background-color: #FFA931; width: 285px; height: 60px;" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal">Lanjutkan Pembayaran</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalLabel3" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body d-flex flex-column align-items-center justify-content-center">
+                    <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="container-fluid">
+                        <h3 class="py-5 text-center" style="font-weight: 600;">Rangkuman Pembayaran</h3>
+                        <div class="row mx-5 mt-3">
+                            <div class="col-8 d-flex justify-content-start" style="font-weight: 600;">
+                                <h4>Detail Pemesanan</h4>
+                            </div>
+                            <div class="col-4 d-flex justify-content-start" style="font-weight: 600;">
+                                <h4>Jumlah</h4>
+                            </div>
+                        </div>
+                        <div class="row mx-5">
+                            <div class="col-8 d-flex justify-content-start">
+                                <span>Paket Platinum Acara Dies Natalis ALEA (Decoration) 2023 untuk Mahasiswa</span>
+                            </div>
+                            <div class="col-4 d-flex justify-content-start">
+                                <span>Rp 20.0000.000,-</span>
+                            </div>
+                        </div>
+                        <div class="row mx-5">
+                            <div class="col-8 justify-content-start">
+                                <span>Dresscode Kaos + Sablon (All Size) Rp 60.000 x 150 pcs</span>
+                            </div>
+                            <div class="col-4 justify-content-start">
+                                <span>Rp 9.0000.000,-</span>
+                            </div>
+                        </div>
+                        <hr class="mx-5">
+                        <div class="row mx-5">
+                            <div class="col-8 justify-content-start" style="font-weight: 600;">
+                                <h4>Metode Pembayaran</h4>
+                            </div>
+                        </div>
+                        <div class="row mx-5">
+                            <div class="col-8 justify-content-start">
+                                <span>TRANSFER - BANK BRI</span>
+                            </div>
+                        </div>
+                        <hr class="mx-5">
+                        <div class="row mx-5">
+                            <div class="col-8 justify-content-start">
+                                <h4>Subtotal</h4>
+                            </div>
+                            <div class="col-4 justify-content-start">
+                                <span>Rp 29.0000.000,-</span>
+                            </div>
+                        </div>
+                        <hr class="mx-5">
+                        <div class="row mx-5">
+                            <div class="col-8 justify-content-start">
+                                <h4>Total Pembayaran</h4>
+                            </div>
+                            <div class="col-4 justify-content-start" style="font-weight: 600;">
+                                <span>Rp 29.0000.000,-</span>
+                            </div>
+                        </div>
+                        <hr class="mx-5">
+                        <div class="d-flex flex-column text-center align-items-center py-5">
+                            <button type="button" class="btn" style="background-color: #FFA931; width: 285px; height: 60px;" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal">Lanjutkan Pembayaran</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModalToggle4" aria-hidden="true" aria-labelledby="exampleModalLabel4" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body d-flex flex-column align-items-center justify-content-center">
+                    <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="container-fluid">
+                        <h3 class="py-5 text-center" style="font-weight: 600;">Pembayaran</h3>
+                        <div class="d-flex flex-column text-center align-items-center py-2">
+                            <span class="mx-5 mb-5">harap periksa email anda , setelah ini kami akan mingirimkan kode billing pembayaran melalui email anda . harap selesaikan pembayaran sebelum tenggat yang telah diberikan.</span>
+                            <button type="button" class="btn mt-5" style="background-color: #FFA931; width: 285px; height: 60px;"><a href="http://localhost:8080/" style="text-decoration: none; color: white;">Kembali ke Beranda</a></button>
                         </div>
                     </div>
                 </div>
