@@ -565,7 +565,6 @@
                                 <br>
                                 <button type="button" class="btn" style="background-color: #FFA931; width: 285px; height: 60px;" data-bs-toggle="modal" data-bs-target="#modalQR">Lunas - Rp 20.000.000</button>
                             </div>
-
                         </form>
                     </div>
                 </div>
