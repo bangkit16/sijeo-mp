@@ -11,7 +11,7 @@ class UserModel extends Model
 
     protected $returnType     = 'array';
 
-    protected $allowedFields = ['nama_customer', 'jenis_kelamin', 'tempat_lahir', 'tanggal_lahir', 'no_hp', 'email', 'alamat', 'password', 'level_user'];
+    protected $allowedFields = ['nama', 'jenis_kelamin', 'tempat_lahir', 'tanggal_lahir', 'no_hp', 'email', 'alamat', 'password', 'level_user'];
 
     protected $useTimestamps = false;
     protected $createdField  = 'created_at';

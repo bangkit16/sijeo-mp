@@ -184,6 +184,11 @@
             background-color: #EBEBEB;
             padding: 60px 120px;
         }
+        .garis_vertikal {
+            border-left: 1px black solid;
+            height: 25px;
+            width: 0px;
+        }
     </style>
 </head>
 

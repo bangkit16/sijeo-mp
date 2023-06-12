@@ -11,7 +11,7 @@ class VendorModel extends Model
 
     protected $returnType     = 'array';
 
-    protected $allowedFields = ['nama_vendor', 'deskripsi_vendor', 'alamat_vendor', 'no_hp_vendor', 'email_vendor', 'harga_vendor'];
+    protected $allowedFields = ['nama_vendor', 'deskripsi_vendor', 'alamat_vendor', 'no_hp_vendor', 'email_vendor', 'kota', 'instagram'];
 
     protected $useTimestamps = false;
     protected $createdField  = 'created_at';
