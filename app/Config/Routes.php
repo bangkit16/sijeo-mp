@@ -38,6 +38,7 @@ $routes->get('/profil', 'Home::profil');
 $routes->get('/detail/(:num)', 'Home::detail/$1');
 
 
+$routes->get('/admin/dashboard', 'Admin::dashboard');
 
 
 
@@ -48,8 +49,12 @@ $routes->get('/detail/(:num)', 'Home::detail/$1');
 $routes->get('/Customer/logout', 'Customer::logout');
 $routes->post('/Customer/login', 'Customer::login');
 $routes->post('/Customer/register', 'Customer::register');
+
+
+
+
 /*
- * --------------------------------------------------------------------
+* --------------------------------------------------------------------
  * Additional Routing
  * --------------------------------------------------------------------
  *
