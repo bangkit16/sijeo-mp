@@ -532,6 +532,15 @@
                             <span style="color: #FFA931;"><?= $paketDetail['idr']; ?></span>
                         </div>
                     </div>
+                    <div class="row row-cols-auto mx-5 mt-4" style="height: 140px; width: 589px; align-items: center; border-color: black; border-style: solid; border-radius: 20px; border-width: 1px;">
+                        <div class="col-3">
+                            <img src="" alt="">
+                        </div>
+                        <div class="col-9 d-flex flex-column justify-content-center">
+                            <span>NAMA PAKET</span>
+                            <span style="color: #FFA931;">HARGA</span>
+                        </div>
+                    </div>
                     <div class="row row-cols-auto mx-auto pt-5" style="height: auto; width: 589px;">
                         <span>Sebelum melanjutkan ke proses pembayaran, mohon lengkapi tanggal layanan dan metodee pembayaran terlebih dahulu</span>
                         <form class="pt-4" style="width: 100%;">
@@ -545,8 +554,7 @@
                                 <option value="3">LinkAja</option>
                             </select>
                             <div class="d-flex flex-column text-center align-items-center py-5">
-                                <button class="btn btn-primary">Open second modal</button>
-                                <a type="button" class="btn" style="background-color: #FFA931; width: 285px; height: 60px;" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Bayar DP - Rp 6.000.000</a>
+                                <button type="button" class="btn" style="background-color: #FFA931; width: 285px; height: 60px;" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Bayar DP - Rp 6.000.000</button>
                                 <br>
                                 <button type="button" class="btn" style="background-color: #FFA931; width: 285px; height: 60px;" data-bs-toggle="modal" data-bs-target="#modalQR">Lunas - Rp 20.000.000</button>
                             </div>
