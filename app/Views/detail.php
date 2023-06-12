@@ -319,7 +319,7 @@
                 <span style="font-weight: 600;font-size: 30px;"><?= $paketDetail['nama_paket']; ?></span><br>
                 <span style="color: #FFA931; font-weight: 500;font-size: 30px;">IDR <?= $paketDetail['idr']; ?></span>
                 <br><br><br><br><br>
-                <a style="font-size: 18px; margin-top: 5rem; width: auto;" class="d-flex flex-row align-items-center justify-content-center btn btnchat" href="http://localhost:8080/login">Chat</a>
+                <a style="font-size: 18px; margin-top: 5rem; width: auto;" class="d-flex flex-row align-items-center justify-content-center btn btnchat" href="">Chat</a>
                 <hr>
                 <span style="font-weight: 600;font-size: 30px;">DETAIL PAKET</span>
                 <hr>
