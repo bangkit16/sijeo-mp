@@ -168,7 +168,7 @@
                 <?php endif; ?>
                 <?php if (!isset($_SESSION['username'])) : ?>
                     <div class="mx-3" style="font-size: 14px;">
-                        <span>Menjadi Vendor? <a href="" style="color: #FFA931; text-decoration: none;" id="link-daftar">Daftar</a></span>
+                        <span>Menjadi Vendor? <a href="http://localhost:8080/daftarVendor" style="color: #FFA931; text-decoration: none;" id="link-daftar">Daftar</a></span>
                     </div>
                     <div class="mx-3" style="font-size: 14px;">
                         <span>Ingin memesan?</span>

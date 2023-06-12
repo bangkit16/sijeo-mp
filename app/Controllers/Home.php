@@ -59,4 +59,7 @@ class Home extends BaseController
     public function profil(){
         return view('profil.php');
     }
+    public function daftarVendor(){
+        return view('daftarVendor.php');
+    }
 }
