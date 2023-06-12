@@ -497,7 +497,7 @@
         </div>
     </div>
     <div class="d-flex flex-row align-items-center justify-content-center">
-        <button style="font-size: 18px; margin-top: 1rem; margin-bottom: 3rem; width: 800px; height: 45px;" class="d-flex align-items-center justify-content-center btn btnchat" data-bs-toggle="modal" data-bs-target="#exampleModal">Pesan Sekarang</button>
+        <button style="font-size: 18px; margin-top: 1rem; margin-bottom: 3rem; width: 800px; height: 45px;" class="d-flex align-items-center justify-content-center btn btnchat" data-bs-toggle="modal" data-bs-target="#exampleModalToggle1">Pesan Sekarang</button>
     </div>
     <hr>
     <div class="container-fluid text-center">
@@ -524,7 +524,7 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModalToggle1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-body d-flex flex-column align-items-center justify-content-center">
@@ -561,9 +561,9 @@
                                 <option value="3">LinkAja</option>
                             </select>
                             <div class="d-flex flex-column text-center align-items-center py-5">
-                                <button type="button" class="btn" style="background-color: #FFA931; width: 285px; height: 60px;" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Bayar DP - Rp 6.000.000</button>
+                                <button type="button" class="btn" style="background-color: #FFA931; width: 285px; height: 60px;" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Bayar DP - Rp 6.000.000</button>
                                 <br>
-                                <button type="button" class="btn" style="background-color: #FFA931; width: 285px; height: 60px;" data-bs-toggle="modal" data-bs-target="#modalQR">Lunas - Rp 20.000.000</button>
+                                <button type="button" class="btn" style="background-color: #FFA931; width: 285px; height: 60px;" data-bs-toggle="modal" data-bs-target="#exampleModalToggle3">Lunas - Rp 20.000.000</button>
                             </div>
                         </form>
                     </div>
@@ -571,55 +571,79 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalLabel2" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
-                <div class="modal-body d-flex flex-column align-items-center justify-content-center">
+                <div class="modal-body d-flex flex-column align-items-center">
                     <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
-                    <img src="https://www.hellotech.com/guide/wp-content/uploads/2020/05/HelloTech-qr-code-1024x1024.jpg" alt="" class="img-fluid">
+                    <div class="container-fluid">
+                        <h3 class="py-5 text-center" style="font-weight: 600;">Rangkuman Pembayaran</h3>
+                        <div class="row mx-5 mt-5">
+                            <div class="col-9 d-flex justify-content-start" style="font-weight: 600;">
+                                <h4>Detail Pemesanan</h4>
+                            </div>
+                            <div class="col-3 d-flex justify-content-center" style="font-weight: 600;">
+                                <h4>Jumlah</h4>
+                            </div>
+                        </div>
+                        <div class="row mx-5">
+                            <div class="col-9 d-flex justify-content-start">
+                                <span>Paket Platinum Acara Dies Natalis ALEA (Decoration) 2023 untuk Mahasiswa</span>
+                            </div>
+                            <div class="col-3 d-flex justify-content-center">
+                                <span>Rp 20.0000.000,-</span>
+                            </div>
+                        </div>
+                        <div class="row mx-5">
+                            <div class="col-9 justify-content-start">
+                                <span>Dresscode Kaos + Sablon (All Size) Rp 60.000 x 150 pcs</span>
+                            </div>
+                            <div class="col-3 justify-content-center">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
-    <script>
-        $('.btn-plus, .btn-minus').on('click', function(e) {
-            const isNegative = $(e.target).closest('.btn-minus').is('.btn-minus');
-            const input = $(e.target).closest('.input-group').find('input');
-            if (input.is('input')) {
-                input[0][isNegative ? 'stepDown' : 'stepUp']()
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+        <script>
+            $('.btn-plus, .btn-minus').on('click', function(e) {
+                const isNegative = $(e.target).closest('.btn-minus').is('.btn-minus');
+                const input = $(e.target).closest('.input-group').find('input');
+                if (input.is('input')) {
+                    input[0][isNegative ? 'stepDown' : 'stepUp']()
+                }
+            })
+
+            // Add active class to the current button (highlight it)
+            var header = document.getElementById("selectWarna");
+            var btns = header.getElementsByClassName("btnWarna");
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].addEventListener("click", function() {
+                    var current = document.getElementsByClassName("active");
+                    current[0].className = current[0].className.replace(" active", "");
+                    this.className += " active";
+                });
             }
-        })
 
-        // Add active class to the current button (highlight it)
-        var header = document.getElementById("selectWarna");
-        var btns = header.getElementsByClassName("btnWarna");
-        for (var i = 0; i < btns.length; i++) {
-            btns[i].addEventListener("click", function() {
-                var current = document.getElementsByClassName("active");
-                current[0].className = current[0].className.replace(" active", "");
-                this.className += " active";
-            });
-        }
+            function selengkapnya() {
+                var dots = document.getElementById("dots");
+                var moreText = document.getElementById("more");
+                var btnText = document.getElementById("selengkapnya");
 
-        function selengkapnya() {
-            var dots = document.getElementById("dots");
-            var moreText = document.getElementById("more");
-            var btnText = document.getElementById("selengkapnya");
-
-            if (dots.style.display === "none") {
-                dots.style.display = "inline";
-                btnText.innerHTML = "Lihat Lebih Banyak";
-                moreText.style.display = "none";
-            } else {
-                dots.style.display = "none";
-                btnText.innerHTML = "Lihat Lebih Sedikit";
-                moreText.style.display = "inline";
+                if (dots.style.display === "none") {
+                    dots.style.display = "inline";
+                    btnText.innerHTML = "Lihat Lebih Banyak";
+                    moreText.style.display = "none";
+                } else {
+                    dots.style.display = "none";
+                    btnText.innerHTML = "Lihat Lebih Sedikit";
+                    moreText.style.display = "inline";
+                }
             }
-        }
-    </script>
+        </script>
 </body>
 
 </html>
