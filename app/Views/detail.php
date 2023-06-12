@@ -203,9 +203,7 @@
                         <img src="<?= base_url(); ?>/img/vector rasyid.png" class="img-fluid" style="width: 30px; height: 30px; border-radius: 100%;">
                         <span>&nbsp;&nbsp;&nbsp;<?= $_SESSION['username']; ?></span>
                     </div>
-                    <div class="mx-3 garis_vertikal" style="font-size: 14px;">
-
-                    </div>
+                    <div class="mx-3 garis_vertikal" style="font-size: 14px;"></div>
                     <div class="mx-3" style="font-size: 14px;">
                         <a href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 25px; height: 25px; fill: black;">
                                 <title>bell-ring-outline</title>
