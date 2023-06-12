@@ -701,7 +701,7 @@
                         </div>
                         <hr class="mx-5">
                         <div class="d-flex flex-column text-center align-items-center py-5">
-                            <button type="button" class="btn" style="background-color: #FFA931; width: 285px; height: 60px;" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal">Lanjutkan Pembayaran</button>
+                            <button type="button" class="btn" style="background-color: #FFA931; width: 285px; height: 60px; color: white;" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal">Lanjutkan Pembayaran</button>
                         </div>
                     </div>
                 </div>
