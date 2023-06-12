@@ -131,6 +131,10 @@
             height: 100%;
             width: auto;
         }
+
+        .checked {
+            color: orange;
+        }
     </style>
 </head>
 
@@ -250,39 +254,43 @@
             <?php endforeach; ?>
 
         </div>
-        <h2 class="mt-5 mb-5" style="font-weight: 600;">Paket Promo Event</h2>
+        <h2 class="mt-5 mb-5" style="font-weight: 600;">Vendor</h2>
         <div class="row mt-3 row-cols-md-5 g-4 roww" style="text-align: start;">
             <?php foreach ($vendor as $vendor) :  ?>
                 <div class="col coll mb-auto">
-                    <!-- <a style="text-decoration: none;" href="<?= base_url(); ?>detail/<?= $vendor['id_vendor']; ?>"> -->
-                    <div class="card my-auto">
-                        <img src="<?= base_url(); ?>/img/<?= $vendor['gambar']; ?>" class=" m-3" style="border-radius: 50%;">
-                        <div class="card-body">
-                            <div style="height: 8rem">
-                                <span style="font-size: 20px; font-weight: 600;width:100% " class="card-title"><?= $vendor['nama_vendor']; ?></span><br>
-                                <span style="font-size: 15px; font-weight: 500;width:100% " class="card-title"><?= $vendor['kota']; ?></span>
-                                <br>
-                                <div class="pt-1 mb-auto">
-                                    <?php
-                                    for ($i = 0; $i < $vendor['rating']; $i++) {
-                                        echo '<span class="fa fa-star checked"></span>';
-                                    }
-                                    // if (!$vendor['rating'] == 5) {
-                                    $j = 5 - $vendor['rating'];
-                                    for ($i = 0; $i < $j; $i++) {
-                                        echo '<span class="fa fa-star"></span>';
-                                    }
-                                    // }
+                    <a style="text-decoration: none;" href="<?= base_url(); ?>detail/<?= $vendor['id_vendor']; ?>">
+                        <div class="card my-auto">
+                            <img src="<?= base_url(); ?>/img/<?= $vendor['gambar']; ?>" class=" m-3" style="border-radius: 50%;">
+                            <div class="card-body">
+                                <div style="height: 8rem ;" class="d-flex flex-column">
+                                    <div class="p-1">
 
-                                    ?>
+                                        <span style="font-size: 20px; font-weight: 600;width:100% " class="card-title"><?= $vendor['nama_vendor']; ?></span><br>
+                                        <span style="font-size: 15px; font-weight: 500;width:100% " class="card-title"><?= $vendor['kota']; ?></span>
+                                    </div>
+                                    <br>
+                                    <div class="pt-1 mb-auto">
+                                        <?php
+                                        for ($i = 0; $i < $vendor['rating']; $i++) {
+                                            echo '<span class="fa fa-star checked"></span>';
+                                        }
+                                        // if (!$vendor['rating'] == 5) {
+                                        $j = 5 - $vendor['rating'];
+                                        for ($i = 0; $i < $j; $i++) {
+                                            echo '<span class="fa fa-star"></span>';
+                                        }
+                                        // }
+
+                                        ?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                     </a>
                 </div>
             <?php endforeach; ?>
         </div>
+        <br>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
