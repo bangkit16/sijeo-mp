@@ -18,12 +18,16 @@ class Customer extends BaseController
         $email = $this->request->getVar('email');
         $password = md5($this->request->getVar('password'));
         // $user = $this->userModel->where(['email_cutomer' => $email])->first();
-        $user = $this->userModel->where(['password_' => $password])->first();
+        $user = $this->userModel->where([
+            'email' => $email,
+            'password' => $password
+        ])->first();
         // dd($user);
         if ($user) {
 
             if ($user['password'] == $password) {
                 $_SESSION['username'] = $user['nama'];
+                $_SESSION['id'] = $user['id_user'];
                 $_SESSION['level_user'] = $user['level_user'];
                 return redirect()->to(base_url() . ' ');
             }
@@ -36,6 +40,8 @@ class Customer extends BaseController
         // unset($_SESSION['leveluser']);
 
         session()->remove('username');
+        session()->remove('id_user');
+        session()->remove('level_user');
 
         return redirect()->to(base_url());
     }
@@ -50,6 +56,7 @@ class Customer extends BaseController
             'level_user' => 1
             // 'no_hp' => $this->request->getVar('')
         ]);
+
         return redirect()->to(base_url());
     }
 }

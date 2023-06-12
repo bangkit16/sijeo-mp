@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Models\AdminModel;
+
 use App\Models\VendorModel;
 use App\Models\PaketVendorModel;
 
@@ -43,8 +43,15 @@ class Home extends BaseController
     }
     public function detail($id)
     {
+        if (!isset($_SESSION['username'])) {
+            return redirect()->to(base_url() . 'login');
+        };
+        $paketDetail = $this->paketVendorModel->where(['id' => $id])->first();
+        $vendor = $this->vendorModel->where(['id_vendor' => $paketDetail['id_vendor']])->first();
+
         $data = [
-            'paketDetail' => $this->paketVendorModel->where(['id' => $id])->first(),
+            'paketDetail' => $paketDetail,
+            'vendor' => $vendor,
             'paket' => $this->paketVendorModel->findAll(),
         ];
         return view('detail.php', $data);
