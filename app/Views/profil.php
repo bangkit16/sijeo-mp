@@ -23,16 +23,51 @@
             padding: 0;
             font-family: 'Poppins', sans-serif;
         }
+
+        .bg-1-lanpaggue {
+            background-image: url("<?= base_url(); ?>/img/landing page 1.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #link-nav2:hover {
+            color: #FFA931 !important;
+        }
     </style>
 </head>
 
 <body>
-    <div class="container-fluid d-flex" style="height: 274px; background-color: #FFA931;">
+    <div class="container-fluid text-center bg-1-lanpaggue sticky-top">
+        <div class="d-flex flex-row align-items-center justify-content-end p-2">
+            <div class="me-auto">
+                <a href="http://localhost:8080/"><img src="<?= base_url(); ?>/img/logo si jeo.png" class="img-fluid" style="width: auto; height: 60px"></a>
+            </div>
+            <div class="mx-5">
+                <a href="<?= base_url(); ?>" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Home</a>
+            </div>
+            <div class="mx-5">
+                <a href="" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Tentang</a>
+            </div>
+            <div class="mx-5">
+                <a href="http://localhost:8080/vendor" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Vendor</a>
+            </div>
+            <div class="mx-5">
+                <a href="" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Store</a>
+            </div>
+            <div class="mx-5">
+                <a href="" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Lastest Event</a>
+            </div>
+            <div class="mx-5">
+                <a href="" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Review</a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid d-flex" style="height: 180px; background-color: #FFA931;">
         <div class="row">
-            <div class="col ms-5 mt-5 d-flex flex-col justify-content-center align-items-center">
+            <div class="col ms-5 d-flex flex-col justify-content-center align-items-center">
                 <img src="<?= base_url(); ?>/img/vector rasyid.png" class="img-fluid" style="width: 115px; height: 115px; border-radius: 100%;">
             </div>
-            <div class="col ms-2 mt-5 d-flex flex-col justify-content-center align-items-center">
+            <div class="col ms-2 d-flex flex-col justify-content-center align-items-center">
                 <span style="font-size: 32px; font-weight: 600; color: white;"><?= $_SESSION['username']; ?></span>
             </div>
         </div>
