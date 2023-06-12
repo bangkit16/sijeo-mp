@@ -2,12 +2,21 @@
 <html lang="en">
 
 <head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Vendor SI JEO</title>
     <style>
         * {
@@ -240,6 +249,39 @@
                 </div>
             <?php endforeach; ?>
 
+        </div>
+        <h2 class="mt-5 mb-5" style="font-weight: 600;">Paket Promo Event</h2>
+        <div class="row mt-3 row-cols-md-5 g-4 roww" style="text-align: start;">
+            <?php foreach ($vendor as $vendor) :  ?>
+                <div class="col coll mb-auto">
+                    <!-- <a style="text-decoration: none;" href="<?= base_url(); ?>detail/<?= $vendor['id_vendor']; ?>"> -->
+                    <div class="card my-auto">
+                        <img src="<?= base_url(); ?>/img/<?= $vendor['gambar']; ?>" class=" m-3" style="border-radius: 50%;">
+                        <div class="card-body">
+                            <div style="height: 8rem">
+                                <span style="font-size: 20px; font-weight: 600;width:100% " class="card-title"><?= $vendor['nama_vendor']; ?></span><br>
+                                <span style="font-size: 15px; font-weight: 500;width:100% " class="card-title"><?= $vendor['kota']; ?></span>
+                                <br>
+                                <div class="pt-1 mb-auto">
+                                    <?php
+                                    for ($i = 0; $i < $vendor['rating']; $i++) {
+                                        echo '<span class="fa fa-star checked"></span>';
+                                    }
+                                    // if (!$vendor['rating'] == 5) {
+                                    $j = 5 - $vendor['rating'];
+                                    for ($i = 0; $i < $j; $i++) {
+                                        echo '<span class="fa fa-star"></span>';
+                                    }
+                                    // }
+
+                                    ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            <?php endforeach; ?>
         </div>
     </div>
 

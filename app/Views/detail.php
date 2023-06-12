@@ -308,6 +308,7 @@
                                 echo '<span class="fa fa-star"></span>';
                             }
                             // }
+                            dd($vendor);
                             ?>
                             <span> 9 (reviews)</span>
                         </div>
