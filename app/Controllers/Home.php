@@ -62,4 +62,7 @@ class Home extends BaseController
     public function daftarVendor(){
         return view('daftarVendor.php');
     }
+    public function notifikasi(){
+        return view('botifikasi.php');
+    }
 }
