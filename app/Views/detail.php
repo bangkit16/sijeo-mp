@@ -203,9 +203,7 @@
                         <img src="<?= base_url(); ?>/img/vector rasyid.png" class="img-fluid" style="width: 30px; height: 30px; border-radius: 100%;">
                         <span>&nbsp;&nbsp;&nbsp;<?= $_SESSION['username']; ?></span>
                     </div>
-                    <div class="mx-3 garis_vertikal" style="font-size: 14px;">
-
-                    </div>
+                    <div class="mx-3 garis_vertikal" style="font-size: 14px;"></div>
                     <div class="mx-3" style="font-size: 14px;">
                         <a href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 25px; height: 25px; fill: black;">
                                 <title>bell-ring-outline</title>
@@ -702,7 +700,7 @@
                         </div>
                         <hr class="mx-5">
                         <div class="d-flex flex-column text-center align-items-center py-5">
-                            <button type="button" class="btn" style="background-color: #FFA931; width: 285px; height: 60px;" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal">Lanjutkan Pembayaran</button>
+                            <button type="button" class="btn" style="background-color: #FFA931; width: 285px; height: 60px; color: white;" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal">Lanjutkan Pembayaran</button>
                         </div>
                     </div>
                 </div>
