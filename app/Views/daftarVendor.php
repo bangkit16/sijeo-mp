@@ -84,7 +84,7 @@
                     <label for="namaVendor" class="form-label" style="font-weight: 500; font-size: 30px;">Nama Vendor</label>
                 </div>
                 <div class="col-8">
-                    <input type="text" class="form-control" id="namaVendor" style="border: 1px solid black;">
+                    <input type="text" class="form-control" id="namaVendor" style="border: 1px solid black;" required>
                 </div>
             </div>
             <div class="row mx-5 d-flex justify-content-center align-items-center mb-3">
@@ -92,7 +92,7 @@
                     <label for="emailVendor" class="form-label" style="font-weight: 500; font-size: 30px;">Email Vendor</label>
                 </div>
                 <div class="col-8">
-                    <input type="email" class="form-control" id="emailVendor" style="border: 1px solid black;">
+                    <input type="email" class="form-control" id="emailVendor" style="border: 1px solid black;" required>
                 </div>
             </div>
             <div class="row mx-5 d-flex justify-content-center align-items-center mb-3">
@@ -100,7 +100,7 @@
                     <label for="noVendor" class="form-label" style="font-weight: 500; font-size: 30px;">No. Hp Vendor</label>
                 </div>
                 <div class="col-8">
-                    <input type="number" min="12" class="form-control" id="noVendor" style="border: 1px solid black;">
+                    <input type="number" min="12" class="form-control" id="noVendor" style="border: 1px solid black;" required>
                 </div>
             </div>
             <div class="row mx-5 d-flex justify-content-center align-items-center mb-3">
@@ -108,7 +108,7 @@
                     <label for="alamatVendor" class="form-label" style="font-weight: 500; font-size: 30px;">Alamat Vendor</label>
                 </div>
                 <div class="col-8">
-                    <input type="text" class="form-control" id="alamatVendor" style="border: 1px solid black;">
+                    <input type="text" class="form-control" id="alamatVendor" style="border: 1px solid black;" required>
                 </div>
             </div>
             <div class="row mx-5 d-flex justify-content-center mb-5">
@@ -116,11 +116,11 @@
                     <label for="deskripsiVendor" class="form-label" style="font-weight: 500; font-size: 30px;">Deskripsi Vendor</label>
                 </div>
                 <div class="col-8">
-                    <textarea name="deskripsiVendor" class="form-control" id="deskripsiVendor" cols="30" rows="10" style="border: 1px solid black;"></textarea>
+                    <textarea name="deskripsiVendor" class="form-control" id="deskripsiVendor" cols="30" rows="10" style="border: 1px solid black;" required></textarea>
                 </div>
             </div>
             <div class="d-flex text-center justify-content-center align-items-center mx-5 pb-5">
-                <button type="button" class="btn btn-daftar" style="background-color: #FFA931; width: 285px; height: 60px; color: white;" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Daftar</button>
+                <button type="submit" class="btn btn-daftar" style="background-color: #FFA931; width: 285px; height: 60px; color: white;" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Daftar</button>
             </div>
         </form>
     </div>
