@@ -260,9 +260,11 @@
                 <div class="col coll mb-auto">
                     <a style="text-decoration: none;" href="<?= base_url(); ?>detail/<?= $vendor['id_vendor']; ?>">
                         <div class="card my-auto">
-                            <img src="<?= base_url(); ?>/img/<?= $vendor['gambar']; ?>" class=" m-3" style="border-radius: 50%;">
+                            <!-- <div class="card-header " style="width: 100%;height: 100%;overflow: hidden;border-radius: 100%;"> -->
+                            <!-- </div> -->
                             <div class="card-body">
-                                <div style="height: 8rem ;" class="d-flex flex-column">
+                                <img src="<?= base_url(); ?>/img/<?= $vendor['gambar']; ?>" class=" card-img-top" style="height: 200px;object-fit: cover;border-radius: 100%;">
+                                <div style="height: 8rem ;" class="d-flex flex-column mt-4">
                                     <div class="p-1">
 
                                         <span style="font-size: 20px; font-weight: 600;width:100% " class="card-title"><?= $vendor['nama_vendor']; ?></span><br>
