@@ -18,7 +18,12 @@
         @import url(https://unpkg.com/@webpixels/css@1.1.5/dist/index.css);
 
         /* Bootstrap Icons */
-        @import url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.4.0/font/bootstrap-icons.min.css")
+        @import url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.4.0/font/bootstrap-icons.min.css");
+
+        * {
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
     </style>
 </head>
 

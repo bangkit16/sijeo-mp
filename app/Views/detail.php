@@ -308,7 +308,6 @@
                                 echo '<span class="fa fa-star"></span>';
                             }
                             // }
-                            dd($vendor);
                             ?>
                             <span> 9 (reviews)</span>
                         </div>
@@ -371,8 +370,8 @@
             <span>Lihat apa yang kami tawarkan di “Store”!</span>
         </div>
         <div class="d-flex flex-row align-items-center pt-5">
-            <span style="font-size: 30px; font-weight: 600;">Store&nbsp;</span>
-            <span style="font-size: 15px; padding-top: 7px;">(Pilih store untuk melihat detail)</span>
+            <span style="font-size: 32px; font-weight: 600;">Store&nbsp;</span>
+            <span style="font-size: 20px; padding-top: 7px;color: #8C8282;">(Pilih store untuk melihat detail)</span>
         </div>
         <div class="d-flex row mt-3 row-cols-md-4 g-4 row" id="dropStore">
             <div class="col mb-auto">
