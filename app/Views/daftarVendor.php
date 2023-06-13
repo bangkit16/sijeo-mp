@@ -100,7 +100,7 @@
                     <label for="noVendor" class="form-label" style="font-weight: 500; font-size: 30px;">No. Hp Vendor</label>
                 </div>
                 <div class="col-8">
-                    <input type="number" min="12" class="form-control" id="noVendor" style="border: 1px solid black;" required>
+                    <input type="number" minlength="11" class="form-control" id="noVendor" style="border: 1px solid black;" required>
                 </div>
             </div>
             <div class="row mx-5 d-flex justify-content-center align-items-center mb-3">
@@ -120,7 +120,7 @@
                 </div>
             </div>
             <div class="d-flex text-center justify-content-center align-items-center mx-5 pb-5">
-                <button type="submit" class="btn btn-daftar" style="background-color: #FFA931; width: 285px; height: 60px; color: white;" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Daftar</button>
+                <input type="submit" class="btn btn-daftar" style="background-color: #FFA931; width: 285px; height: 60px; color: white;" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" value="Daftar">
             </div>
         </form>
     </div>
