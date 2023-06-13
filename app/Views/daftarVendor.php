@@ -111,7 +111,7 @@
                     <input type="text" class="form-control" id="alamatVendor" style="border: 1px solid black;">
                 </div>
             </div>
-            <div class="row mx-5 d-flex justify-content-center align-items-center mb-5">
+            <div class="row mx-5 d-flex justify-content-center mb-5">
                 <div class="col-4">
                     <label for="deskripsiVendor" class="form-label" style="font-weight: 500; font-size: 30px;">Deskripsi Vendor</label>
                 </div>
@@ -119,7 +119,7 @@
                     <textarea name="deskripsiVendor" class="form-control" id="deskripsiVendor" cols="30" rows="10" style="border: 1px solid black;"></textarea>
                 </div>
             </div>
-            <div class="d-flex text-center align-items-center justify-content-center mx-5 pb-5">
+            <div class="d-flex text-center justify-content-center align-items-center mx-5 pb-5">
                 <button type="button" class="btn btn-daftar" style="background-color: #FFA931; width: 285px; height: 60px; color: white;" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Daftar</button>
             </div>
         </form>
