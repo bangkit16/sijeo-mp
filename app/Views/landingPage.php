@@ -245,7 +245,7 @@
                     <a href="http://localhost:8080/" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Home</a>
                 </div>
                 <div class="mx-5">
-                    <a href="" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Tentang</a>
+                    <a href="#tentang" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Tentang</a>
                 </div>
                 <div class="mx-5">
                     <a href="http://localhost:8080/vendor" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Vendor</a>
@@ -254,10 +254,10 @@
                     <a href="" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Store</a>
                 </div>
                 <div class="mx-5">
-                    <a href="" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Lastest Event</a>
+                    <a href="#lastestEvent" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Lastest Event</a>
                 </div>
                 <div class="mx-5">
-                    <a href="" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Review</a>
+                    <a href="#review" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Review</a>
                 </div>
             </div>
             <br>
@@ -281,7 +281,7 @@
             </div>
         </div>
     </nav>
-    <div class="container-fluid text-center overflow px-5 py-5" style="font-size: 18px;">
+    <div class="container-fluid text-center overflow px-5 py-5" style="font-size: 18px;" id="tentang">
         <div class="py-5">
             <span>SI JEO merupakan jasa Event Organizer terkenal di Malang. Sebagai EO berpengalaman</span>
             <br>
@@ -366,9 +366,9 @@
         </div>
     </div>
     <br>
-    <div class="container-fluid galery d-flex flex-column">
+    <div class="container-fluid galery d-flex flex-column" id="lastestEvent">
         <div class="latest">
-            <h1 style="font-weight: 600;">LATEST EVENT</h1>
+            <h1 style="font-weight: 600;">LASTEST EVENT</h1>
         </div>
         <br>
         <div class="wrapper">
@@ -390,7 +390,7 @@
             <img src="https://source.unsplash.com/random/1600x1600?concert" alt="">
         </div>
     </div>
-    <div class="review container-fluid">
+    <div class="review container-fluid" id="review">
         <span style="font-weight: 500;font-size: 32px;">Review</span><br>
         <div class="row">
             <div class="col-4">
