@@ -30,14 +30,16 @@
             width: 0px;
         }
 
-        .bg-1-lanpaggue {
-            background-image: url("<?= base_url(); ?>/img/landing page 1.png");
-            background-size: cover;
-            background-repeat: no-repeat;
+        #btn-daftar:hover {
+            background-color: white;
+            color: #FFA931;
+            border-color: #FFA931;
         }
 
-        #link-nav2:hover {
+        #btn-daftar:active {
+            background-color: white !important;
             color: #FFA931 !important;
+            border-color: #FFA931 !important;
         }
 
         .btn-primary-custom {
@@ -45,6 +47,44 @@
             color: white;
             font-size: 14px;
             padding: 3px 28px;
+        }
+
+        .btn-outline-primary-custom {
+            border-color: #FFA931;
+            color: #FFA931;
+            font-size: 14px;
+            padding: 3px 28px;
+        }
+
+        .bg-1-lanpaggue {
+            background-image: url("<?= base_url(); ?>/img/landing page 1.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #btn-daftar:hover {
+            background-color: white;
+            color: #FFA931;
+            border-color: #FFA931;
+        }
+
+        #btn-daftar:active {
+            background-color: white !important;
+            color: #FFA931 !important;
+            border-color: #FFA931 !important;
+        }
+
+        #btn-masuk:hover {
+            background-color: #FFA931;
+            color: white;
+        }
+
+        #link-daftar:hover {
+            color: black !important;
+        }
+
+        #link-nav2:hover {
+            color: #FFA931 !important;
         }
     </style>
 </head>
@@ -92,7 +132,7 @@
             </div>
         </div>
     </nav>
-    <div class="container-fluid text-center bg-1-lanpaggue sticky-top">
+    <div class="container-fluid text-center bg-1-lanpaggue sticky-top shadow-sm ">
         <div class="d-flex flex-row align-items-center justify-content-end p-2">
             <div class="me-auto">
                 <a href="http://localhost:8080/"><img src="<?= base_url(); ?>/img/logo si jeo.png" class="img-fluid" style="width: auto; height: 60px"></a>
@@ -101,7 +141,7 @@
                 <a href="<?= base_url(); ?>" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Home</a>
             </div>
             <div class="mx-5">
-                <a href="" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Tentang</a>
+                <a href="http://localhost:8080/#tentang" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Tentang</a>
             </div>
             <div class="mx-5">
                 <a href="http://localhost:8080/vendor" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Vendor</a>
@@ -110,10 +150,10 @@
                 <a href="" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Store</a>
             </div>
             <div class="mx-5">
-                <a href="" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Lastest Event</a>
+                <a href="http://localhost:8080/#lastestEvent" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Lastest Event</a>
             </div>
             <div class="mx-5">
-                <a href="" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Review</a>
+                <a href="http://localhost:8080/#review" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Review</a>
             </div>
         </div>
     </div>
