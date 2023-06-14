@@ -252,7 +252,6 @@
                     </a>
                 </div>
             <?php endforeach; ?>
-
         </div>
         <h2 class="mt-5 mb-5" style="font-weight: 600;">Vendor</h2>
         <div class="row mt-3 row-cols-md-5 g-4 roww" style="text-align: start;">

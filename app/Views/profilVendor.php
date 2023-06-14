@@ -236,7 +236,7 @@
             <div style="font-size: 24px;">Penyedia layanan penyewaan peralatan dan dekorasi yang menghadirkan segala yang Anda butuhkan untuk menciptakan atmosfer yang sempurna dalam acara Dies Natalis. Dari panggung dan tenda yang elegan hingga peralatan meja dan kursi yang berkualitas tinggi, kami menyediakan solusi yang komprehensif untuk kebutuhan logistik acara Anda. Dengan beragam pilihan dekorasi tema dan pencahayaan yang menarik, kami membantu menciptakan suasana yang sesuai dengan visi Anda. Dengan layanan pengiriman dan instalasi yang profesional, Event Pro Rentals akan memastikan acara Dies Natalis Anda berjalan dengan lancar dan terlihat luar biasa.</div>
         </div>
         <hr class="mx-5">
-        <span style="font-size: 32px; font-weight: 600; text-align: center;" class="my-5">Event</span>
+        <h4 style="font-size: 32px; font-weight: 600; text-align: center;" class="my-5">Event</h4>
         
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
