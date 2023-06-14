@@ -237,7 +237,7 @@
         </div>
         <hr class="mx-5">
         <h4 style="font-size: 32px; font-weight: 600; text-align: center;" class="my-5">Event</h4>
-        <div class="row row-cols-1 row-cols-md-4 g-4">
+        <div class="row row-cols-1 row-cols-md-4 g-4 mx-5">
             <div class="col">
                 <div class="card h-100">
                     <img src="..." class="card-img-top" alt="...">
