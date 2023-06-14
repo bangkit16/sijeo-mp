@@ -230,7 +230,17 @@
                 <a href="http://" type="button" class="btn btn-primary btn-love-vendor" style="width: 289px; background-color: white; border: 1px solid #FFA931; color: #FFA931; font-size: 24px;">Love Vendor</a>
             </div>
         </div>
+        <hr class="mx-5">
+        <div class="d-flex flex-column my-5 mx-5 justify-content-center align-items-center text-center">
+            <div style="font-size: 32px; font-weight: 600;" class="mb-4">Tentang</div>
+            <div style="font-size: 24px;">Penyedia layanan penyewaan peralatan dan dekorasi yang menghadirkan segala yang Anda butuhkan untuk menciptakan atmosfer yang sempurna dalam acara Dies Natalis. Dari panggung dan tenda yang elegan hingga peralatan meja dan kursi yang berkualitas tinggi, kami menyediakan solusi yang komprehensif untuk kebutuhan logistik acara Anda. Dengan beragam pilihan dekorasi tema dan pencahayaan yang menarik, kami membantu menciptakan suasana yang sesuai dengan visi Anda. Dengan layanan pengiriman dan instalasi yang profesional, Event Pro Rentals akan memastikan acara Dies Natalis Anda berjalan dengan lancar dan terlihat luar biasa.</div>
+        </div>
+        <hr class="mx-5">
+        <span style="font-size: 32px; font-weight: 600; text-align: center;" class="my-5">Event</span>
+        
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
 </body>
 
 </html>
