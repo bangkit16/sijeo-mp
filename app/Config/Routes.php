@@ -37,7 +37,7 @@ $routes->get('/vendor', 'Home::vendorPage');
 $routes->get('/profil', 'Home::profil');
 $routes->get('/daftarVendor', 'Home::daftarVendor');
 $routes->get('/notifikasi', 'Home::notifikasi');
-$routes->get('/profilVendor', 'Home::profilVendor');
+$routes->get('/profilVendor/(:num)', 'Home::profilVendor/$1');
 $routes->get('/detail/(:num)', 'Home::detail/$1');
 
 

@@ -162,14 +162,14 @@
     </div>
     <div class="container-fluid text-center">
         <div class="d-flex justify-content-center align-items-center my-5">
-            <img src="<?= base_url(); ?>img/profVen1.jpg" class="img-fluid" style="width: 1320px; height: 545px; border-radius: 20px;">
+            <img src="<?= base_url(); ?>img/profVen1.jpg" class="img-fluid" style="width: 1320px; height: 545px;object-fit: cover; border-radius: 20px;">
         </div>
         <div class="d-flex flex-row justify-content-center align-items-center align-items-stretch mb-5 mx-5">
             <div class="p-0 ms-5">
                 <img src="<?= base_url(); ?>img/logovendor1.jpg" class="img-fluid" style="width: 113px; height: 113px; border-radius: 100%;">
             </div>
             <div class="p-0 me-auto d-flex flex-column justify-content-start align-items-center">
-                <div class="ps-4" style="font-size: 28px; font-weight: 600;">Alea Decoration, MALANG</div>
+                <div class="ps-4" style="font-size: 28px; font-weight: 600;"><?= $vendor['nama_vendor']; ?>, <?= $vendor['kota']; ?></div>
                 <div class="ps-4 d-flex flex-row justify-content-center align-items-center me-auto">
                     <div class="p-0" style="font-size: 24px;">Acara Dies Natalis</div>
                     <div class="mx-1 garis_vertikal p-0"></div>
@@ -183,7 +183,7 @@
                             </defs>
                         </svg>
                     </div>
-                    <div class="p-0" style="font-size: 24px;">Malang</div>
+                    <div class="p-0" style="font-size: 24px;"><?= $vendor['kota']; ?></div>
                 </div>
                 <div class="ps-4 pt-3 d-flex flex-row justify-content-center align-items-center me-auto">
                     <div class="pe-4 d-flex flex-column">
@@ -204,14 +204,14 @@
                         <img src="<?= base_url(); ?>img/instagram.png" class="img-fluid p-0" style="width: 34px; height: 34px;">
                     </div>
                     <div style="font-size: 20px;" class="ms-3">:</div>
-                    <div style="font-size: 20px;" class="ms-3">Alea_Dec12</div>
+                    <div style="font-size: 20px;" class="ms-3"><?= $vendor['instagram']; ?></div>
                 </div>
                 <div class="d-flex flex-row justify-content-center align-items-center me-auto ps-4 pt-3">
                     <div>
                         <img src="<?= base_url(); ?>img/gmail.png" class="img-fluid p-0" style="width: 34px; height: 34px;">
                     </div>
                     <div style="font-size: 20px;" class="ms-3">:</div>
-                    <div style="font-size: 20px;" class="ms-3">AleaDec12@gmail.com</div>
+                    <div style="font-size: 20px;" class="ms-3"><?= $vendor['email_vendor']; ?></div>
                 </div>
             </div>
             <div class="p-0 mx-4">
@@ -224,47 +224,29 @@
         <hr class="mx-5">
         <div class="d-flex flex-column my-5 mx-5 justify-content-center align-items-center text-center">
             <div style="font-size: 32px; font-weight: 600;" class="mb-4">Tentang</div>
-            <div style="font-size: 24px;">Penyedia layanan penyewaan peralatan dan dekorasi yang menghadirkan segala yang Anda butuhkan untuk menciptakan atmosfer yang sempurna dalam acara Dies Natalis. Dari panggung dan tenda yang elegan hingga peralatan meja dan kursi yang berkualitas tinggi, kami menyediakan solusi yang komprehensif untuk kebutuhan logistik acara Anda. Dengan beragam pilihan dekorasi tema dan pencahayaan yang menarik, kami membantu menciptakan suasana yang sesuai dengan visi Anda. Dengan layanan pengiriman dan instalasi yang profesional, Event Pro Rentals akan memastikan acara Dies Natalis Anda berjalan dengan lancar dan terlihat luar biasa.</div>
+            <div style="font-size: 24px;"><?= $vendor['deskripsi_vendor']; ?></div>
         </div>
         <hr class="mx-5">
         <h4 style="font-size: 32px; font-weight: 600; text-align: center;" class="my-5">Event</h4>
-        <div class="row row-cols-1 row-cols-md-4 g-4 mx-5">
-            <div class="col">
-                <div class="card h-100">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    </div>
+        <?php if ($paket == null) { ?>
+            <div style="font-size: 24px;color: gray;">Vendor ini belum memiliki paket Event</div>
+        <?php } ?>
+        <div class="row mt-3 row-cols-md-5 g-4 row justify-content-center" style="text-align: start;">
+            <?php foreach ($paket as $paket) :  ?>
+                <div class="col mb-auto">
+                    <a style="text-decoration: none;" href="<?= base_url(); ?>detail/<?= $paket['id']; ?>">
+                        <div class="card my-auto ">
+                            <img src="<?= base_url(); ?>/img/<?= $paket['gambar']; ?>" class="card-img-top img-fluid" style="">
+                            <div class="card-body">
+                                <div style="height: 8rem">
+                                    <span style="font-size: 16px; font-weight: 600;width:100% " class="card-title"><?= $paket['nama_paket']; ?></span>
+                                </div>
+                                <p class="card-text  mb-1" style="color: #FFA931;font-size: 15px; font-weight: 500;">Rp <?= $paket['idr']; ?></p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a short card.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    </div>
-                </div>
-            </div>
+            <?php endforeach; ?>
         </div>
     </div>
     <footer>
