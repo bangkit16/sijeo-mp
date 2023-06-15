@@ -251,9 +251,6 @@
                     <a href="http://localhost:8080/vendor" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Vendor</a>
                 </div>
                 <div class="mx-5">
-                    <a href="" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Store</a>
-                </div>
-                <div class="mx-5">
                     <a href="#lastestEvent" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Lastest Event</a>
                 </div>
                 <div class="mx-5">
@@ -448,11 +445,10 @@
                         <p class="card-text m-auto">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
                 </div>
-                
             </div>
         </div>
-        
     </div>
+    <div></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
         // 'https://images.pexels.com/photos/3941286/pexels-photo-3941286.jpeg',
