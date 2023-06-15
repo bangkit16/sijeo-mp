@@ -692,6 +692,63 @@
             </div>
         </div>
     </div>
+    <footer>
+        <div class="container-fluid text-center" style="background-color: #45484E;">
+            <div class="d-flex flex-row px-5 pb-5">
+                <div class="d-flex flex-column mx-auto">
+                    <div class="my-5 me-auto">
+                        <img src="<?= base_url(); ?>/img/logo si jeo.png" class="img-fluid" style="height: auto; width: 197px;">
+                    </div>
+                    <div class="me-auto mb-1" style="font-size: 25px; color: white;">Sosial Media</div>
+                    <div class="d-flex flex-row mx-auto">
+                        <div>
+                            <img src="<?= base_url(); ?>/img/footer_facebook.png" class="img-fluid me-1" style="width: 40px; height: 40px;">
+                        </div>
+                        <div>
+                            <img src="<?= base_url(); ?>/img/footer_twitter.png" class="img-fluid mx-1" style="width: 40px; height: 40px;">
+                        </div>
+                        <div>
+                            <img src="<?= base_url(); ?>/img/footer_instagram.png" class="img-fluid mx-1" style="width: 40px; height: 40px;">
+                        </div>
+                        <div>
+                            <img src="<?= base_url(); ?>/img/footer_tiktok.png" class="img-fluid mx-1" style="width: 40px; height: 40px;">
+                        </div>
+                        <div>
+                            <img src="<?= base_url(); ?>/img/footer_youtube.png" class="img-fluid mx-1" style="width: 40px; height: 40px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-column mx-auto">
+                    <div class="mt-5 me-auto" style="font-size: 25px; font-weight: 600; color: white;">Tentang Kami</div>
+                    <div class="mt-2 me-auto" style="font-size: 20px; color: white;">Tentang</div>
+                    <div class="mt-1 me-auto" style="font-size: 20px; color: white;">Penawaran dan Promo</div>
+                    <div class="mt-1 me-auto" style="font-size: 20px; color: white;">Karir</div>
+                </div>
+                <div class="d-flex flex-column mx-auto">
+                    <div class="mt-5 me-auto" style="font-size: 25px; font-weight: 600; color: white;">Layanan</div>
+                    <div class="mt-2 me-auto" style="font-size: 20px; color: white;">Katalog</div>
+                    <div class="mt-1 me-auto" style="font-size: 20px; color: white;">Vendor</div>
+                    <div class="mt-1 me-auto" style="font-size: 20px; color: white;">Store</div>
+                </div>
+                <div class="d-flex flex-column mx-auto">
+                    <div class="mt-5 me-auto" style="font-size: 25px; font-weight: 600; color: white;">Hubungi Kami</div>
+                    <div>
+                        <form style="width: 412px;">
+                            <input type="text" class="form-control custom-form mt-2 p-0 pb-2" style="border-style: none; background-color: #45484E; color: #FFFFFF; font-size: 20px;" id="nama" placeholder="Nama">
+                            <input type="email" class="form-control custom-form mt-2 p-0 pb-2 " id="email" style="border: none; background-color: #45484E; color: #FFFFFF; font-size: 20px;" placeholder="Email">
+                            <input type="email" class="form-control custom-form mt-2 p-0 pb-2" id="email" style="border: none; background-color: #45484E; color: #FFFFFF; font-size: 20px;" placeholder="Apa yang dapat kami bantu?">
+                            <div class="d-flex justify-content-end align-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" fill="white" class="bi bi-arrow-right mt-5" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                                </svg>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <h5 class="m-0 pb-3" style="color: white;">Copyright @ 2023 - SI JEO Event Organizer</h5>
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
     <script>
