@@ -69,10 +69,16 @@ class Home extends BaseController
     {
         return view('daftarVendor.php');
     }
-    public function notifikasi(){
+    public function notifikasi()
+    {
         return view('notifikasi.php');
     }
-    public function profilVendor(){
-        return view('profilVendor.php');
+    public function profilVendor($id)
+    {
+        $data = [
+            'paket' => $this->paketVendorModel->where(['id_vendor' => $id])->findAll(),
+            'vendor' => $this->vendorModel->where(['id_vendor' => $id])->first(),
+        ];
+        return view('profilVendor.php', $data);
     }
 }

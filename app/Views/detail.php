@@ -376,40 +376,44 @@
             <span style="font-size: 20px; padding-top: 7px;color: #8C8282;">(Pilih store untuk melihat detail)</span>
         </div>
         <div class="d-flex row mt-3 row-cols-md-4 g-4 row" id="dropStore">
-            <?php foreach ($store as $storee) : ?>
+
+            <?php for ($i = 0; $i < count($store); $i++) { ?>
                 <div class="col mb-auto">
-                    <a style="text-decoration: none;" href="http://">
-                        <div class="card my-auto">
-                            <!-- <img style="height: 18rem;" src="<?= base_url(); ?>/img/store 1.jpg" class="card-img-top "> -->
-                            <img src="<?= base_url(); ?>/img/<?= $storee['gambar']; ?>" class=" card-img-top" style="height: 300px;object-fit: cover;">
-                            <div class="card-body">
-                                <div style="height: 8rem">
-                                    <span style="font-size: 16px; font-weight: 600;width:100% " class="card-title"><?= $storee['nama_store']; ?></span>
-                                </div>
-                                <p class="card-text  mb-1" style="color: #FFA931;font-size: 15px; font-weight: 500;">Rp <?= $storee['harga_store']; ?></p>
+                    <!-- <a style="text-decoration: none;" href="http://"> -->
+                    <div class="card my-auto">
+                        <!-- <img style="height: 18rem;" src="<?= base_url(); ?>/img/store 1.jpg" class="card-img-top "> -->
+                        <img src="<?= base_url(); ?>/img/<?= $store[$i]['gambar']; ?>" class=" card-img-top" style="height: 300px;object-fit: cover;">
+                        <div class="card-body">
+                            <div style="height: 4rem">
+                                <span style="font-size: 20px; font-weight: 600;width:100% " class="card-title"><?= $store[$i]['nama_store']; ?></span>
                             </div>
+                            <p class="card-text  mb-1" style="color: #FFA931;font-size: 18px; font-weight: 500;">Rp <?= $store[$i]['harga_store']; ?></p>
                         </div>
-                    </a>
+                        <input type="hidden" value="<?= $i; ?>">
+                        <button type="submit" class="btn btn-warning m-2" name='btn' id="btnn">Tambah</button>
+                    </div>
+                    <!-- </a> -->
                 </div>
-            <?php endforeach; ?>
+            <?php }; ?>
+
         </div>
         <div class="d-flex ms-5 my-5">
             <span style="font-size: 30px; font-weight: 600;">Detail Pemesanan Store</span>
         </div>
 
-        <?php foreach ($store as $stored) : ?>
-            <div class="card  mb-3 ms-5" style="max-width: 1122px; border: none;">
+        <?php for ($i = 0; $i < count($store); $i++) { ?>
+            <div class="card dkor dhidden mb-3 ms-5" style="max-width: 1122px; border: none;">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="<?= base_url(); ?>/img/<?= $stored['gambar']; ?>" class="img-fluid rounded-start" style="height: 300px;object-fit: cover;"" alt=" ...">
+                        <img src="<?= base_url(); ?>/img/<?= $store[$i]['gambar']; ?>" class="img-fluid rounded-start" style="height: 300px;object-fit: cover;"" alt=" ...">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body pt-0">
-                            <h5 class="card-title" style="font-size: 24px; font-weight: 600;"><?= $stored['nama_store']; ?></h5>
+                            <h5 class="card-title" style="font-size: 24px; font-weight: 600;"><?= $store[$i]['nama_store']; ?></h5>
                             <span style="font-size: 20px;">Catatan</span>
                             <form action="">
-                                <input type="hidden" name="" value="<?= $stored['id_store']; ?>" id="">
-                                <textarea name="" id="" cols="30" rows="6"></textarea>
+                                <input type="hidden" name="" value="<?= $store[$i]['id_store']; ?>" id="">
+                                <textarea name="" id="" cols="60" rows="6"></textarea>
                             </form>
 
                             <hr>
@@ -437,7 +441,7 @@
                     </div>
                 </div>
             </div>
-        <?php endforeach; ?>
+        <?php }; ?>
         <script>
             const formContainer = document.getElementById('formContainer');
             const displayDiv = document.getElementById('displayDiv');
