@@ -484,13 +484,13 @@
             </div>
             <div class="d-flex flex-column justify-content-center align-items-center mx-auto my-5">
                 <div>
-                    <img src="<?= base_url(); ?>/img/vector rasyid.png" class="img-fluid mb-3" style="height: 177px; width: 177px; border-radius: 100%; border: 3px solid black;">
+                    <img src="<?= base_url(); ?>/img/bangkit 2.png" class="img-fluid mb-3" style="height: 177px; width: 177px; border-radius: 100%; border: 3px solid black;">
                 </div>
                 <div style="font-size: 24px; font-weight: 500;">Bangkit Maulana C</div>
             </div>
             <div class="d-flex flex-column justify-content-center align-items-center mx-auto my-5">
                 <div>
-                    <img src="<?= base_url(); ?>/img/vector rasyid.png" class="img-fluid mb-3" style="height: 177px; width: 177px; border-radius: 100%; border: 3px solid black;">
+                    <img src="<?= base_url(); ?>/img/febry.png" class="img-fluid mb-3" style="height: 177px; width: 177px; border-radius: 100%; border: 3px solid black;">
                 </div>
                 <div style="font-size: 24px; font-weight: 500;">Ega Fadhilla F</div>
             </div>
@@ -501,19 +501,19 @@
         <div class="d-flex flex-row my-5">
             <div class="d-flex flex-column justify-content-center align-items-center mx-auto my-5">
                 <div>
-                    <img src="<?= base_url(); ?>/img/vector rasyid.png" class="img-fluid mb-3" style="height: 177px; width: 177px; border-radius: 100%; border: 3px solid black;">
+                    <img src="<?= base_url(); ?>/img/ferly.png" class="img-fluid mb-3" style="height: 177px; width: 177px; border-radius: 100%; border: 3px solid black;">
                 </div>
                 <div style="font-size: 24px; font-weight: 500;">Ferly Yanuar P</div>
             </div>
             <div class="d-flex flex-column justify-content-center align-items-center mx-auto my-5">
                 <div>
-                    <img src="<?= base_url(); ?>/img/vector rasyid.png" class="img-fluid mb-3" style="height: 177px; width: 177px; border-radius: 100%; border: 3px solid black;">
+                    <img src="<?= base_url(); ?>/img/khosyi.png" class="img-fluid mb-3" style="height: 177px; width: 177px; border-radius: 100%; border: 3px solid black;">
                 </div>
                 <div style="font-size: 24px; font-weight: 500;">Khosyi Nasywa I</div>
             </div>
             <div class="d-flex flex-column justify-content-center align-items-center mx-auto my-5">
                 <div>
-                    <img src="<?= base_url(); ?>/img/vector rasyid.png" class="img-fluid mb-3" style="height: 177px; width: 177px; border-radius: 100%; border: 3px solid black;">
+                    <img src="<?= base_url(); ?>/img/rasyid.png" class="img-fluid mb-3" style="height: 177px; width: 177px; border-radius: 100%; border: 3px solid black;">
                 </div>
                 <div style="font-size: 24px; font-weight: 500;">Rasyid Razeka A</div>
             </div>
@@ -532,7 +532,7 @@
             </div>
             <div class="d-flex flex-column justify-content-center align-items-center mx-auto my-5">
                 <div>
-                    <img src="<?= base_url(); ?>/img/vector rasyid.png" class="img-fluid mb-3" style="height: 177px; width: 177px; border-radius: 100%; border: 3px solid black;">
+                    <img src="<?= base_url(); ?>/img/risma.png" class="img-fluid mb-3" style="height: 177px; width: 177px; border-radius: 100%; border: 3px solid black;">
                 </div>
                 <div style="font-size: 24px; font-weight: 500;">Wiraswanti Rismanda P</div>
             </div>
@@ -591,7 +591,7 @@
                         <form style="width: 412px;">
                             <input type="text" class="form-control custom-form mt-2 p-0 pb-2" style="border-style: none; background-color: #45484E; color: #FFFFFF; font-size: 20px;" id="nama" placeholder="Nama">
                             <input type="email" class="form-control custom-form mt-2 p-0 pb-2 " id="email" style="border: none; background-color: #45484E; color: #FFFFFF; font-size: 20px;" placeholder="Email">
-                            <input type="email" class="form-control custom-form mt-2 p-0 pb-2" id="email" style="border: none; background-color: #45484E; color: #FFFFFF; font-size: 20px;" placeholder="Apa yang dapat kami bantu?">
+                            <input type="text" name="message" class="form-control custom-form mt-2 p-0 pb-2" id="email" style="border: none; background-color: #45484E; color: #FFFFFF; font-size: 20px;" placeholder="Apa yang dapat kami bantu?">
                             <div class="d-flex justify-content-end align-items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" fill="white" class="bi bi-arrow-right mt-5" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
