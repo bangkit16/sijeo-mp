@@ -39,6 +39,7 @@ $routes->get('/daftarVendor', 'Home::daftarVendor');
 $routes->get('/notifikasi', 'Home::notifikasi');
 $routes->get('/profilVendor/(:num)', 'Home::profilVendor/$1');
 $routes->get('/detail/(:num)', 'Home::detail/$1');
+$routes->post('/home/create-data', 'Home::createData');
 
 
 $routes->get('/admin/dashboard', 'Admin::dashboard');
