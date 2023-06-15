@@ -191,6 +191,10 @@
             -webkit-appearance: none;
             margin: 0;
         }
+
+        .dhidden {
+            display: none;
+        }
     </style>
 </head>
 
@@ -372,127 +376,101 @@
             <span style="font-size: 20px; padding-top: 7px;color: #8C8282;">(Pilih store untuk melihat detail)</span>
         </div>
         <div class="d-flex row mt-3 row-cols-md-4 g-4 row" id="dropStore">
-            <div class="col mb-auto">
-                <a style="text-decoration: none;" href="http://">
-                    <div class="card my-auto">
-                        <img style="height: 18rem;" src="<?= base_url(); ?>/img/store 1.jpg" class="card-img-top ">
-                        <div class="card-body">
-                            <div style="height: 8rem">
-                                <span style="font-size: 16px; font-weight: 600;width:100% " class="card-title">Dress Code</span>
+            <?php foreach ($store as $storee) : ?>
+                <div class="col mb-auto">
+                    <a style="text-decoration: none;" href="http://">
+                        <div class="card my-auto">
+                            <!-- <img style="height: 18rem;" src="<?= base_url(); ?>/img/store 1.jpg" class="card-img-top "> -->
+                            <img src="<?= base_url(); ?>/img/<?= $storee['gambar']; ?>" class=" card-img-top" style="height: 300px;object-fit: cover;">
+                            <div class="card-body">
+                                <div style="height: 8rem">
+                                    <span style="font-size: 16px; font-weight: 600;width:100% " class="card-title"><?= $storee['nama_store']; ?></span>
+                                </div>
+                                <p class="card-text  mb-1" style="color: #FFA931;font-size: 15px; font-weight: 500;">Rp <?= $storee['harga_store']; ?></p>
                             </div>
-                            <p class="card-text  mb-1" style="color: #FFA931;font-size: 15px; font-weight: 500;">Rp 10.000</p>
                         </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col mb-auto">
-                <a style="text-decoration: none;" href="http://">
-                    <div class="card my-auto">
-                        <img style="height: 18rem;" src="<?= base_url(); ?>/img/store 2.jpg" class="card-img-top ">
-                        <div class="card-body">
-                            <div style="height: 8rem">
-                                <span style="font-size: 16px; font-weight: 600;width:100% " class="card-title">Souvenir</span>
-                            </div>
-                            <p class="card-text  mb-1" style="color: #FFA931;font-size: 15px; font-weight: 500;">Rp 10.000</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col mb-auto">
-                <a style="text-decoration: none;" href="http://">
-                    <div class="card my-auto">
-                        <img style="height: 18rem;" src="<?= base_url(); ?>/img/store 3.jpg" class="card-img-top ">
-                        <div class="card-body">
-                            <div style="height: 8rem">
-                                <span style="font-size: 16px; font-weight: 600;width:100% " class="card-title">Bracelet Ticket/span>
-                            </div>
-                            <p class="card-text  mb-1" style="color: #FFA931;font-size: 15px; font-weight: 500;">Rp 10.000</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col mb-auto">
-                <a style="text-decoration: none;" href="http://">
-                    <div class="card my-auto">
-                        <img style="height: 18rem;" src="<?= base_url(); ?>/img/store 4.jpg" class="card-img-top ">
-                        <div class="card-body">
-                            <div style="height: 8rem">
-                                <span style="font-size: 16px; font-weight: 600;width:100% " class="card-title">Balon</span>
-                            </div>
-                            <p class="card-text  mb-1" style="color: #FFA931;font-size: 15px; font-weight: 500;">Rp 10.000</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
+                    </a>
+                </div>
+            <?php endforeach; ?>
         </div>
         <div class="d-flex ms-5 my-5">
             <span style="font-size: 30px; font-weight: 600;">Detail Pemesanan Store</span>
         </div>
-        <div class="card mb-3 ms-5" style="max-width: 1122px; border: none;">
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img src="<?= base_url(); ?>/img/store 1.png" class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body pt-0">
-                        <h5 class="card-title" style="font-size: 24px; font-weight: 600;">Dresscode Kaos + Sablon</h5>
-                        <span style="font-size: 20px;">Warna</span>
-                        <div id="selectWarna" class="mt-3">
-                            <div class="row">
-                                <div class="col">
-                                    <button class="btnWarna active">Warna1</button>
+
+        <?php foreach ($store as $stored) : ?>
+            <div class="card  mb-3 ms-5" style="max-width: 1122px; border: none;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="<?= base_url(); ?>/img/<?= $stored['gambar']; ?>" class="img-fluid rounded-start" style="height: 300px;object-fit: cover;"" alt=" ...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body pt-0">
+                            <h5 class="card-title" style="font-size: 24px; font-weight: 600;"><?= $stored['nama_store']; ?></h5>
+                            <span style="font-size: 20px;">Catatan</span>
+                            <form action="">
+                                <input type="hidden" name="" value="<?= $stored['id_store']; ?>" id="">
+                                <textarea name="" id="" cols="30" rows="6"></textarea>
+                            </form>
+
+                            <hr>
+
+                            <div class="jumlahForm align-items-center d-flex flex-rows"><br>
+                                <div class="d-flex flex-column">
+                                    <span style="font-size: 20px;">Jumlah</span>
+                                    <span style="font-size: 14px;">*minimum pemesanan 50 pcs</span>
                                 </div>
-                                <div class="col">
-                                    <button class="btnWarna">Warna2</button>
-                                </div>
-                                <div class="col">
-                                    <button class="btnWarna">Warna3</button>
-                                </div>
-                            </div>
-                            <div class="row mt-3">
-                                <div class="col">
-                                    <button class="btnWarna">Warna4</button>
-                                </div>
-                                <div class="col">
-                                    <button class="btnWarna">Warna5</button>
-                                </div>
-                                <div class="col">
-                                    <button class="btnWarna">Warna6</button>
-                                </div>
-                            </div>
-                        </div>
-                        <hr>
-                        <span style="font-size: 20px;">Ukuran</span>
-                        <select class="form-select mt-2 mb-4 text-center btnUkuran align-items-center" aria-label="Default select example" style="width: 209px; height: 42px; background-color: #D9D9D9; font-weight: 600; font-size: 18px;">
-                            <option value="s" selected>S</option>
-                            <option value="m">M</option>
-                            <option value="l">L</option>
-                            <option value="xl">XL</option>
-                            <option value="xxl">XXL</option>
-                        </select>
-                        <div class="jumlahForm align-items-center d-flex flex-rows"><br>
-                            <div class="d-flex flex-column">
-                                <span style="font-size: 20px;">Jumlah</span>
-                                <span style="font-size: 14px;">*minimum pemesanan 50 pcs</span>
-                            </div>
-                            <div class="input-group inline-group ms-auto">
-                                <div class="input-group-prepend">
-                                    <button class="btn btn-outline-secondary btn-minus">
-                                        <i class="fa fa-minus"></i>
-                                    </button>
-                                </div>
-                                <input class="form-control quantity" min="50" name="quantity" value="50" type="number" style="text-align: center;">
-                                <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary btn-plus">
-                                        <i class="fa fa-plus"></i>
-                                    </button>
+                                <div class="input-group inline-group ms-auto">
+                                    <div class="input-group-prepend">
+                                        <button class="btn btn-outline-secondary btn-minus">
+                                            <i class="fa fa-minus"></i>
+                                        </button>
+                                    </div>
+                                    <input class="form-control quantity" min="50" name="quantity" value="50" type="number" style="text-align: center;">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary btn-plus">
+                                            <i class="fa fa-plus"></i>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        <?php endforeach; ?>
+        <script>
+            const formContainer = document.getElementById('formContainer');
+            const displayDiv = document.getElementById('displayDiv');
+            const showButton = document.getElementById('showButton');
+
+
+            showButton.addEventListener('click', function() {
+                const forms = formContainer.getElementsByClassName('dynamic-form');
+                const dataArray = [];
+
+                for (let i = 0; i < forms.length; i++) {
+                    const form = forms[i];
+                    const hiddenValue = form.querySelector('input[type="hidden"]').value;
+                    const inputValue = form.querySelector('input[type="text"]').value;
+
+                    if (inputValue !== '') {
+                        const data = {
+                            hiddenValue: hiddenValue,
+                            inputValue: inputValue
+                        };
+
+                        dataArray.push(data);
+
+                        const newDiv = document.createElement('div');
+                        newDiv.textContent = 'Hidden Value: ' + hiddenValue + ', Input Value: ' + inputValue;
+
+                        displayDiv.appendChild(newDiv);
+                    }
+                }
+
+                console.log(dataArray); // Menampilkan array data di konsol
+            });
+        </script>
     </div>
     <div class="d-flex flex-row align-items-center justify-content-center">
         <button style="font-size: 18px; margin-top: 1rem; margin-bottom: 3rem; width: 800px; height: 45px;" class="d-flex align-items-center justify-content-center btn btnchat" data-bs-toggle="modal" data-bs-target="#exampleModalToggle1">Pesan Sekarang</button>

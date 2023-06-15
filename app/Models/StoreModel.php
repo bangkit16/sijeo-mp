@@ -11,7 +11,7 @@ class StoreModel extends Model
 
     protected $returnType     = 'array';
 
-    protected $allowedFields = ['nama_store', 'deskripsi_store', 'alamat_store', 'no_hp_store', 'email_store', 'harga_store'];
+    protected $allowedFields = ['nama_store', 'deskripsi_store', 'harga_store', 'id_vendor', 'gambar'];
 
     protected $useTimestamps = false;
     protected $createdField  = 'created_at';
