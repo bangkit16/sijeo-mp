@@ -195,6 +195,21 @@
         .dhidden {
             display: none;
         }
+
+        .custom-form {
+            border-bottom: 1px solid white !important;
+            border-radius: 0%;
+        }
+
+        #nama::placeholder {
+            color: white;
+            font-size: 20px;
+        }
+
+        #email::placeholder {
+            color: white;
+            font-size: 20px;
+        }
     </style>
 </head>
 
