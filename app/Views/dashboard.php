@@ -28,15 +28,10 @@
 </head>
 
 <body>
-    <!-- Banner -->
-    <a href="https://webpixels.io/components?ref=codepen" class="btn w-full btn-primary text-truncate rounded-0 py-2 border-0 position-relative" style="z-index: 1000;">
-        <strong>Crafted with Webpixels CSS:</strong> The design system for Bootstrap 5. Browse all components →
-    </a>
-
     <!-- Dashboard -->
     <div class="d-flex flex-column flex-lg-row h-lg-full bg-surface-secondary">
         <!-- Vertical Navbar -->
-        <nav class="navbar show navbar-vertical h-lg-screen navbar-expand-lg px-0 py-3 navbar-light bg-white border-bottom border-bottom-lg-0 border-end-lg" id="navbarVertical">
+        <nav class="navbar show navbar-vertical h-lg-screen navbar-expand-lg px-0 py-3 navbar-light bg-white border-bottom border-bottom-lg-0 border-end-lg" id="navbarVertical" style="background-color: #353745;">
             <div class="container-fluid">
                 <!-- Toggler -->
                 <button class="navbar-toggler ms-n2" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarCollapse" aria-controls="sidebarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,7 +39,7 @@
                 </button>
                 <!-- Brand -->
                 <a class="navbar-brand py-lg-2 mb-lg-5 px-lg-6 me-0" href="#">
-                    <img src="https://preview.webpixels.io/web/img/logos/clever-primary.svg" alt="...">
+                    <img src="<?= base_url(); ?>/img/logo si jeo.png" alt="...">
                 </a>
                 <!-- User menu (mobile) -->
                 <div class="navbar-user d-lg-none">
@@ -73,7 +68,7 @@
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <i class="bi bi-house"></i> Dashboard
+                                <i class="bi bi-house"></i> Kelola Event
                             </a>
                         </li>
                         <li class="nav-item">
@@ -83,104 +78,16 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <i class="bi bi-chat"></i> Messages
-                                <span class="badge bg-soft-primary text-primary rounded-pill d-inline-flex align-items-center ms-auto">6</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="bi bi-bookmarks"></i> Collections
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="bi bi-people"></i> Users
+                                <i class="bi bi-bookmarks"></i> History Pemesanan
                             </a>
                         </li>
                     </ul>
                     <!-- Divider -->
                     <hr class="navbar-divider my-5 opacity-20">
-                    <!-- Navigation -->
-                    <ul class="navbar-nav mb-md-4">
-                        <li>
-                            <div class="nav-link text-xs font-semibold text-uppercase text-muted ls-wide" href="#">
-                                Contacts
-                                <span class="badge bg-soft-primary text-primary rounded-pill d-inline-flex align-items-center ms-4">13</span>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-link d-flex align-items-center">
-                                <div class="me-4">
-                                    <div class="position-relative d-inline-block text-white">
-                                        <img alt="Image Placeholder" src="https://images.unsplash.com/photo-1548142813-c348350df52b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80" class="avatar rounded-circle">
-                                        <span class="position-absolute bottom-2 end-2 transform translate-x-1/2 translate-y-1/2 border-2 border-solid border-current w-3 h-3 bg-success rounded-circle"></span>
-                                    </div>
-                                </div>
-                                <div>
-                                    <span class="d-block text-sm font-semibold">
-                                        Marie Claire
-                                    </span>
-                                    <span class="d-block text-xs text-muted font-regular">
-                                        Paris, FR
-                                    </span>
-                                </div>
-                                <div class="ms-auto">
-                                    <i class="bi bi-chat"></i>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-link d-flex align-items-center">
-                                <div class="me-4">
-                                    <div class="position-relative d-inline-block text-white">
-                                        <span class="avatar bg-soft-warning text-warning rounded-circle">JW</span>
-                                        <span class="position-absolute bottom-2 end-2 transform translate-x-1/2 translate-y-1/2 border-2 border-solid border-current w-3 h-3 bg-success rounded-circle"></span>
-                                    </div>
-                                </div>
-                                <div>
-                                    <span class="d-block text-sm font-semibold">
-                                        Michael Jordan
-                                    </span>
-                                    <span class="d-block text-xs text-muted font-regular">
-                                        Bucharest, RO
-                                    </span>
-                                </div>
-                                <div class="ms-auto">
-                                    <i class="bi bi-chat"></i>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-link d-flex align-items-center">
-                                <div class="me-4">
-                                    <div class="position-relative d-inline-block text-white">
-                                        <img alt="..." src="https://images.unsplash.com/photo-1610899922902-c471ae684eff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80" class="avatar rounded-circle">
-                                        <span class="position-absolute bottom-2 end-2 transform translate-x-1/2 translate-y-1/2 border-2 border-solid border-current w-3 h-3 bg-danger rounded-circle"></span>
-                                    </div>
-                                </div>
-                                <div>
-                                    <span class="d-block text-sm font-semibold">
-                                        Heather Wright
-                                    </span>
-                                    <span class="d-block text-xs text-muted font-regular">
-                                        London, UK
-                                    </span>
-                                </div>
-                                <div class="ms-auto">
-                                    <i class="bi bi-chat"></i>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
                     <!-- Push content down -->
                     <div class="mt-auto"></div>
                     <!-- User (md) -->
                     <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="bi bi-person-square"></i> Account
-                            </a>
-                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
                                 <i class="bi bi-box-arrow-left"></i> Logout
