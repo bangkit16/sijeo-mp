@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -15,9 +15,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Vendor SI JEO</title>
+    <title>Notifikasi</title>
     <style>
         * {
             margin: 0;
@@ -31,14 +30,16 @@
             width: 0px;
         }
 
-        .bg-1-lanpaggue {
-            background-image: url("<?= base_url(); ?>/img/landing page 1.png");
-            background-size: cover;
-            background-repeat: no-repeat;
+        #btn-daftar:hover {
+            background-color: white;
+            color: #FFA931;
+            border-color: #FFA931;
         }
 
-        #link-nav2:hover {
+        #btn-daftar:active {
+            background-color: white !important;
             color: #FFA931 !important;
+            border-color: #FFA931 !important;
         }
 
         .btn-primary-custom {
@@ -55,23 +56,10 @@
             padding: 3px 28px;
         }
 
-
-        .btn-siapkan-event {
-            background-color: #FFA931;
-            color: white;
-            font-size: 25px;
-            padding: 4px 30px;
-            border-radius: 25px;
-        }
-
-        .btn:hover {
-            border-color: white;
-            color: white;
-        }
-
-        .btn:active {
-            border-color: white !important;
-            color: white !important;
+        .bg-1-lanpaggue {
+            background-image: url("<?= base_url(); ?>/img/landing page 1.png");
+            background-size: cover;
+            background-repeat: no-repeat;
         }
 
         #btn-daftar:hover {
@@ -98,43 +86,6 @@
         #link-nav2:hover {
             color: #FFA931 !important;
         }
-
-        /* .carousel-inner .carousel-item-next.carousel-item-start,
-        .carousel-inner .carousel-item-prev.carousel-item-end {
-            transform: translateX(50%);
-        }
-
-        .carousel-inner .carousel-item-start.active,
-        .carousel-inner .carousel-item-end.active {
-            transform: translateX(0);
-        } */
-
-        .carousel-inner .carousel-item-start,
-        .carousel-inner .carousel-item-end {
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .carousel-item {
-            border-radius: 25px;
-            height: 100%;
-            overflow: hidden;
-        }
-
-        .carousel-inner {
-            border-radius: 25px;
-            height: 100%;
-            overflow: hidden;
-        }
-
-        .carousel-item img {
-            border-radius: 25px;
-            height: 100%;
-            width: auto;
-        }
-
-        .checked {
-            color: orange;
-        }
     </style>
 </head>
 
@@ -147,9 +98,7 @@
                         <img src="<?= base_url(); ?>/img/vector rasyid.png" class="img-fluid" style="width: 30px; height: 30px; border-radius: 100%;">
                         <span>&nbsp;&nbsp;&nbsp;<?= $_SESSION['username']; ?></span>
                     </div>
-                    <div class="mx-3 garis_vertikal" style="font-size: 14px;">
-
-                    </div>
+                    <div class="mx-3 garis_vertikal" style="font-size: 14px;"></div>
                     <div class="mx-3" style="font-size: 14px;">
                         <a href="http://localhost:8080/notifikasi"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 25px; height: 25px; fill: black;">
                                 <title>bell-ring-outline</title>
@@ -181,7 +130,6 @@
                     </div>
                 <?php endif; ?>
             </div>
-
         </div>
     </nav>
     <div class="container-fluid text-center bg-1-lanpaggue sticky-top shadow-sm ">
@@ -209,92 +157,40 @@
             </div>
         </div>
     </div>
-    <div class="container">
-
-        <div id="carouselExampleAutoplaying" class="carousel slide mt-3" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="<?= base_url(); ?>img/vendor car 1.png" class="d-block w-100" alt="...">
+    <div class="container-fluid text-center">
+        <div class="d-flex justify-content-start align-items-center mt-5 ms-5">
+            <h4 style="font-weight: 600;">Notifikasi</h4>
+        </div>
+        <div class="mx-5 mt-4" style="border: 2px solid #959698; border-radius: 10px;">
+            <div class="row mx-3 my-3">
+                <div class="col-1 d-flex justify-content-center align-items-center">
+                    <img src="<?= base_url() ?>svg/notif.svg" alt="">
                 </div>
-                <div class="carousel-item">
-                    <img src="<?= base_url(); ?>img/vendor car 2.png" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="<?= base_url(); ?>img/vendor car 3.png" class="d-block w-100" alt="...">
+                <div class="col-11 d-flex justify-content-start align-items-center">
+                    Pesan Notifikasi Disini
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-
-        <h2 class="mt-5 " style="font-weight: 600;">Paket Promo Event</h2>
-        <div class="row mt-3 row-cols-md-5 g-4 roww" style="text-align: start;">
-            <?php foreach ($paket as $paket) :  ?>
-                <div class="col coll mb-auto">
-                    <a style="text-decoration: none;" href="<?= base_url(); ?>detail/<?= $paket['id']; ?>">
-                        <div class="card my-auto ">
-                            <img src="<?= base_url(); ?>/img/<?= $paket['gambar']; ?>" class="card-img-top img-fluid" style="">
-                            <div class="card-body">
-                                <div style="height: 8rem">
-                                    <span style="font-size: 16px; font-weight: 600;width:100% " class="card-title"><?= $paket['nama_paket']; ?></span>
-                                </div>
-                                <p class="card-text  mb-1" style="color: #FFA931;font-size: 15px; font-weight: 500;">Rp <?= $paket['idr']; ?></p>
-                            </div>
-                        </div>
-                    </a>
+            <hr class="my-0">
+            <div class="row mx-3 my-3">
+                <div class="col-1 d-flex justify-content-center align-items-center">
+                    <img src="<?= base_url() ?>svg/notif.svg" alt="">
                 </div>
-            <?php endforeach; ?>
-        </div>
-        <h2 class="mt-5 mb-5" style="font-weight: 600;">Vendor</h2>
-        <div class="row mt-3 row-cols-md-5 g-4 roww" style="text-align: start;">
-            <?php foreach ($vendor as $vendor) :  ?>
-                <div class="col coll mb-auto">
-                    <a style="text-decoration: none;" href="<?= base_url(); ?>detail/<?= $vendor['id_vendor']; ?>">
-                        <div class="card my-auto">
-                            <!-- <div class="card-header " style="width: 100%;height: 100%;overflow: hidden;border-radius: 100%;"> -->
-                            <!-- </div> -->
-                            <div class="card-body">
-                                <img src="<?= base_url(); ?>/img/<?= $vendor['gambar']; ?>" class=" card-img-top" style="height: 200px;object-fit: cover;border-radius: 100%;">
-                                <div style="height: 8rem ;" class="d-flex flex-column mt-4">
-                                    <div class="p-1">
-
-                                        <span style="font-size: 20px; font-weight: 600;width:100% " class="card-title"><?= $vendor['nama_vendor']; ?></span><br>
-                                        <span style="font-size: 15px; font-weight: 500;width:100% " class="card-title"><?= $vendor['kota']; ?></span>
-                                    </div>
-                                    <br>
-                                    <div class="pt-1 mb-auto">
-                                        <?php
-                                        for ($i = 0; $i < $vendor['rating']; $i++) {
-                                            echo '<span class="fa fa-star checked"></span>';
-                                        }
-                                        // if (!$vendor['rating'] == 5) {
-                                        $j = 5 - $vendor['rating'];
-                                        for ($i = 0; $i < $j; $i++) {
-                                            echo '<span class="fa fa-star"></span>';
-                                        }
-                                        // }
-
-                                        ?>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+                <div class="col-11 d-flex justify-content-start align-items-center">
+                    Pesan Notifikasi Disini
                 </div>
-            <?php endforeach; ?>
+            </div>
+            <hr class="my-0">
+            <div class="row mx-3 my-3">
+                <div class="col-1 d-flex justify-content-center align-items-center">
+                    <img src="<?= base_url() ?>svg/notif.svg" alt="">
+                </div>
+                <div class="col-11 d-flex justify-content-start align-items-center">
+                    Pesan Notifikasi Disini
+                </div>
+            </div>
+            <hr class="my-0">
         </div>
-        <br>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
-
 </body>
 
 </html>

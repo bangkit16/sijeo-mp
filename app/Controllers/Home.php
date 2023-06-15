@@ -69,4 +69,10 @@ class Home extends BaseController
     {
         return view('daftarVendor.php');
     }
+    public function notifikasi(){
+        return view('notifikasi.php');
+    }
+    public function profilVendor(){
+        return view('profilVendor.php');
+    }
 }

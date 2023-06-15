@@ -51,7 +51,7 @@
 </head>
 
 <body>
-    <div class="container-fluid text-center bg-1-lanpaggue sticky-top">
+<div class="container-fluid text-center bg-1-lanpaggue sticky-top shadow-sm ">
         <div class="d-flex flex-row align-items-center justify-content-end p-2">
             <div class="me-auto">
                 <a href="http://localhost:8080/"><img src="<?= base_url(); ?>/img/logo si jeo.png" class="img-fluid" style="width: auto; height: 60px"></a>
@@ -60,7 +60,7 @@
                 <a href="<?= base_url(); ?>" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Home</a>
             </div>
             <div class="mx-5">
-                <a href="" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Tentang</a>
+                <a href="http://localhost:8080/#tentang" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Tentang</a>
             </div>
             <div class="mx-5">
                 <a href="http://localhost:8080/vendor" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Vendor</a>
@@ -69,10 +69,10 @@
                 <a href="" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Store</a>
             </div>
             <div class="mx-5">
-                <a href="" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Lastest Event</a>
+                <a href="http://localhost:8080/#lastestEvent" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Lastest Event</a>
             </div>
             <div class="mx-5">
-                <a href="" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Review</a>
+                <a href="http://localhost:8080/#review" id="link-nav2" style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;">Review</a>
             </div>
         </div>
     </div>
@@ -84,7 +84,7 @@
                     <label for="namaVendor" class="form-label" style="font-weight: 500; font-size: 30px;">Nama Vendor</label>
                 </div>
                 <div class="col-8">
-                    <input type="text" class="form-control" id="namaVendor" style="border: 1px solid black;">
+                    <input type="text" class="form-control" id="namaVendor" style="border: 1px solid black;" required>
                 </div>
             </div>
             <div class="row mx-5 d-flex justify-content-center align-items-center mb-3">
@@ -92,7 +92,7 @@
                     <label for="emailVendor" class="form-label" style="font-weight: 500; font-size: 30px;">Email Vendor</label>
                 </div>
                 <div class="col-8">
-                    <input type="email" class="form-control" id="emailVendor" style="border: 1px solid black;">
+                    <input type="email" class="form-control" id="emailVendor" style="border: 1px solid black;" required>
                 </div>
             </div>
             <div class="row mx-5 d-flex justify-content-center align-items-center mb-3">
@@ -100,7 +100,7 @@
                     <label for="noVendor" class="form-label" style="font-weight: 500; font-size: 30px;">No. Hp Vendor</label>
                 </div>
                 <div class="col-8">
-                    <input type="number" min="12" class="form-control" id="noVendor" style="border: 1px solid black;">
+                    <input type="number" minlength="11" class="form-control" id="noVendor" style="border: 1px solid black;" required>
                 </div>
             </div>
             <div class="row mx-5 d-flex justify-content-center align-items-center mb-3">
@@ -108,7 +108,7 @@
                     <label for="alamatVendor" class="form-label" style="font-weight: 500; font-size: 30px;">Alamat Vendor</label>
                 </div>
                 <div class="col-8">
-                    <input type="text" class="form-control" id="alamatVendor" style="border: 1px solid black;">
+                    <input type="text" class="form-control" id="alamatVendor" style="border: 1px solid black;" required>
                 </div>
             </div>
             <div class="row mx-5 d-flex justify-content-center mb-5">
@@ -116,11 +116,11 @@
                     <label for="deskripsiVendor" class="form-label" style="font-weight: 500; font-size: 30px;">Deskripsi Vendor</label>
                 </div>
                 <div class="col-8">
-                    <textarea name="deskripsiVendor" class="form-control" id="deskripsiVendor" cols="30" rows="10" style="border: 1px solid black;"></textarea>
+                    <textarea name="deskripsiVendor" class="form-control" id="deskripsiVendor" cols="30" rows="10" style="border: 1px solid black;" required></textarea>
                 </div>
             </div>
             <div class="d-flex text-center justify-content-center align-items-center mx-5 pb-5">
-                <button type="button" class="btn btn-daftar" style="background-color: #FFA931; width: 285px; height: 60px; color: white;" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Daftar</button>
+                <input type="submit" class="btn btn-daftar" style="background-color: #FFA931; width: 285px; height: 60px; color: white;" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" value="Daftar">
             </div>
         </form>
     </div>
