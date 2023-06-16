@@ -380,6 +380,7 @@
         </div>
     </div>
     <br>
+    
     <div class="container-fluid text-center">
         <div class="d-flex flex-row justify-content-center align-items-start my-5">
             <div><img src="<?= base_url(); ?>/img/caraPesan.png" class="img-fluid mx-1" style="width: 625px; height: 907px;"></div>
