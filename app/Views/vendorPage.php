@@ -261,7 +261,7 @@
         <div class="row mt-3 row-cols-md-5 g-4 roww" style="text-align: start;">
             <?php foreach ($vendor as $vendor) :  ?>
                 <div class="col coll mb-auto">
-                    <a style="text-decoration: none;" href="<?= base_url(); ?>detail/<?= $vendor['id_vendor']; ?>">
+                    <a style="text-decoration: none;" href="<?= base_url(); ?>profilVendor/<?= $vendor['id_vendor']; ?>">
                         <div class="card my-auto">
                             <!-- <div class="card-header " style="width: 100%;height: 100%;overflow: hidden;border-radius: 100%;"> -->
                             <!-- </div> -->
