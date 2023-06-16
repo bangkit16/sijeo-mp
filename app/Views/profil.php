@@ -176,17 +176,17 @@
     <div class="container-fluid px-0 mt-5" style="background-color: #EBEBEB;">
         <div class="row g-0 py-3">
             <div class="col-6 d-flex justify-content-start align-items-center ps-5" style="font-size: 20px; font-weight: 600;">Nama</div>
-            <div class="col-6 d-flex justify-content-end align-items-center pe-5" style="font-size: 20px;">Nadelye Aurorae</div>
+            <div class="col-6 d-flex justify-content-end align-items-center pe-5" style="font-size: 20px;"><?= $user['nama']; ?></div>
         </div>
         <hr class="mx-5 my-0">
         <div class="row g-0 py-3">
             <div class="col-6 d-flex justify-content-start align-items-center ps-5" style="font-size: 20px; font-weight: 600;">Jenis Kelamin</div>
-            <div class="col-6 d-flex justify-content-end align-items-center pe-5" style="font-size: 20px;">Perempuan</div>
+            <div class="col-6 d-flex justify-content-end align-items-center pe-5" style="font-size: 20px;"><?= $user['jenis_kelamin']; ?></div>
         </div>
         <hr class="mx-5 my-0">
         <div class="row g-0 py-3">
             <div class="col-6 d-flex justify-content-start align-items-center ps-5" style="font-size: 20px; font-weight: 600;">Tempat Lahir</div>
-            <div class="col-6 d-flex justify-content-end align-items-center pe-5" style="font-size: 20px;">Malang</div>
+            <div class="col-6 d-flex justify-content-end align-items-center pe-5" style="font-size: 20px;"><?= $user['tempat_lahir']; ?></div>
         </div>
         <hr class="mx-5 my-0">
         <div class="row g-0 py-3">
@@ -196,17 +196,17 @@
         <hr class="mx-5 my-0">
         <div class="row g-0 py-3">
             <div class="col-6 d-flex justify-content-start align-items-center ps-5" style="font-size: 20px; font-weight: 600;">Email</div>
-            <div class="col-6 d-flex justify-content-end align-items-center pe-5" style="font-size: 20px;">auroraenadyline@gmail.com</div>
+            <div class="col-6 d-flex justify-content-end align-items-center pe-5" style="font-size: 20px;"><?= $user['email']; ?></div>
         </div>
         <hr class="mx-5 my-0">
         <div class="row g-0 py-3">
             <div class="col-6 d-flex justify-content-start align-items-center ps-5" style="font-size: 20px; font-weight: 600;">No HP</div>
-            <div class="col-6 d-flex justify-content-end align-items-center pe-5" style="font-size: 20px;">089567492512</div>
+            <div class="col-6 d-flex justify-content-end align-items-center pe-5" style="font-size: 20px;"><?= $user['no_hp']; ?></div>
         </div>
         <hr class="mx-5 my-0">
         <div class="row g-0 py-3">
             <div class="col-6 d-flex justify-content-start align-items-center ps-5" style="font-size: 20px; font-weight: 600;">Alamat</div>
-            <div class="col-6 d-flex justify-content-end align-items-center pe-5" style="font-size: 20px;">Lowokwaru, Malang</div>
+            <div class="col-6 d-flex justify-content-end align-items-center pe-5" style="font-size: 20px;"><?= $user['alamat']; ?></div>
         </div>
         <hr class="mx-5 my-0">
     </div>

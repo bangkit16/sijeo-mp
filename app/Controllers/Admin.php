@@ -17,6 +17,20 @@ class Admin extends BaseController
     }
     public function dashboard()
     {
-        return view('dashboard.php');
+
+        if (!isset($_SESSION['level_user'])) {
+            return redirect()->to(base_url() . 'vendorPage');
+            // if (!($_SESSION['level_user'] == 2)) {
+
+            //     return redirect()->to(base_url() . 'login');
+            // };
+        };
+        $trans = $this->transaksiModel->findAll();
+        $user = $this->userModel->findAll();
+        $data = [
+            'trans' => $trans,
+            'user' => $user
+        ];
+        return view('dashboard.php', $data);
     }
 }

@@ -800,10 +800,6 @@
                                 ttllElement.innerHTML = `Rp. ${parseInt(subb) + parseInt(dataPaket.idr)} ,-`
 
                             }
-                            let idPaket = dataPaket.id;
-                            let id_user = sessionStorage.getItem('id');
-                            let status = "Lunas"
-                            let totalP = parseInt(subb) + parseInt(dataPaket.idr)
                         </script>
                         <!-- <div class="row mx-5">
                             <div class="col-8 justify-content-start">
@@ -844,8 +840,47 @@
                         </div>
                         <hr class="mx-5">
                         <div class="d-flex flex-column text-center align-items-center py-5">
-                            <button type="button" class="btn" style="background-color: #FFA931; width: 285px; height: 60px; color: white;" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal">Lanjutkan Pembayaran</button>
+                            <form action="GET" action="<?= base_url(); ?>/simpanTransaksi" id="lun">
+                                <input type="hidden" value="" name="idPaket" id="idPaket">
+                                <input type="hidden" value="<?= $_SESSION['id']; ?>" name="idUser" id="idUser">
+                                <input type="hidden" value="" name="status" id="status">
+                                <input type="hidden" value="" name="totalP" id="totalP">
+                                <!-- <input type="hidden" value="" id="subb"> -->
+                                <input name="submit" type="submit" id="" class="btn" style="background-color: #FFA931; width: 285px; height: 60px; color: white;" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal" value="Lanjutkan Pembayaran">
+                            </form>
                         </div>
+                        <script>
+                            let idPaket = dataPaket.id
+                            let status = "Lunas"
+                            let totalP = parseInt(subb) + parseInt(dataPaket.idr)
+
+                            const idPaketE = document.querySelector('#idPaket')
+                            const idUserE = document.querySelector('#idUser')
+                            const statusE = document.querySelector('#status')
+                            const totalE = document.querySelector('#totalP')
+                            // const subE = document.querySelector('#subb')
+
+                            idPaketE.value = idPaket
+                            // idUserE.value = id_user
+                            statusE.value = "Lunas"
+                            totalE.value = totalP
+                            console.log('idPaket', status.value)
+                            // lE.value = totalP
+                            $(document).ready(function() {
+
+                                $('form').on('submit', function(e) {
+                                    e.preventDefault()
+                                    $.ajax({
+                                        type: $(this).attr('method'),
+                                        url: $(this).attr('action'),
+                                        data: $(this).serialize(),
+                                        success: function() {
+                                            console.log('sukses')
+                                        }
+                                    })
+                                })
+                            })
+                        </script>
                     </div>
                 </div>
             </div>
