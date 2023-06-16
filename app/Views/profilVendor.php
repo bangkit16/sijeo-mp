@@ -246,6 +246,7 @@
         <?php if ($paket == null) { ?>
             <div style="font-size: 24px;color: gray;">Vendor ini belum memiliki paket Event</div>
         <?php } ?>
+        
         <div class="row mt-3 row-cols-md-5 g-4 row justify-content-center mb-5" style="text-align: start;">
             <?php foreach ($paket as $paket) :  ?>
                 <div class="col mb-auto">
