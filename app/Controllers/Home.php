@@ -6,21 +6,25 @@ namespace App\Controllers;
 use App\Models\VendorModel;
 use App\Models\PaketVendorModel;
 use App\Models\StoreModel;
+use App\Models\UserModel;
+use App\Models\TransaksiModel;
 
-use CodeIgniter\API\ResponseTrait;
 
 class Home extends BaseController
 {
-    use ResponseTrait;
     protected $vendorModel;
     protected $paketVendorModel;
     protected $storeModel;
+    protected $userModel;
+    protected $transaksiModel;
 
     public function __construct()
     {
         $this->vendorModel = new VendorModel();
         $this->paketVendorModel = new PaketVendorModel();
         $this->storeModel = new StoreModel();
+        $this->userModel = new UserModel();
+        $this->transaksiModel = new TransaksiModel();
     }
 
     public function index()
@@ -87,9 +91,29 @@ class Home extends BaseController
         ];
         return view('detail.php', $data);
     }
+    public function simpanTransaksi()
+    {
+        // if (isset($_GET['submit'])) {
+        $this->transaksiModel->save([
+            'id_customer' => $this->request->getVar('idUser'),
+            'id_paket' => $this->request->getVar('idPaket'),
+            'status' => $this->request->getVar('status'),
+            'total_pembayaran' => $this->request->getVar('totalP'),
+
+            // 'no_hp' => $this->request->getVar('')
+        ]);
+        // }
+    }
     public function profil()
     {
-        return view('profil.php');
+        if (!isset($_SESSION['username'])) {
+            return redirect()->to(base_url() . 'login');
+        };
+        $user = $this->userModel->where(['id_user' => $_SESSION['id']])->first();
+        $data = [
+            'user' => $user
+        ];
+        return view('profil.php', $data);
     }
     public function daftarVendor()
     {
