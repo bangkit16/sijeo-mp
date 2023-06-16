@@ -110,8 +110,11 @@ class Home extends BaseController
             return redirect()->to(base_url() . 'login');
         };
         $user = $this->userModel->where(['id_user' => $_SESSION['id']])->first();
+        $trans = $this->transaksiModel->where(['id_customer' => $_SESSION['id']])->findAll();
+
         $data = [
-            'user' => $user
+            'user' => $user,
+            'trans' => $trans
         ];
         return view('profil.php', $data);
     }
