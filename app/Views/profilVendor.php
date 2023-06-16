@@ -177,7 +177,7 @@
     </div>
     <div class="container-fluid text-center">
         <div class="d-flex justify-content-center align-items-center my-5">
-            <img src="<?= base_url(); ?>img/profVen1.jpg" class="img-fluid" style="width: 1320px; height: 545px;object-fit: cover; border-radius: 20px;">
+            <img src="<?= base_url(); ?>img/<?= $vendor['gambar']; ?>" class="img-fluid" style="width: 1320px; height: 545px;object-fit: cover; border-radius: 20px;">
         </div>
         <div class="d-flex flex-row justify-content-center align-items-center align-items-stretch mb-5 mx-5">
             <div class="p-0 ms-5">
@@ -230,7 +230,7 @@
                 </div>
             </div>
             <div class="p-0 mx-4">
-                <a href="http://" type="button" class="btn btn-primary btn-chat-with-us" style="width: 289px; background-color: #FFA931; color: white; border: 1px solid #FFA931; font-size: 24px;">Chat With Us</a>
+                <a href="https://wa.me/+6289616693464" type="button" class="btn btn-primary btn-chat-with-us" style="width: 289px; background-color: #FFA931; color: white; border: 1px solid #FFA931; font-size: 24px;">Chat With Us</a>
             </div>
             <div class="p-0 me-5">
                 <a href="http://" type="button" class="btn btn-primary btn-love-vendor" style="width: 289px; background-color: white; border: 1px solid #FFA931; color: #FFA931; font-size: 24px;">Love Vendor</a>
