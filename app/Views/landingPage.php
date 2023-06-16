@@ -208,6 +208,10 @@
             color: white;
             font-size: 20px;
         }
+
+        .ft-tentang:hover {
+            color: #FFA931 !important;
+        }
     </style>
 </head>
 
@@ -376,6 +380,12 @@
         </div>
     </div>
     <br>
+    <div class="container-fluid text-center">
+        <div class="d-flex flex-row justify-content-center align-items-start my-5">
+            <div><img src="<?= base_url(); ?>/img/caraPesan.png" class="img-fluid mx-1" style="width: 625px; height: 907px;"></div>
+            <div><img src="<?= base_url(); ?>/img/daftarVendor.png" class="img-fluid mx-1" style="width: 667px; height: 907px;"></div>
+        </div>
+    </div>
     <div class="container-fluid galery d-flex flex-column" id="lastestEvent">
         <div class="latest">
             <h1 style="font-weight: 600;">LASTEST EVENT</h1>
@@ -552,7 +562,7 @@
             <div class="d-flex flex-row px-5 pb-5">
                 <div class="d-flex flex-column mx-auto">
                     <div class="my-5 me-auto">
-                        <img src="<?= base_url(); ?>/img/logo si jeo.png" class="img-fluid" style="height: auto; width: 197px;">
+                        <a href="http://localhost:8080/"><img src="<?= base_url(); ?>/img/logo si jeo.png" class="img-fluid" style="height: auto; width: 197px;"></a>
                     </div>
                     <div class="me-auto mb-1" style="font-size: 25px; color: white;">Sosial Media</div>
                     <div class="d-flex flex-row mx-auto">
@@ -575,9 +585,8 @@
                 </div>
                 <div class="d-flex flex-column mx-auto">
                     <div class="mt-5 me-auto" style="font-size: 25px; font-weight: 600; color: white;">Tentang Kami</div>
-                    <div class="mt-2 me-auto" style="font-size: 20px; color: white;">Tentang</div>
+                    <div class=" mt-2 me-auto"><a href="#tentang" class="ft-tentang" style="text-decoration: none; font-size: 20px; color: white;">Tentang</a></div>
                     <div class="mt-1 me-auto" style="font-size: 20px; color: white;">Penawaran dan Promo</div>
-                    <div class="mt-1 me-auto" style="font-size: 20px; color: white;">Karir</div>
                 </div>
                 <div class="d-flex flex-column mx-auto">
                     <div class="mt-5 me-auto" style="font-size: 25px; font-weight: 600; color: white;">Layanan</div>
