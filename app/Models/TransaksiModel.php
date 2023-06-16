@@ -11,7 +11,7 @@ class TransaksiModel extends Model
 
     protected $returnType     = 'array';
 
-    protected $allowedFields = ['id_transaksi', 'id_customer', 'id_paket', 'tgl_pesanan'];
+    protected $allowedFields = ['id_transaksi', 'id_customer', 'id_paket', 'tgl_pesanan', 'jml_byr', 'total_pembayaran', 'status'];
 
     protected $useTimestamps = false;
     protected $createdField  = 'created_at';

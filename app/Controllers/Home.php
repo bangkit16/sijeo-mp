@@ -7,8 +7,11 @@ use App\Models\VendorModel;
 use App\Models\PaketVendorModel;
 use App\Models\StoreModel;
 
+use CodeIgniter\API\ResponseTrait;
+
 class Home extends BaseController
 {
+    use ResponseTrait;
     protected $vendorModel;
     protected $paketVendorModel;
     protected $storeModel;
@@ -44,8 +47,31 @@ class Home extends BaseController
         ];
         return view('vendorPage.php', $data);
     }
+
+
+    // public function createData()
+    // {
+    //     // Get the request data
+    //     $requestData = $this->request->getPost();
+
+    //     // Perform data validation
+    //     // ...
+
+    //     // Insert the data into the database
+    //     $db = \Config\Database::connect();
+    //     $db->table('your_table_name')->insert($requestData);
+
+    //     // Return the API response
+    //     $response = [
+    //         'message' => 'Data created successfully',
+    //         'data' => $requestData
+    //     ];
+
+    //     return $this->respond($response);
+    // }
     public function detail($id)
     {
+
         if (!isset($_SESSION['username'])) {
             return redirect()->to(base_url() . 'login');
         };

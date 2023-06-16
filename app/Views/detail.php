@@ -194,6 +194,7 @@
 
         .dhidden {
             display: none;
+            transition: 2s ease;
         }
 
         .custom-form {
@@ -211,9 +212,15 @@
             font-size: 20px;
         }
     </style>
+    <script>
+        let data = JSON.parse('<?= json_encode($store) ?>');
+        let dataPaket = JSON.parse('<?= json_encode($paketDetail) ?>');
+    </script>
 </head>
 
+
 <body>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
     <nav>
         <div class="container-fluid text-center sticky-top" style="background-color: white;">
             <div class=" d-flex flex-row align-items-center justify-content-end p-2">
@@ -382,7 +389,65 @@
             <span style="font-size: 20px; padding-top: 7px;color: #8C8282;">(Pilih store untuk melihat detail)</span>
         </div>
         <div class="d-flex row mt-3 row-cols-md-4 g-4 row" id="dropStore">
+            <script>
+                const dataArr = [];
 
+                function findProducts(data_ids) {
+                    return data.filter((dt) => {
+                        return data_ids.includes(parseInt(dt.id_store))
+                    })
+                }
+
+                function tambah(i, j) {
+                    const dkor = document.querySelectorAll('#dkor');
+                    dkor[i].classList.remove('dhidden');
+                    if (!dataArr.includes(j)) {
+                        dataArr.push(j);
+                    }
+
+                }
+
+
+                function hapus(i, j) {
+                    const dkor = document.querySelectorAll('#dkor');
+                    dkor[i].classList.add('dhidden');
+                    const index = dataArr.indexOf(j);
+                    if (index !== -1) {
+                        dataArr.splice(index, 1);
+                    }
+                }
+                // var dataArr = [1, 2, 3];
+                // var jsonData = JSON.stringify(dataArr);
+                // var currentUrl = window.location.href;
+
+                // $("#btn").click(function() {
+                //     $.ajax({
+                //         url: "detail.php",
+                //         type: "POST",
+                //         data: {
+                //             data: jsonData
+                //         },
+                //         success: function(response) {
+                //             console.log(response);
+                //         },
+                //         error: function(xhr, status, error) {
+                //             console.error(error);
+                //         }
+                //     });
+                // });
+            </script>
+            <?php
+            // Ambil data dari permintaan POST
+            // $jsonData = $_POST['data'];
+
+            // // Ubah JSON menjadi array PHP
+            // $dataArr = json_decode($jsonData, true);
+
+            // // Gunakan data array PHP
+            // foreach ($dataArr as $value) {
+            //     echo $value . "<br>";
+            // }
+            ?>
             <?php for ($i = 0; $i < count($store); $i++) { ?>
                 <div class="col mb-auto">
                     <!-- <a style="text-decoration: none;" href="http://"> -->
@@ -396,7 +461,7 @@
                             <p class="card-text  mb-1" style="color: #FFA931;font-size: 18px; font-weight: 500;">Rp <?= $store[$i]['harga_store']; ?></p>
                         </div>
                         <input type="hidden" value="<?= $i; ?>">
-                        <button type="submit" class="btn btn-warning m-2" name='btn' id="btnn">Tambah</button>
+                        <button type="submit" class="btn btn-warning m-2" name='btn' id="btnn" onclick="tambah(<?= $i; ?> , <?= $store[$i]['id_store'] ?>)">Tambah</button>
                     </div>
                     <!-- </a> -->
                 </div>
@@ -408,18 +473,23 @@
         </div>
 
         <?php for ($i = 0; $i < count($store); $i++) { ?>
-            <div class="card dkor dhidden mb-3 ms-5" style="max-width: 1122px; border: none;">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="<?= base_url(); ?>/img/<?= $store[$i]['gambar']; ?>" class="img-fluid rounded-start" style="height: 300px;object-fit: cover;"" alt=" ...">
+            <div id="dkor" class="card dhidden mb-3 ms-5" style="max-width: 1122px; border: none;">
+
+                <div class="row g-0 border">
+                    <div class="col-md-4 p-3">
+                        <img src="<?= base_url(); ?>/img/<?= $store[$i]['gambar']; ?>" class=" img-fluid rounded-start" style="height: 300px;object-fit: cover;"" alt=" ...">
                     </div>
-                    <div class="col-md-8">
-                        <div class="card-body pt-0">
-                            <h5 class="card-title" style="font-size: 24px; font-weight: 600;"><?= $store[$i]['nama_store']; ?></h5>
+                    <div class="col-md-8 p-2">
+                        <div class="card-body pt-0 d-flex flex-column ">
+                            <div class="d-flex mt-3">
+
+                                <h5 class="card-title" style="font-size: 24px; font-weight: 600;"><?= $store[$i]['nama_store']; ?></h5>
+                                <button type="button" class="btn-close ms-auto " onclick="hapus(<?= $i; ?>    , <?= $store[$i]['id_store'] ?>)" aria-label="Close"></button>
+                            </div>
                             <span style="font-size: 20px;">Catatan</span>
                             <form action="">
-                                <input type="hidden" name="" value="<?= $store[$i]['id_store']; ?>" id="">
-                                <textarea name="" id="" cols="60" rows="6"></textarea>
+                                <input type="hidden" name="" value="<?= $store[$i]['id_store']; ?>" id="<?= $store[$i]['id_store']; ?>">
+                                <textarea name="" cols="60" rows="6" id="catatan<?= $store[$i]['id_store']; ?>"></textarea>
                             </form>
 
                             <hr>
@@ -435,7 +505,7 @@
                                             <i class="fa fa-minus"></i>
                                         </button>
                                     </div>
-                                    <input class="form-control quantity" min="50" name="quantity" value="50" type="number" style="text-align: center;">
+                                    <input id="qty<?= $store[$i]['id_store']; ?>" class="form-control quantity" min="50" name="quantity" value="50" type="number" style="text-align: center;">
                                     <div class="input-group-append">
                                         <button class="btn btn-outline-secondary btn-plus">
                                             <i class="fa fa-plus"></i>
@@ -448,42 +518,10 @@
                 </div>
             </div>
         <?php }; ?>
-        <script>
-            const formContainer = document.getElementById('formContainer');
-            const displayDiv = document.getElementById('displayDiv');
-            const showButton = document.getElementById('showButton');
 
-
-            showButton.addEventListener('click', function() {
-                const forms = formContainer.getElementsByClassName('dynamic-form');
-                const dataArray = [];
-
-                for (let i = 0; i < forms.length; i++) {
-                    const form = forms[i];
-                    const hiddenValue = form.querySelector('input[type="hidden"]').value;
-                    const inputValue = form.querySelector('input[type="text"]').value;
-
-                    if (inputValue !== '') {
-                        const data = {
-                            hiddenValue: hiddenValue,
-                            inputValue: inputValue
-                        };
-
-                        dataArray.push(data);
-
-                        const newDiv = document.createElement('div');
-                        newDiv.textContent = 'Hidden Value: ' + hiddenValue + ', Input Value: ' + inputValue;
-
-                        displayDiv.appendChild(newDiv);
-                    }
-                }
-
-                console.log(dataArray); // Menampilkan array data di konsol
-            });
-        </script>
     </div>
     <div class="d-flex flex-row align-items-center justify-content-center">
-        <button style="font-size: 18px; margin-top: 1rem; margin-bottom: 3rem; width: 800px; height: 45px;" class="d-flex align-items-center justify-content-center btn btnchat" data-bs-toggle="modal" data-bs-target="#exampleModalToggle1">Pesan Sekarang</button>
+        <button style="font-size: 18px; margin-top: 1rem; margin-bottom: 3rem; width: 800px; height: 45px;" onclick="showItems()" class="d-flex align-items-center justify-content-center btn btnchat" data-bs-toggle="modal" data-bs-target="#exampleModalToggle1">Pesan Sekarang</button>
     </div>
     <hr>
     <div class="container-fluid text-center">
@@ -525,15 +563,38 @@
                             <span style="color: #FFA931;"><?= $paketDetail['idr']; ?></span>
                         </div>
                     </div>
-                    <div class="row row-cols-auto mx-5 mt-4" style="height: 140px; width: 589px; align-items: center; border-color: black; border-style: solid; border-radius: 20px; border-width: 1px;">
-                        <div class="col-3">
-                            <img src="" alt="">
-                        </div>
-                        <div class="col-9 d-flex flex-column justify-content-center">
-                            <span>NAMA PAKET</span>
-                            <span style="color: #FFA931;">HARGA</span>
+                    <span class=" mt-4" style="font-weight: 600;">Store</span>
+                    <!-- ================================ -->
+                    <div id="itempix">
+                        <div class="mt-3">
+
                         </div>
                     </div>
+                    <script>
+                        const itemsWr = document.querySelector("#itempix");
+
+                        function showItems() {
+                            itemsWr.innerHTML = ''
+                            let selected = findProducts(dataArr)
+                            selected.forEach(el => {
+
+
+                                itemsWr.innerHTML +=
+                                    `
+                            <div class="row row-cols-auto mx-5 mt-4" style="height: 140px; width: 589px; align-items: center; border-color: black; border-style: solid; border-radius: 20px; border-width: 1px;">
+                                <div class="col-3">
+                                    <img src="${el.gambar}" alt="">
+                                </div>
+                                <div class="col-9 d-flex flex-column justify-content-center">
+                                    <span>${el.nama_store}</span>
+                                    <span style="color: #FFA931;">${el.harga_store}</span>
+                                </div>
+                            </div>
+                            `
+
+                            });
+                        }
+                    </script>
                     <div class="row row-cols-auto mx-auto pt-5" style="height: auto; width: 589px;">
                         <span>Sebelum melanjutkan ke proses pembayaran, mohon lengkapi tanggal layanan dan metodee pembayaran terlebih dahulu</span>
                         <form class="pt-4" style="width: 100%;">
@@ -547,9 +608,9 @@
                                 <option value="3">LinkAja</option>
                             </select>
                             <div class="d-flex flex-column text-center align-items-center py-5">
-                                <button type="button" class="btn" style="background-color: #FFA931; width: 285px; height: 60px;" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Bayar DP - Rp 6.000.000</button>
+                                <button type="button" onclick="showItems2()" class="btn" style="background-color: #FFA931; width: 285px; height: 60px;" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Bayar DP</button>
                                 <br>
-                                <button type="button" class="btn" style="background-color: #FFA931; width: 285px; height: 60px;" data-bs-toggle="modal" data-bs-target="#exampleModalToggle3">Lunas - Rp 20.000.000</button>
+                                <button type="button" onclick="showItems3()" class="btn" style="background-color: #FFA931; width: 285px; height: 60px;" data-bs-toggle="modal" data-bs-target="#exampleModalToggle3">Bayar Lunas </button>
                             </div>
                         </form>
                     </div>
@@ -574,20 +635,66 @@
                         </div>
                         <div class="row mx-5">
                             <div class="col-8 d-flex justify-content-start">
-                                <span>Paket Platinum Acara Dies Natalis ALEA (Decoration) 2023 untuk Mahasiswa</span>
+                                <span><?= $paketDetail["nama_paket"]; ?></span>
                             </div>
                             <div class="col-4 d-flex justify-content-start">
-                                <span>Rp 20.0000.000,-</span>
+                                <span>Rp <?= $paketDetail["idr"]; ?>,-</span>
                             </div>
                         </div>
-                        <div class="row mx-5">
+                        <div id="itempixx">
+                            <div class="mx-5">
+
+                            </div>
+                        </div>
+                        <script>
+                            function hitung() {
+                                let selected = findProducts(dataArr)
+                                console.log('selected', selected)
+                                selected.forEach(el => {
+
+                                });
+                            }
+                            const itemsWrr = document.querySelector("#itempixx");
+                            let sub = 0;
+
+                            function showItems2() {
+                                let selected = findProducts(dataArr)
+                                console.log('selected', selected)
+                                itemsWrr.innerHTML = '';
+
+                                selected.forEach(el => {
+
+                                    let qtyElement = document.querySelector('#qty' + el.id_store)
+                                    let catElement = document.querySelector('#catatan' + el.id_store)
+                                    itemsWrr.innerHTML +=
+                                        `
+                                        <div class="row mx-5">
+                                            <div class="col-8 justify-content-start">
+                                                <span>${el.nama_store}</span>
+                                                <p class="ms-3">Catatan: <br>${catElement.value}</p>
+                                            </div>
+                                            <div class="col-4 justify-content-start">
+                                                <span>Rp ${el.harga_store} x ${qtyElement.value},-</span>
+                                            </div>
+                                        </div>
+                                        `
+                                    sub += el.harga_store * qtyElement.value
+                                });
+                                const subElement = document.querySelector('#sub')
+                                const ttlElement = document.querySelector('#total')
+                                subElement.innerHTML = `Rp. ${sub} ,-`
+                                ttlElement.innerHTML = `Rp. ${60 / 100 * (parseInt(sub) + parseInt(dataPaket.idr))} ,-`
+
+                            }
+                        </script>
+                        <!-- <div class="row mx-5">
                             <div class="col-8 justify-content-start">
                                 <span>Dresscode Kaos + Sablon (All Size) Rp 60.000 x 150 pcs</span>
                             </div>
                             <div class="col-4 justify-content-start">
                                 <span>Rp 9.0000.000,-</span>
                             </div>
-                        </div>
+                        </div> -->
                         <hr class="mx-5">
                         <div class="row mx-5">
                             <div class="col-8 justify-content-start" style="font-weight: 600;">
@@ -605,16 +712,17 @@
                                 <h4>Subtotal</h4>
                             </div>
                             <div class="col-4 justify-content-start">
-                                <span>Rp 29.0000.000,-</span>
+                                <span id="sub">Rp 29.0000.000,-</span>
                             </div>
                         </div>
                         <hr class="mx-5">
                         <div class="row mx-5">
                             <div class="col-8 justify-content-start">
                                 <h4>Total Pembayaran</h4>
+                                <h6>DP 60%</h6>
                             </div>
                             <div class="col-4 justify-content-start" style="font-weight: 600;">
-                                <span>Rp 29.0000.000,-</span>
+                                <span id="total">Rp 29.0000.000,-</span>
                             </div>
                         </div>
                         <hr class="mx-5">
@@ -643,20 +751,68 @@
                         </div>
                         <div class="row mx-5">
                             <div class="col-8 d-flex justify-content-start">
-                                <span>Paket Platinum Acara Dies Natalis ALEA (Decoration) 2023 untuk Mahasiswa</span>
+                                <span><?= $paketDetail["nama_paket"]; ?></span>
                             </div>
                             <div class="col-4 d-flex justify-content-start">
-                                <span>Rp 20.0000.000,-</span>
+                                <span>Rp <?= $paketDetail["idr"]; ?>,-</span>
                             </div>
                         </div>
-                        <div class="row mx-5">
+                        <div id="itempixxx">
+
+                        </div>
+                        <script>
+                            function hitung() {
+                                let selected = findProducts(dataArr)
+                                console.log('selected', selected)
+                                selected.forEach(el => {
+
+                                });
+                            }
+                            const itemsWrrr = document.querySelector("#itempixxx");
+                            let subb = 0;
+
+                            function showItems3() {
+                                let selected = findProducts(dataArr)
+                                console.log('selected', selected)
+                                itemsWrrr.innerHTML = '';
+
+                                selected.forEach(el => {
+
+                                    let qtyElement = document.querySelector('#qty' + el.id_store)
+                                    let catElement = document.querySelector('#catatan' + el.id_store)
+                                    itemsWrrr.innerHTML +=
+                                        `
+                                        <div class="row mx-5">
+                                            <div class="col-8 justify-content-start">
+                                                <span>${el.nama_store}</span>
+                                                <p class="ms-3">Catatan: <br>${catElement.value}</p>
+                                            </div>
+                                            <div class="col-4 justify-content-start">
+                                                <span>Rp ${el.harga_store} x ${qtyElement.value},-</span>
+                                            </div>
+                                        </div>
+                                        `
+                                    subb += el.harga_store * qtyElement.value
+                                });
+                                const subbElement = document.querySelector('#subb')
+                                const ttllElement = document.querySelector('#totall')
+                                subbElement.innerHTML = `Rp. ${subb} ,-`
+                                ttllElement.innerHTML = `Rp. ${parseInt(subb) + parseInt(dataPaket.idr)} ,-`
+
+                            }
+                            let idPaket = dataPaket.id;
+                            let id_user = sessionStorage.getItem('id');
+                            let status = "Lunas"
+                            let totalP = parseInt(subb) + parseInt(dataPaket.idr)
+                        </script>
+                        <!-- <div class="row mx-5">
                             <div class="col-8 justify-content-start">
                                 <span>Dresscode Kaos + Sablon (All Size) Rp 60.000 x 150 pcs</span>
                             </div>
                             <div class="col-4 justify-content-start">
                                 <span>Rp 9.0000.000,-</span>
                             </div>
-                        </div>
+                        </div> -->
                         <hr class="mx-5">
                         <div class="row mx-5">
                             <div class="col-8 justify-content-start" style="font-weight: 600;">
@@ -674,7 +830,7 @@
                                 <h4>Subtotal</h4>
                             </div>
                             <div class="col-4 justify-content-start">
-                                <span>Rp 29.0000.000,-</span>
+                                <span id="subb">Rp 29.0000.000,-</span>
                             </div>
                         </div>
                         <hr class="mx-5">
@@ -683,7 +839,7 @@
                                 <h4>Total Pembayaran</h4>
                             </div>
                             <div class="col-4 justify-content-start" style="font-weight: 600;">
-                                <span>Rp 29.0000.000,-</span>
+                                <span id="totall">Rp 29.0000.000,-</span>
                             </div>
                         </div>
                         <hr class="mx-5">
@@ -789,6 +945,7 @@
                 this.className += " active";
             });
         }
+
 
         function selengkapnya() {
             var dots = document.getElementById("dots");
