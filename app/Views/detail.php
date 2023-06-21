@@ -303,8 +303,8 @@
                 <br>
                 <div class="row row-cols-auto">
                     <a href="<?= base_url(); ?>/profilVendor/<?= $vendor['id_vendor']; ?>">
-                        <div class="col-3">
-                            <img src="<?= base_url(); ?>img/vector rasyid.png" class="img-fluid" aria-rowspan="3" style="width: 109px; height: 109px; border-radius: 100%;">
+                        <div class="col-3 p-0">
+                            <img src="<?= base_url(); ?>img/vector rasyid.png" class="img-fluid" style="width: 109px; height: 109px; border-radius: 100%;">
                         </div>
                         <div class="col-9 d-flex flex-column justify-content-center">
                             <span style="font-weight: 600;"><?= $vendor['nama_vendor']; ?>, <?= $vendor['kota']; ?></span>
