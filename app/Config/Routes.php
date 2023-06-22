@@ -29,11 +29,36 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+
 $routes->get('/', 'Home::index');
-$routes->get('/tes', 'Home::tes');
+$routes->get('/login', 'Home::login');
+$routes->get('/register', 'Home::register');
+$routes->get('/vendor', 'Home::vendorPage');
+$routes->get('/profil', 'Home::profil');
+$routes->get('/daftarVendor', 'Home::daftarVendor');
+$routes->get('/notifikasi', 'Home::notifikasi');
+$routes->get('/profilVendor/(:num)', 'Home::profilVendor/$1');
+$routes->get('/detail/(:num)', 'Home::detail/$1');
+$routes->post('/simpanTransaksi', 'Home::simpanTransaksi');
+
+
+$routes->get('/admin/dashboard', 'Admin::dashboard');
+
+
+
+
+
+
+
+$routes->get('/Customer/logout', 'Customer::logout');
+$routes->post('/Customer/login', 'Customer::login');
+$routes->post('/Customer/register', 'Customer::register');
+
+
+
 
 /*
- * --------------------------------------------------------------------
+* --------------------------------------------------------------------
  * Additional Routing
  * --------------------------------------------------------------------
  *

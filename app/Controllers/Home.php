@@ -2,31 +2,141 @@
 
 namespace App\Controllers;
 
-use App\Models\AdminModel;
+
+use App\Models\VendorModel;
+use App\Models\PaketVendorModel;
+use App\Models\StoreModel;
+use App\Models\UserModel;
+use App\Models\TransaksiModel;
+
 
 class Home extends BaseController
 {
-    protected $adminModel;
+    protected $vendorModel;
+    protected $paketVendorModel;
+    protected $storeModel;
+    protected $userModel;
+    protected $transaksiModel;
 
     public function __construct()
     {
-        $this->adminModel = new AdminModel();
+        $this->vendorModel = new VendorModel();
+        $this->paketVendorModel = new PaketVendorModel();
+        $this->storeModel = new StoreModel();
+        $this->userModel = new UserModel();
+        $this->transaksiModel = new TransaksiModel();
     }
 
     public function index()
     {
-        $admin = $this->adminModel->findAll();
         $data = [
-            'admin' => $admin,
+            'paket' => $this->paketVendorModel->findAll(5),
         ];
-        return view('welcome_message', $data);
+        return view('landingPage.php', $data);
     }
-    public function tes()
+
+    public function login()
     {
-        $admin = $this->adminModel->findAll();
+        return view('login.php');
+    }
+    public function register()
+    {
+        return view('register.php');
+    }
+    public function vendorPage()
+    {
         $data = [
-            'admin' => $admin,
+            'paket' => $this->paketVendorModel->findAll(),
+            'vendor' => $this->vendorModel->findAll(),
         ];
-        return view('tesView.php', $data);
+        return view('vendorPage.php', $data);
+    }
+
+
+    // public function createData()
+    // {
+    //     // Get the request data
+    //     $requestData = $this->request->getPost();
+
+    //     // Perform data validation
+    //     // ...
+
+    //     // Insert the data into the database
+    //     $db = \Config\Database::connect();
+    //     $db->table('your_table_name')->insert($requestData);
+
+    //     // Return the API response
+    //     $response = [
+    //         'message' => 'Data created successfully',
+    //         'data' => $requestData
+    //     ];
+
+    //     return $this->respond($response);
+    // }
+    public function detail($id)
+    {
+
+        if (!isset($_SESSION['username'])) {
+            return redirect()->to(base_url() . 'login');
+        };
+        $paketDetail = $this->paketVendorModel->where(['id' => $id])->first();
+        $vendor = $this->vendorModel->where(['id_vendor' => $paketDetail['id_vendor']])->first();
+        $store = $this->storeModel->where(['id_vendor' => $paketDetail['id_vendor']])->findAll();
+
+        $data = [
+            'paketDetail' => $paketDetail,
+            'vendor' => $vendor,
+            'store' => $store,
+            'paket' => $this->paketVendorModel->findAll(),
+        ];
+        return view('detail.php', $data);
+    }
+    
+    public function simpanTransaksi()
+    {
+        $idPaket = $this->request->getPost('idPaketI');
+        $idUser = $this->request->getPost('idUserI');
+        $status = $this->request->getPost('statusI');
+        $total = $this->request->getPost('totalI');
+        // if (isset($_GET['submit'])) {
+        $this->transaksiModel->save([
+            'id_customer' => $idUser,
+            'id_paket' => $idPaket,
+            'status' => $status,
+            'total_pembayaran' => $total,
+
+            // 'no_hp' => $this->request->getVar('')
+        ]);
+        // }
+    }
+    public function profil()
+    {
+        if (!isset($_SESSION['username'])) {
+            return redirect()->to(base_url() . 'login');
+        };
+        $user = $this->userModel->where(['id_user' => $_SESSION['id']])->first();
+        $trans = $this->transaksiModel->where(['id_customer' => $_SESSION['id']])->findAll();
+
+        $data = [
+            'user' => $user,
+            'trans' => $trans
+        ];
+        return view('profil.php', $data);
+    }
+    public function daftarVendor()
+    {
+        return view('daftarVendor.php');
+    }
+    public function notifikasi()
+    {
+        return view('notifikasi.php');
+    }
+    public function profilVendor($id)
+    {
+        $data = [
+            'paket' => $this->paketVendorModel->where(['id_vendor' => $id])->findAll(),
+            'vendor' => $this->vendorModel->where(['id_vendor' => $id])->first(),
+        ];
+        return view('profilVendor.php', $data);
     }
 }
