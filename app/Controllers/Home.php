@@ -91,6 +91,7 @@ class Home extends BaseController
         ];
         return view('detail.php', $data);
     }
+    
     public function simpanTransaksi()
     {
         $idPaket = $this->request->getPost('idPaketI');
