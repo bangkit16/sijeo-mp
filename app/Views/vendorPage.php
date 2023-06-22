@@ -270,7 +270,7 @@
                                 <div style="height: 8rem ;" class="d-flex flex-column mt-4">
                                     <div class="p-1">
 
-                                        <span style="font-size: 20px; font-weight: 600;width:100% " class="card-title"><?= $vendor['nama_vendor']; ?></span><br>
+                                        <span style="font-size: 20px; font-weight: 600;width:100% " class="card-title"><a style="text-decoration: none;" href="<?= base_url(); ?>profilVendor/<?= $vendor['id_vendor']; ?>"><?= $vendor['nama_vendor']; ?></a></span><br>
                                         <span style="font-size: 15px; font-weight: 500;width:100% " class="card-title"><?= $vendor['kota']; ?></span>
                                     </div>
                                     <br>
@@ -291,7 +291,7 @@
                                 </div>
                             </div>
                         </div>
-                    </a>
+
                 </div>
             <?php endforeach; ?>
         </div>
