@@ -181,7 +181,7 @@
         </div>
         <div class="d-flex flex-row justify-content-center align-items-center align-items-stretch mb-5 mx-5">
             <div class="p-0 ms-5">
-                <img src="<?= base_url(); ?>img/logovendor1.jpg" class="img-fluid" style="width: 113px; height: 113px; border-radius: 100%;">
+                <img src="<?= base_url(); ?>img/<?= $vendor['gambar']; ?>" class="img-fluid" style="width: 113px; height: 113px; border-radius: 100%;">
             </div>
             <div class="p-0 me-auto d-flex flex-column justify-content-start align-items-center">
                 <div class="ps-4" style="font-size: 28px; font-weight: 600;"><?= $vendor['nama_vendor']; ?>, <?= $vendor['kota']; ?></div>
@@ -246,7 +246,7 @@
         <?php if ($paket == null) { ?>
             <div style="font-size: 24px;color: gray;">Vendor ini belum memiliki paket Event</div>
         <?php } ?>
-        
+
         <div class="row mt-3 row-cols-md-5 g-4 row justify-content-center mb-5" style="text-align: start;">
             <?php foreach ($paket as $paket) :  ?>
                 <div class="col mb-auto">

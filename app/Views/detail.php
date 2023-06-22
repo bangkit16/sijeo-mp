@@ -302,34 +302,33 @@
                 </div>
                 <br>
                 <div class="row row-cols-auto">
-                    <a href="<?= base_url(); ?>/profilVendor/<?= $vendor['id_vendor']; ?>">
-                        <div class="col-3">
-                            <img src="<?= base_url(); ?>img/vector rasyid.png" class="img-fluid" aria-rowspan="3" style="width: 109px; height: 109px; border-radius: 100%;">
+
+                    <div class="col-3">
+                        <img src="<?= base_url(); ?>img/<?= $vendor['gambar']; ?>" class="img-fluid" aria-rowspan="3" style="width: 109px; height: 109px; border-radius: 100%;">
+                    </div>
+                    <div class="col-9 d-flex flex-column justify-content-center">
+                        <span style="font-weight: 600;"><a style="text-decoration: none;color: black;" href="<?= base_url(); ?>/profilVendor/<?= $vendor['id_vendor']; ?>"><?= $vendor['nama_vendor']; ?>, <?= $vendor['kota']; ?></a></span>
+                        <div class="pt-1">
+                            <span class="pt-5"><?= $vendor['email_vendor']; ?> | <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="black" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                </svg> <?= $vendor['kota']; ?></span>
                         </div>
-                        <div class="col-9 d-flex flex-column justify-content-center">
-                            <span style="font-weight: 600;"><?= $vendor['nama_vendor']; ?>, <?= $vendor['kota']; ?></span>
-                            <div class="pt-1">
-                                <span class="pt-5"><?= $vendor['email_vendor']; ?> | <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="black" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-                                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                                    </svg> <?= $vendor['kota']; ?></span>
-                            </div>
-                            <div class="pt-1">
-                                <?php
-                                for ($i = 0; $i < $vendor['rating']; $i++) {
-                                    echo '<span class="fa fa-star checked"></span>';
-                                }
-                                // if (!$vendor['rating'] == 5) {
-                                $j = 5 - $vendor['rating'];
-                                for ($i = 0; $i < $j; $i++) {
-                                    echo '<span class="fa fa-star"></span>';
-                                }
-                                // }
-                                ?>
-                                <span> 9 (reviews)</span>
-                            </div>
-                            <a href="btn"></a>
+                        <div class="pt-1">
+                            <?php
+                            for ($i = 0; $i < $vendor['rating']; $i++) {
+                                echo '<span class="fa fa-star checked"></span>';
+                            }
+                            // if (!$vendor['rating'] == 5) {
+                            $j = 5 - $vendor['rating'];
+                            for ($i = 0; $i < $j; $i++) {
+                                echo '<span class="fa fa-star"></span>';
+                            }
+                            // }
+                            ?>
+                            <span> 9 (reviews)</span>
                         </div>
-                    </a>
+                        <a href="btn"></a>
+                    </div>
                 </div>
             </div>
             <div class="col-7 pt-1">
@@ -842,47 +841,16 @@
                         </div>
                         <hr class="mx-5">
                         <div class="d-flex flex-column text-center align-items-center py-5">
-                            <form action="GET" action="<?= base_url(); ?>/simpanTransaksi" id="lun">
+                            <form id="">
                                 <input type="hidden" value="" name="idPaket" id="idPaket">
                                 <input type="hidden" value="<?= $_SESSION['id']; ?>" name="idUser" id="idUser">
                                 <input type="hidden" value="" name="status" id="status">
                                 <input type="hidden" value="" name="totalP" id="totalP">
                                 <!-- <input type="hidden" value="" id="subb"> -->
-                                <input name="submit" type="submit" id="" class="btn" style="background-color: #FFA931; width: 285px; height: 60px; color: white;" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal" value="Lanjutkan Pembayaran">
+                                <button id="btnnn" type="button" class="btnnn" style="background-color: #FFA931; width: 285px; height: 60px; color: white;" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal">Konfirmasi Pembayaran</button>
                             </form>
                         </div>
-                        <script>
-                            let idPaket = dataPaket.id
-                            let status = "Lunas"
-                            let totalP = parseInt(subb) + parseInt(dataPaket.idr)
-
-                            const idPaketE = document.querySelector('#idPaket')
-                            const idUserE = document.querySelector('#idUser')
-                            const statusE = document.querySelector('#status')
-                            const totalE = document.querySelector('#totalP')
-                            // const subE = document.querySelector('#subb')
-
-                            idPaketE.value = idPaket
-                            // idUserE.value = id_user
-                            statusE.value = "Lunas"
-                            totalE.value = totalP
-                            console.log('idPaket', status.value)
-                            // lE.value = totalP
-                            $(document).ready(function() {
-
-                                $('form').on('submit', function(e) {
-                                    e.preventDefault()
-                                    $.ajax({
-                                        type: $(this).attr('method'),
-                                        url: $(this).attr('action'),
-                                        data: $(this).serialize(),
-                                        success: function() {
-                                            console.log('sukses')
-                                        }
-                                    })
-                                })
-                            })
-                        </script>
+                        <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
                     </div>
                 </div>
             </div>
@@ -1001,5 +969,47 @@
         }
     </script>
 </body>
+<script>
+    $(document).ready(function() {
+        console.log('sukses selalu')
+    })
+    let idPaket = dataPaket.id
+    let status = "Lunas"
+    let totalP = parseInt(subb) + parseInt(dataPaket.idr)
+    let urll = JSON.parse('<?= json_encode(base_url()) ?>')
+    const idPaketE = document.querySelector('#idPaket')
+    const idUserE = document.querySelector('#idUser')
+    const statusE = document.querySelector('#status')
+    const totalE = document.querySelector('#totalP')
+    // const subE = document.querySelector('#subb')
+
+    idPaketE.value = idPaket
+    statusE.value = "Lunas"
+    totalE.value = totalP
+
+
+    // $(document).ready(function() {
+
+    $('.btnnn').click(function() {
+        // alert('asdsdsdd');
+        $.ajax({
+            url: "<?= base_url('/simpanTransaksi'); ?>",
+            type: "POST",
+            data: {
+                idPaketI: idPaketE.value,
+                idUserI: idUserE.value,
+                statusI: statusE.value,
+                totalI: totalE.value
+            },
+            success: function() {
+                console.log('sukses ajax')
+            },
+            error: function() {
+                console.log('error lur')
+            },
+        })
+    });
+    // lE.value = totalP
+</script>
 
 </html>

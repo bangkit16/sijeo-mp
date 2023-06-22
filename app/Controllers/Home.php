@@ -93,12 +93,16 @@ class Home extends BaseController
     }
     public function simpanTransaksi()
     {
+        $idPaket = $this->request->getPost('idPaketI');
+        $idUser = $this->request->getPost('idUserI');
+        $status = $this->request->getPost('statusI');
+        $total = $this->request->getPost('totalI');
         // if (isset($_GET['submit'])) {
         $this->transaksiModel->save([
-            'id_customer' => $this->request->getVar('idUser'),
-            'id_paket' => $this->request->getVar('idPaket'),
-            'status' => $this->request->getVar('status'),
-            'total_pembayaran' => $this->request->getVar('totalP'),
+            'id_customer' => $idUser,
+            'id_paket' => $idPaket,
+            'status' => $status,
+            'total_pembayaran' => $total,
 
             // 'no_hp' => $this->request->getVar('')
         ]);
